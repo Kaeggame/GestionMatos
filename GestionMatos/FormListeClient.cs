@@ -83,16 +83,11 @@ namespace GestionMatos
             cn.Close();
         }
 
-        private void textBoxCRecherche_TextChanged(object sender, EventArgs e)
+        private void buttonModifierClient_Click(object sender, EventArgs e)
         {
-            string str = textBoxCRecherche.Text;
-            string sql = "select * from Client where NomClient like '" + str + "%'";
-            Requete(sql);
-        }
+            FormulaireModifierClient ChildForm = new FormulaireModifierClient();
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            ChildForm.ShowDialog();
         }
     }
 }

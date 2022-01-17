@@ -30,6 +30,7 @@ namespace GestionMatos
         private void InitializeComponent()
         {
             this.groupBoxIntervention = new System.Windows.Forms.GroupBox();
+            this.buttonModifierIntervention = new System.Windows.Forms.Button();
             this.comboBoxIFiltre = new System.Windows.Forms.ComboBox();
             this.groupBoxIInfos = new System.Windows.Forms.GroupBox();
             this.textBoxIDate = new System.Windows.Forms.TextBox();
@@ -52,12 +53,15 @@ namespace GestionMatos
             this.listBoxIntervention = new System.Windows.Forms.ListBox();
             this.buttonIFiltre = new System.Windows.Forms.Button();
             this.buttonNewIntervention = new System.Windows.Forms.Button();
+            this.labelIChercher = new System.Windows.Forms.Label();
             this.groupBoxIntervention.SuspendLayout();
             this.groupBoxIInfos.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxIntervention
             // 
+            this.groupBoxIntervention.Controls.Add(this.labelIChercher);
+            this.groupBoxIntervention.Controls.Add(this.buttonModifierIntervention);
             this.groupBoxIntervention.Controls.Add(this.comboBoxIFiltre);
             this.groupBoxIntervention.Controls.Add(this.groupBoxIInfos);
             this.groupBoxIntervention.Controls.Add(this.textBoxIRecherche);
@@ -66,22 +70,28 @@ namespace GestionMatos
             this.groupBoxIntervention.Controls.Add(this.listBoxIntervention);
             this.groupBoxIntervention.Controls.Add(this.buttonIFiltre);
             this.groupBoxIntervention.Controls.Add(this.buttonNewIntervention);
-            this.groupBoxIntervention.Location = new System.Drawing.Point(18, 18);
-            this.groupBoxIntervention.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxIntervention.Location = new System.Drawing.Point(37, 34);
             this.groupBoxIntervention.Name = "groupBoxIntervention";
-            this.groupBoxIntervention.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBoxIntervention.Size = new System.Drawing.Size(736, 454);
+            this.groupBoxIntervention.Size = new System.Drawing.Size(1472, 873);
             this.groupBoxIntervention.TabIndex = 0;
             this.groupBoxIntervention.TabStop = false;
             this.groupBoxIntervention.Text = "Interventions";
             // 
+            // buttonModifierIntervention
+            // 
+            this.buttonModifierIntervention.Location = new System.Drawing.Point(946, 766);
+            this.buttonModifierIntervention.Name = "buttonModifierIntervention";
+            this.buttonModifierIntervention.Size = new System.Drawing.Size(242, 86);
+            this.buttonModifierIntervention.TabIndex = 29;
+            this.buttonModifierIntervention.Text = "Modifier";
+            this.buttonModifierIntervention.UseVisualStyleBackColor = true;
+            // 
             // comboBoxIFiltre
             // 
             this.comboBoxIFiltre.FormattingEnabled = true;
-            this.comboBoxIFiltre.Location = new System.Drawing.Point(342, 72);
-            this.comboBoxIFiltre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxIFiltre.Location = new System.Drawing.Point(683, 138);
             this.comboBoxIFiltre.Name = "comboBoxIFiltre";
-            this.comboBoxIFiltre.Size = new System.Drawing.Size(388, 21);
+            this.comboBoxIFiltre.Size = new System.Drawing.Size(771, 33);
             this.comboBoxIFiltre.TabIndex = 31;
             this.comboBoxIFiltre.Text = "Filtres";
             // 
@@ -101,157 +111,138 @@ namespace GestionMatos
             this.groupBoxIInfos.Controls.Add(this.labelIMateriel);
             this.groupBoxIInfos.Controls.Add(this.textBoxINom);
             this.groupBoxIInfos.Controls.Add(this.labelINom);
-            this.groupBoxIInfos.Location = new System.Drawing.Point(210, 115);
-            this.groupBoxIInfos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxIInfos.Location = new System.Drawing.Point(420, 222);
             this.groupBoxIInfos.Name = "groupBoxIInfos";
-            this.groupBoxIInfos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBoxIInfos.Size = new System.Drawing.Size(517, 262);
+            this.groupBoxIInfos.Size = new System.Drawing.Size(1034, 503);
             this.groupBoxIInfos.TabIndex = 30;
             this.groupBoxIInfos.TabStop = false;
             this.groupBoxIInfos.Text = "Informations";
             // 
             // textBoxIDate
             // 
-            this.textBoxIDate.Location = new System.Drawing.Point(363, 23);
-            this.textBoxIDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxIDate.Location = new System.Drawing.Point(726, 45);
             this.textBoxIDate.Name = "textBoxIDate";
-            this.textBoxIDate.Size = new System.Drawing.Size(145, 20);
+            this.textBoxIDate.Size = new System.Drawing.Size(286, 31);
             this.textBoxIDate.TabIndex = 28;
             // 
             // labelIDate
             // 
             this.labelIDate.AutoSize = true;
-            this.labelIDate.Location = new System.Drawing.Point(257, 25);
-            this.labelIDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelIDate.Location = new System.Drawing.Point(514, 48);
             this.labelIDate.Name = "labelIDate";
-            this.labelIDate.Size = new System.Drawing.Size(97, 13);
+            this.labelIDate.Size = new System.Drawing.Size(191, 25);
             this.labelIDate.TabIndex = 27;
             this.labelIDate.Text = "Date d\'Intervention";
             // 
             // textBoxISite
             // 
-            this.textBoxISite.Location = new System.Drawing.Point(363, 154);
-            this.textBoxISite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxISite.Location = new System.Drawing.Point(726, 297);
             this.textBoxISite.Name = "textBoxISite";
-            this.textBoxISite.Size = new System.Drawing.Size(145, 20);
+            this.textBoxISite.Size = new System.Drawing.Size(286, 31);
             this.textBoxISite.TabIndex = 26;
             // 
             // labelISite
             // 
             this.labelISite.AutoSize = true;
-            this.labelISite.Location = new System.Drawing.Point(328, 156);
-            this.labelISite.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelISite.Location = new System.Drawing.Point(656, 300);
             this.labelISite.Name = "labelISite";
-            this.labelISite.Size = new System.Drawing.Size(25, 13);
+            this.labelISite.Size = new System.Drawing.Size(49, 25);
             this.labelISite.TabIndex = 25;
             this.labelISite.Text = "Site";
             // 
             // textBoxIClient
             // 
-            this.textBoxIClient.Location = new System.Drawing.Point(363, 89);
-            this.textBoxIClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxIClient.Location = new System.Drawing.Point(726, 171);
             this.textBoxIClient.Name = "textBoxIClient";
-            this.textBoxIClient.Size = new System.Drawing.Size(145, 20);
+            this.textBoxIClient.Size = new System.Drawing.Size(286, 31);
             this.textBoxIClient.TabIndex = 24;
             // 
             // labelIClient
             // 
             this.labelIClient.AutoSize = true;
-            this.labelIClient.Location = new System.Drawing.Point(319, 90);
-            this.labelIClient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelIClient.Location = new System.Drawing.Point(638, 174);
             this.labelIClient.Name = "labelIClient";
-            this.labelIClient.Size = new System.Drawing.Size(33, 13);
+            this.labelIClient.Size = new System.Drawing.Size(67, 25);
             this.labelIClient.TabIndex = 23;
             this.labelIClient.Text = "Client";
             // 
             // textBoxIType
             // 
-            this.textBoxIType.Location = new System.Drawing.Point(99, 154);
-            this.textBoxIType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxIType.Location = new System.Drawing.Point(198, 297);
             this.textBoxIType.Name = "textBoxIType";
-            this.textBoxIType.Size = new System.Drawing.Size(145, 20);
+            this.textBoxIType.Size = new System.Drawing.Size(286, 31);
             this.textBoxIType.TabIndex = 22;
             // 
             // labelIType
             // 
             this.labelIType.AutoSize = true;
-            this.labelIType.Location = new System.Drawing.Point(3, 154);
-            this.labelIType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelIType.Location = new System.Drawing.Point(6, 297);
             this.labelIType.Name = "labelIType";
-            this.labelIType.Size = new System.Drawing.Size(86, 13);
+            this.labelIType.Size = new System.Drawing.Size(173, 25);
             this.labelIType.TabIndex = 21;
             this.labelIType.Text = "Type de Materiel";
             // 
             // textBoxICommentaire
             // 
-            this.textBoxICommentaire.Location = new System.Drawing.Point(99, 219);
-            this.textBoxICommentaire.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxICommentaire.Location = new System.Drawing.Point(198, 422);
             this.textBoxICommentaire.Name = "textBoxICommentaire";
-            this.textBoxICommentaire.Size = new System.Drawing.Size(409, 20);
+            this.textBoxICommentaire.Size = new System.Drawing.Size(814, 31);
             this.textBoxICommentaire.TabIndex = 20;
             // 
             // labelICommentaire
             // 
             this.labelICommentaire.AutoSize = true;
-            this.labelICommentaire.Location = new System.Drawing.Point(20, 219);
-            this.labelICommentaire.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelICommentaire.Location = new System.Drawing.Point(40, 422);
             this.labelICommentaire.Name = "labelICommentaire";
-            this.labelICommentaire.Size = new System.Drawing.Size(68, 13);
+            this.labelICommentaire.Size = new System.Drawing.Size(139, 25);
             this.labelICommentaire.TabIndex = 19;
             this.labelICommentaire.Text = "Commentaire";
             // 
             // textBoxIMateriel
             // 
-            this.textBoxIMateriel.Location = new System.Drawing.Point(99, 89);
-            this.textBoxIMateriel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxIMateriel.Location = new System.Drawing.Point(198, 171);
             this.textBoxIMateriel.Name = "textBoxIMateriel";
-            this.textBoxIMateriel.Size = new System.Drawing.Size(145, 20);
+            this.textBoxIMateriel.Size = new System.Drawing.Size(286, 31);
             this.textBoxIMateriel.TabIndex = 18;
             // 
             // labelIMateriel
             // 
             this.labelIMateriel.AutoSize = true;
-            this.labelIMateriel.Location = new System.Drawing.Point(45, 90);
-            this.labelIMateriel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelIMateriel.Location = new System.Drawing.Point(90, 174);
             this.labelIMateriel.Name = "labelIMateriel";
-            this.labelIMateriel.Size = new System.Drawing.Size(44, 13);
+            this.labelIMateriel.Size = new System.Drawing.Size(89, 25);
             this.labelIMateriel.TabIndex = 17;
             this.labelIMateriel.Text = "Materiel";
             // 
             // textBoxINom
             // 
-            this.textBoxINom.Location = new System.Drawing.Point(99, 23);
-            this.textBoxINom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxINom.Location = new System.Drawing.Point(198, 45);
             this.textBoxINom.Name = "textBoxINom";
-            this.textBoxINom.Size = new System.Drawing.Size(145, 20);
+            this.textBoxINom.Size = new System.Drawing.Size(286, 31);
             this.textBoxINom.TabIndex = 16;
             // 
             // labelINom
             // 
             this.labelINom.AutoSize = true;
-            this.labelINom.Location = new System.Drawing.Point(62, 27);
-            this.labelINom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelINom.Location = new System.Drawing.Point(123, 51);
             this.labelINom.Name = "labelINom";
-            this.labelINom.Size = new System.Drawing.Size(29, 13);
+            this.labelINom.Size = new System.Drawing.Size(56, 25);
             this.labelINom.TabIndex = 15;
             this.labelINom.Text = "Nom";
             // 
             // textBoxIRecherche
             // 
-            this.textBoxIRecherche.Location = new System.Drawing.Point(15, 29);
-            this.textBoxIRecherche.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxIRecherche.Location = new System.Drawing.Point(142, 56);
             this.textBoxIRecherche.Name = "textBoxIRecherche";
-            this.textBoxIRecherche.Size = new System.Drawing.Size(714, 20);
+            this.textBoxIRecherche.Size = new System.Drawing.Size(1312, 31);
             this.textBoxIRecherche.TabIndex = 11;
-            this.textBoxIRecherche.Text = "Chercher...";
-            this.textBoxIRecherche.TextChanged += new System.EventHandler(this.textBoxIRecherche_TextChanged);
+            this.textBoxIRecherche.Tag = "";
             // 
             // buttonListeIClient
             // 
-            this.buttonListeIClient.Location = new System.Drawing.Point(284, 398);
-            this.buttonListeIClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonListeIClient.Location = new System.Drawing.Point(420, 766);
             this.buttonListeIClient.Name = "buttonListeIClient";
-            this.buttonListeIClient.Size = new System.Drawing.Size(121, 45);
+            this.buttonListeIClient.Size = new System.Drawing.Size(242, 86);
             this.buttonListeIClient.TabIndex = 7;
             this.buttonListeIClient.Text = "Liste Client";
             this.buttonListeIClient.UseVisualStyleBackColor = true;
@@ -259,10 +250,9 @@ namespace GestionMatos
             // 
             // buttonListeIMateriel
             // 
-            this.buttonListeIMateriel.Location = new System.Drawing.Point(442, 398);
-            this.buttonListeIMateriel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonListeIMateriel.Location = new System.Drawing.Point(683, 766);
             this.buttonListeIMateriel.Name = "buttonListeIMateriel";
-            this.buttonListeIMateriel.Size = new System.Drawing.Size(121, 45);
+            this.buttonListeIMateriel.Size = new System.Drawing.Size(242, 86);
             this.buttonListeIMateriel.TabIndex = 6;
             this.buttonListeIMateriel.Text = "Liste Materiel";
             this.buttonListeIMateriel.UseVisualStyleBackColor = true;
@@ -271,41 +261,47 @@ namespace GestionMatos
             // listBoxIntervention
             // 
             this.listBoxIntervention.FormattingEnabled = true;
-            this.listBoxIntervention.Location = new System.Drawing.Point(15, 64);
-            this.listBoxIntervention.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxIntervention.ItemHeight = 25;
+            this.listBoxIntervention.Location = new System.Drawing.Point(30, 123);
             this.listBoxIntervention.Name = "listBoxIntervention";
-            this.listBoxIntervention.Size = new System.Drawing.Size(171, 381);
+            this.listBoxIntervention.Size = new System.Drawing.Size(338, 729);
             this.listBoxIntervention.TabIndex = 5;
             // 
             // buttonIFiltre
             // 
-            this.buttonIFiltre.Location = new System.Drawing.Point(225, 64);
-            this.buttonIFiltre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonIFiltre.Location = new System.Drawing.Point(450, 123);
             this.buttonIFiltre.Name = "buttonIFiltre";
-            this.buttonIFiltre.Size = new System.Drawing.Size(104, 31);
+            this.buttonIFiltre.Size = new System.Drawing.Size(209, 60);
             this.buttonIFiltre.TabIndex = 3;
             this.buttonIFiltre.Text = "Filtre";
             this.buttonIFiltre.UseVisualStyleBackColor = true;
             // 
             // buttonNewIntervention
             // 
-            this.buttonNewIntervention.Location = new System.Drawing.Point(595, 398);
-            this.buttonNewIntervention.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonNewIntervention.Location = new System.Drawing.Point(1212, 766);
             this.buttonNewIntervention.Name = "buttonNewIntervention";
-            this.buttonNewIntervention.Size = new System.Drawing.Size(121, 45);
+            this.buttonNewIntervention.Size = new System.Drawing.Size(242, 86);
             this.buttonNewIntervention.TabIndex = 0;
             this.buttonNewIntervention.Text = "Nouvelle Intervention";
             this.buttonNewIntervention.UseVisualStyleBackColor = true;
             this.buttonNewIntervention.Click += new System.EventHandler(this.buttonNewIntervention_Click);
             // 
+            // labelIChercher
+            // 
+            this.labelIChercher.AutoSize = true;
+            this.labelIChercher.Location = new System.Drawing.Point(25, 59);
+            this.labelIChercher.Name = "labelIChercher";
+            this.labelIChercher.Size = new System.Drawing.Size(100, 25);
+            this.labelIChercher.TabIndex = 1;
+            this.labelIChercher.Text = "Chercher";
+            // 
             // FormulaireListeIntervention
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(774, 487);
+            this.ClientSize = new System.Drawing.Size(1549, 937);
             this.Controls.Add(this.groupBoxIntervention);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormulaireListeIntervention";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Liste Intervention";
@@ -343,5 +339,7 @@ namespace GestionMatos
         private System.Windows.Forms.TextBox textBoxINom;
         private System.Windows.Forms.Label labelINom;
         private System.Windows.Forms.ComboBox comboBoxIFiltre;
+        private System.Windows.Forms.Button buttonModifierIntervention;
+        private System.Windows.Forms.Label labelIChercher;
     }
 }

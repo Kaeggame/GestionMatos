@@ -44,10 +44,5 @@ namespace GestionMatos
 
             fr.ShowDialog();
         }
-
-        private void textBoxIRecherche_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
