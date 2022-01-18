@@ -30,6 +30,7 @@ namespace GestionMatos
         private void InitializeComponent()
         {
             this.groupBoxMateriel = new System.Windows.Forms.GroupBox();
+            this.labelMChercher = new System.Windows.Forms.Label();
             this.buttonModifierMateriel = new System.Windows.Forms.Button();
             this.groupBoxMInfos = new System.Windows.Forms.GroupBox();
             this.textBoxMDate = new System.Windows.Forms.TextBox();
@@ -52,7 +53,6 @@ namespace GestionMatos
             this.textBoxMRecherche = new System.Windows.Forms.TextBox();
             this.buttonMFiltre = new System.Windows.Forms.Button();
             this.buttonNewMateriel = new System.Windows.Forms.Button();
-            this.labelMChercher = new System.Windows.Forms.Label();
             this.groupBoxMateriel.SuspendLayout();
             this.groupBoxMInfos.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +75,15 @@ namespace GestionMatos
             this.groupBoxMateriel.TabStop = false;
             this.groupBoxMateriel.Text = "Materiels";
             // 
+            // labelMChercher
+            // 
+            this.labelMChercher.AutoSize = true;
+            this.labelMChercher.Location = new System.Drawing.Point(19, 56);
+            this.labelMChercher.Name = "labelMChercher";
+            this.labelMChercher.Size = new System.Drawing.Size(100, 25);
+            this.labelMChercher.TabIndex = 31;
+            this.labelMChercher.Text = "Chercher";
+            // 
             // buttonModifierMateriel
             // 
             this.buttonModifierMateriel.Location = new System.Drawing.Point(908, 769);
@@ -83,6 +92,7 @@ namespace GestionMatos
             this.buttonModifierMateriel.TabIndex = 30;
             this.buttonModifierMateriel.Text = "Modifer";
             this.buttonModifierMateriel.UseVisualStyleBackColor = true;
+            this.buttonModifierMateriel.Click += new System.EventHandler(this.buttonModifierMateriel_Click);
             // 
             // groupBoxMInfos
             // 
@@ -272,15 +282,6 @@ namespace GestionMatos
             this.buttonNewMateriel.Text = "Nouveau Materiel";
             this.buttonNewMateriel.UseVisualStyleBackColor = true;
             this.buttonNewMateriel.Click += new System.EventHandler(this.buttonNewMateriel_Click);
-            // 
-            // labelMChercher
-            // 
-            this.labelMChercher.AutoSize = true;
-            this.labelMChercher.Location = new System.Drawing.Point(19, 56);
-            this.labelMChercher.Name = "labelMChercher";
-            this.labelMChercher.Size = new System.Drawing.Size(100, 25);
-            this.labelMChercher.TabIndex = 31;
-            this.labelMChercher.Text = "Chercher";
             // 
             // FormulaireListeMateriel
             // 

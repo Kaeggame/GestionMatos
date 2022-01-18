@@ -28,5 +28,12 @@ namespace GestionMatos
 
             ChildForm.Show();
         }
+
+        private void buttonModifierMateriel_Click(object sender, EventArgs e)
+        {
+            FormulaireModifierMateriel ChildForm = new FormulaireModifierMateriel();
+
+            ChildForm.Show();
+        }
     }
 }

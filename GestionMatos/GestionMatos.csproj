@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormModifierMateriel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifierMateriel.Designer.cs">
+      <DependentUpon>FormModifierMateriel.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormModifierClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     <Compile Include="IdClient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormModifierMateriel.resx">
+      <DependentUpon>FormModifierMateriel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormModifierClient.resx">
       <DependentUpon>FormModifierClient.cs</DependentUpon>
     </EmbeddedResource>
