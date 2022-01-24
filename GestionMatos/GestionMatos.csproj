@@ -101,6 +101,7 @@
       <DependentUpon>FormListeIntervention.cs</DependentUpon>
     </Compile>
     <Compile Include="IdClient.cs" />
+    <Compile Include="IdMat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormModifierMateriel.resx">
