@@ -80,10 +80,9 @@ namespace GestionMatos
             // labelMChercher
             // 
             this.labelMChercher.AutoSize = true;
-            this.labelMChercher.Location = new System.Drawing.Point(10, 29);
-            this.labelMChercher.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelMChercher.Location = new System.Drawing.Point(19, 56);
             this.labelMChercher.Name = "labelMChercher";
-            this.labelMChercher.Size = new System.Drawing.Size(50, 13);
+            this.labelMChercher.Size = new System.Drawing.Size(100, 25);
             this.labelMChercher.TabIndex = 31;
             this.labelMChercher.Text = "Chercher";
             // 
@@ -96,6 +95,7 @@ namespace GestionMatos
             this.buttonModifierMateriel.TabIndex = 30;
             this.buttonModifierMateriel.Text = "Modifer";
             this.buttonModifierMateriel.UseVisualStyleBackColor = true;
+            this.buttonModifierMateriel.Click += new System.EventHandler(this.buttonModifierMateriel_Click);
             // 
             // groupBoxMInfos
             // 

@@ -30,6 +30,13 @@ namespace GestionMatos
             ChildForm.ShowDialog();
         }
 
+        private void buttonModifierMateriel_Click(object sender, EventArgs e)
+        {
+            FormulaireModifierMateriel ChildForm = new FormulaireModifierMateriel();
+
+            ChildForm.Show();
+        }
+
         private void FormulaireListeMateriel_Load(object sender, EventArgs e)
         {
             string s = "select * from Materiel";
@@ -89,6 +96,5 @@ namespace GestionMatos
             textBoxMDescription.Text = sqr["Description"].ToString();
             cn.Close();
         }
-
     }
 }

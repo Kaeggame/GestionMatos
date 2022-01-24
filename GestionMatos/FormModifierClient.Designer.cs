@@ -38,11 +38,15 @@ namespace GestionMatos
             this.labelCModifierMail = new System.Windows.Forms.Label();
             this.labelCModifierTel = new System.Windows.Forms.Label();
             this.labelCModifierNom = new System.Windows.Forms.Label();
+            this.textBoxCModifierDescription = new System.Windows.Forms.TextBox();
+            this.labelCModifierDescription = new System.Windows.Forms.Label();
             this.groupBoxModifierClient.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxModifierClient
             // 
+            this.groupBoxModifierClient.Controls.Add(this.textBoxCModifierDescription);
+            this.groupBoxModifierClient.Controls.Add(this.labelCModifierDescription);
             this.groupBoxModifierClient.Controls.Add(this.buttonCModifier);
             this.groupBoxModifierClient.Controls.Add(this.buttonCModifierAnnuler);
             this.groupBoxModifierClient.Controls.Add(this.textBoxCModifierTel);
@@ -125,13 +129,29 @@ namespace GestionMatos
             this.labelCModifierNom.TabIndex = 0;
             this.labelCModifierNom.Text = "Nom";
             // 
-            // FormModifierClient
+            // textBoxCModifierDescription
+            // 
+            this.textBoxCModifierDescription.Location = new System.Drawing.Point(998, 220);
+            this.textBoxCModifierDescription.Name = "textBoxCModifierDescription";
+            this.textBoxCModifierDescription.Size = new System.Drawing.Size(260, 31);
+            this.textBoxCModifierDescription.TabIndex = 17;
+            // 
+            // labelCModifierDescription
+            // 
+            this.labelCModifierDescription.AutoSize = true;
+            this.labelCModifierDescription.Location = new System.Drawing.Point(823, 220);
+            this.labelCModifierDescription.Name = "labelCModifierDescription";
+            this.labelCModifierDescription.Size = new System.Drawing.Size(120, 25);
+            this.labelCModifierDescription.TabIndex = 16;
+            this.labelCModifierDescription.Text = "Description";
+            // 
+            // FormulaireModifierClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1546, 767);
             this.Controls.Add(this.groupBoxModifierClient);
-            this.Name = "FormModifierClient";
+            this.Name = "FormulaireModifierClient";
             this.Text = "Modifier Client";
             this.groupBoxModifierClient.ResumeLayout(false);
             this.groupBoxModifierClient.PerformLayout();
@@ -150,5 +170,7 @@ namespace GestionMatos
         private System.Windows.Forms.Label labelCModifierMail;
         private System.Windows.Forms.Label labelCModifierTel;
         private System.Windows.Forms.Label labelCModifierNom;
+        private System.Windows.Forms.TextBox textBoxCModifierDescription;
+        private System.Windows.Forms.Label labelCModifierDescription;
     }
 }

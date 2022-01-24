@@ -38,11 +38,15 @@ namespace GestionMatos
             this.labelCMail = new System.Windows.Forms.Label();
             this.labelCTel = new System.Windows.Forms.Label();
             this.labelCNom = new System.Windows.Forms.Label();
+            this.labelCDescription = new System.Windows.Forms.Label();
+            this.textBoxCDescription = new System.Windows.Forms.TextBox();
             this.groupBoxNewClient.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxNewClient
             // 
+            this.groupBoxNewClient.Controls.Add(this.textBoxCDescription);
+            this.groupBoxNewClient.Controls.Add(this.labelCDescription);
             this.groupBoxNewClient.Controls.Add(this.buttonCCreer);
             this.groupBoxNewClient.Controls.Add(this.buttonCAnnuler);
             this.groupBoxNewClient.Controls.Add(this.textBoxCTel);
@@ -125,6 +129,22 @@ namespace GestionMatos
             this.labelCNom.TabIndex = 0;
             this.labelCNom.Text = "Nom";
             // 
+            // labelCDescription
+            // 
+            this.labelCDescription.AutoSize = true;
+            this.labelCDescription.Location = new System.Drawing.Point(823, 220);
+            this.labelCDescription.Name = "labelCDescription";
+            this.labelCDescription.Size = new System.Drawing.Size(120, 25);
+            this.labelCDescription.TabIndex = 14;
+            this.labelCDescription.Text = "Description";
+            // 
+            // textBoxCDescription
+            // 
+            this.textBoxCDescription.Location = new System.Drawing.Point(998, 220);
+            this.textBoxCDescription.Name = "textBoxCDescription";
+            this.textBoxCDescription.Size = new System.Drawing.Size(260, 31);
+            this.textBoxCDescription.TabIndex = 15;
+            // 
             // FormulaireNewClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -151,5 +171,7 @@ namespace GestionMatos
         private System.Windows.Forms.Label labelCMail;
         private System.Windows.Forms.Label labelCTel;
         private System.Windows.Forms.Label labelCNom;
+        private System.Windows.Forms.TextBox textBoxCDescription;
+        private System.Windows.Forms.Label labelCDescription;
     }
 }
