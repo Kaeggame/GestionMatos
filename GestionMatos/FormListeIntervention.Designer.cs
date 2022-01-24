@@ -30,6 +30,7 @@ namespace GestionMatos
         private void InitializeComponent()
         {
             this.groupBoxIntervention = new System.Windows.Forms.GroupBox();
+            this.labelIChercher = new System.Windows.Forms.Label();
             this.buttonModifierIntervention = new System.Windows.Forms.Button();
             this.comboBoxIFiltre = new System.Windows.Forms.ComboBox();
             this.groupBoxIInfos = new System.Windows.Forms.GroupBox();
@@ -53,7 +54,6 @@ namespace GestionMatos
             this.listBoxIntervention = new System.Windows.Forms.ListBox();
             this.buttonIFiltre = new System.Windows.Forms.Button();
             this.buttonNewIntervention = new System.Windows.Forms.Button();
-            this.labelIChercher = new System.Windows.Forms.Label();
             this.groupBoxIntervention.SuspendLayout();
             this.groupBoxIInfos.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +77,15 @@ namespace GestionMatos
             this.groupBoxIntervention.TabStop = false;
             this.groupBoxIntervention.Text = "Interventions";
             // 
+            // labelIChercher
+            // 
+            this.labelIChercher.AutoSize = true;
+            this.labelIChercher.Location = new System.Drawing.Point(25, 59);
+            this.labelIChercher.Name = "labelIChercher";
+            this.labelIChercher.Size = new System.Drawing.Size(100, 25);
+            this.labelIChercher.TabIndex = 1;
+            this.labelIChercher.Text = "Chercher";
+            // 
             // buttonModifierIntervention
             // 
             this.buttonModifierIntervention.Location = new System.Drawing.Point(946, 766);
@@ -85,6 +94,7 @@ namespace GestionMatos
             this.buttonModifierIntervention.TabIndex = 29;
             this.buttonModifierIntervention.Text = "Modifier";
             this.buttonModifierIntervention.UseVisualStyleBackColor = true;
+            this.buttonModifierIntervention.Click += new System.EventHandler(this.buttonModifierIntervention_Click);
             // 
             // comboBoxIFiltre
             // 
@@ -122,6 +132,7 @@ namespace GestionMatos
             // 
             this.textBoxIDate.Location = new System.Drawing.Point(726, 45);
             this.textBoxIDate.Name = "textBoxIDate";
+            this.textBoxIDate.ReadOnly = true;
             this.textBoxIDate.Size = new System.Drawing.Size(286, 31);
             this.textBoxIDate.TabIndex = 28;
             // 
@@ -138,6 +149,7 @@ namespace GestionMatos
             // 
             this.textBoxISite.Location = new System.Drawing.Point(726, 297);
             this.textBoxISite.Name = "textBoxISite";
+            this.textBoxISite.ReadOnly = true;
             this.textBoxISite.Size = new System.Drawing.Size(286, 31);
             this.textBoxISite.TabIndex = 26;
             // 
@@ -154,6 +166,7 @@ namespace GestionMatos
             // 
             this.textBoxIClient.Location = new System.Drawing.Point(726, 171);
             this.textBoxIClient.Name = "textBoxIClient";
+            this.textBoxIClient.ReadOnly = true;
             this.textBoxIClient.Size = new System.Drawing.Size(286, 31);
             this.textBoxIClient.TabIndex = 24;
             // 
@@ -170,6 +183,7 @@ namespace GestionMatos
             // 
             this.textBoxIType.Location = new System.Drawing.Point(198, 297);
             this.textBoxIType.Name = "textBoxIType";
+            this.textBoxIType.ReadOnly = true;
             this.textBoxIType.Size = new System.Drawing.Size(286, 31);
             this.textBoxIType.TabIndex = 22;
             // 
@@ -186,6 +200,7 @@ namespace GestionMatos
             // 
             this.textBoxICommentaire.Location = new System.Drawing.Point(198, 422);
             this.textBoxICommentaire.Name = "textBoxICommentaire";
+            this.textBoxICommentaire.ReadOnly = true;
             this.textBoxICommentaire.Size = new System.Drawing.Size(814, 31);
             this.textBoxICommentaire.TabIndex = 20;
             // 
@@ -202,6 +217,7 @@ namespace GestionMatos
             // 
             this.textBoxIMateriel.Location = new System.Drawing.Point(198, 171);
             this.textBoxIMateriel.Name = "textBoxIMateriel";
+            this.textBoxIMateriel.ReadOnly = true;
             this.textBoxIMateriel.Size = new System.Drawing.Size(286, 31);
             this.textBoxIMateriel.TabIndex = 18;
             // 
@@ -218,6 +234,7 @@ namespace GestionMatos
             // 
             this.textBoxINom.Location = new System.Drawing.Point(198, 45);
             this.textBoxINom.Name = "textBoxINom";
+            this.textBoxINom.ReadOnly = true;
             this.textBoxINom.Size = new System.Drawing.Size(286, 31);
             this.textBoxINom.TabIndex = 16;
             // 
@@ -285,15 +302,6 @@ namespace GestionMatos
             this.buttonNewIntervention.Text = "Nouvelle Intervention";
             this.buttonNewIntervention.UseVisualStyleBackColor = true;
             this.buttonNewIntervention.Click += new System.EventHandler(this.buttonNewIntervention_Click);
-            // 
-            // labelIChercher
-            // 
-            this.labelIChercher.AutoSize = true;
-            this.labelIChercher.Location = new System.Drawing.Point(25, 59);
-            this.labelIChercher.Name = "labelIChercher";
-            this.labelIChercher.Size = new System.Drawing.Size(100, 25);
-            this.labelIChercher.TabIndex = 1;
-            this.labelIChercher.Text = "Chercher";
             // 
             // FormulaireListeIntervention
             // 

@@ -34,7 +34,7 @@ namespace GestionMatos
         {
             FormulaireModifierMateriel ChildForm = new FormulaireModifierMateriel();
 
-            ChildForm.Show();
+            ChildForm.ShowDialog();
         }
 
         private void FormulaireListeMateriel_Load(object sender, EventArgs e)

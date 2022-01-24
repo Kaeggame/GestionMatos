@@ -44,5 +44,12 @@ namespace GestionMatos
 
             fr.ShowDialog();
         }
+
+        private void buttonModifierIntervention_Click(object sender, EventArgs e)
+        {
+            FormulaireModifierIntervention ChildForm = new FormulaireModifierIntervention();
+
+            ChildForm.ShowDialog();
+        }
     }
 }
