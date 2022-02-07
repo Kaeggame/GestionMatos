@@ -96,5 +96,12 @@ namespace GestionMatos
             textBoxMDescription.Text = sqr["Description"].ToString();
             cn.Close();
         }
+
+        private void textBoxMRecherche_KeyUp(object sender, KeyEventArgs e)
+        {
+            string str = textBoxMRecherche.Text;
+            string sql = "select * from Materiel where Nom like '" + str + "%'";
+            Requete(sql);
+        }
     }
 }

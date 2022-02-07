@@ -51,5 +51,10 @@ namespace GestionMatos
 
             ChildForm.ShowDialog();
         }
+
+        private void textBoxIRecherche_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }

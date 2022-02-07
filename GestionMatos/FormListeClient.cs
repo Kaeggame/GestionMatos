@@ -89,5 +89,12 @@ namespace GestionMatos
 
             ChildForm.ShowDialog();
         }
+
+        private void textBoxCRecherche_KeyUp(object sender, KeyEventArgs e)
+        {
+            string str = textBoxCRecherche.Text;
+            string sql = "select * from Client where NomClient like '" + str + "%'";
+            Requete(sql);
+        }
     }
 }

@@ -30,6 +30,8 @@ namespace GestionMatos
         private void InitializeComponent()
         {
             this.groupBoxClient = new System.Windows.Forms.GroupBox();
+            this.buttonModifierClient = new System.Windows.Forms.Button();
+            this.labelCChercher = new System.Windows.Forms.Label();
             this.groupBoxMInfos = new System.Windows.Forms.GroupBox();
             this.textBoxCTel = new System.Windows.Forms.TextBox();
             this.labelCTel = new System.Windows.Forms.Label();
@@ -45,8 +47,6 @@ namespace GestionMatos
             this.listBoxClient = new System.Windows.Forms.ListBox();
             this.buttonCFiltre = new System.Windows.Forms.Button();
             this.buttonNewClient = new System.Windows.Forms.Button();
-            this.labelCChercher = new System.Windows.Forms.Label();
-            this.buttonModifierClient = new System.Windows.Forms.Button();
             this.groupBoxClient.SuspendLayout();
             this.groupBoxMInfos.SuspendLayout();
             this.SuspendLayout();
@@ -62,14 +62,35 @@ namespace GestionMatos
             this.groupBoxClient.Controls.Add(this.listBoxClient);
             this.groupBoxClient.Controls.Add(this.buttonCFiltre);
             this.groupBoxClient.Controls.Add(this.buttonNewClient);
-            this.groupBoxClient.Location = new System.Drawing.Point(32, 35);
-            this.groupBoxClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxClient.Location = new System.Drawing.Point(16, 18);
+            this.groupBoxClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxClient.Name = "groupBoxClient";
-            this.groupBoxClient.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBoxClient.Size = new System.Drawing.Size(1478, 875);
+            this.groupBoxClient.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxClient.Size = new System.Drawing.Size(739, 455);
             this.groupBoxClient.TabIndex = 1;
             this.groupBoxClient.TabStop = false;
             this.groupBoxClient.Text = "Clients";
+            // 
+            // buttonModifierClient
+            // 
+            this.buttonModifierClient.Location = new System.Drawing.Point(456, 400);
+            this.buttonModifierClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonModifierClient.Name = "buttonModifierClient";
+            this.buttonModifierClient.Size = new System.Drawing.Size(121, 45);
+            this.buttonModifierClient.TabIndex = 32;
+            this.buttonModifierClient.Text = "Modifer";
+            this.buttonModifierClient.UseVisualStyleBackColor = true;
+            this.buttonModifierClient.Click += new System.EventHandler(this.buttonModifierClient_Click);
+            // 
+            // labelCChercher
+            // 
+            this.labelCChercher.AutoSize = true;
+            this.labelCChercher.Location = new System.Drawing.Point(8, 27);
+            this.labelCChercher.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCChercher.Name = "labelCChercher";
+            this.labelCChercher.Size = new System.Drawing.Size(50, 13);
+            this.labelCChercher.TabIndex = 31;
+            this.labelCChercher.Text = "Chercher";
             // 
             // groupBoxMInfos
             // 
@@ -81,115 +102,116 @@ namespace GestionMatos
             this.groupBoxMInfos.Controls.Add(this.labelCMail);
             this.groupBoxMInfos.Controls.Add(this.textBoxCNom);
             this.groupBoxMInfos.Controls.Add(this.labelCNom);
-            this.groupBoxMInfos.Location = new System.Drawing.Point(412, 208);
-            this.groupBoxMInfos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxMInfos.Location = new System.Drawing.Point(206, 108);
+            this.groupBoxMInfos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxMInfos.Name = "groupBoxMInfos";
-            this.groupBoxMInfos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBoxMInfos.Size = new System.Drawing.Size(1034, 504);
+            this.groupBoxMInfos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxMInfos.Size = new System.Drawing.Size(517, 262);
             this.groupBoxMInfos.TabIndex = 30;
             this.groupBoxMInfos.TabStop = false;
             this.groupBoxMInfos.Text = "Informations";
             // 
             // textBoxCTel
             // 
-            this.textBoxCTel.Location = new System.Drawing.Point(198, 300);
-            this.textBoxCTel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCTel.Location = new System.Drawing.Point(99, 156);
+            this.textBoxCTel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCTel.Name = "textBoxCTel";
             this.textBoxCTel.ReadOnly = true;
-            this.textBoxCTel.Size = new System.Drawing.Size(286, 31);
+            this.textBoxCTel.Size = new System.Drawing.Size(145, 20);
             this.textBoxCTel.TabIndex = 22;
             // 
             // labelCTel
             // 
             this.labelCTel.AutoSize = true;
-            this.labelCTel.Location = new System.Drawing.Point(6, 300);
-            this.labelCTel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCTel.Location = new System.Drawing.Point(3, 156);
+            this.labelCTel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCTel.Name = "labelCTel";
-            this.labelCTel.Size = new System.Drawing.Size(173, 25);
+            this.labelCTel.Size = new System.Drawing.Size(88, 13);
             this.labelCTel.TabIndex = 21;
             this.labelCTel.Text = "N° de Téléphone";
             // 
             // textBoxCDescription
             // 
-            this.textBoxCDescription.Location = new System.Drawing.Point(198, 421);
-            this.textBoxCDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCDescription.Location = new System.Drawing.Point(99, 219);
+            this.textBoxCDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCDescription.Name = "textBoxCDescription";
             this.textBoxCDescription.ReadOnly = true;
-            this.textBoxCDescription.Size = new System.Drawing.Size(806, 31);
+            this.textBoxCDescription.Size = new System.Drawing.Size(405, 20);
             this.textBoxCDescription.TabIndex = 20;
             // 
             // labelCDescription
             // 
             this.labelCDescription.AutoSize = true;
-            this.labelCDescription.Location = new System.Drawing.Point(60, 421);
-            this.labelCDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCDescription.Location = new System.Drawing.Point(30, 219);
+            this.labelCDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCDescription.Name = "labelCDescription";
-            this.labelCDescription.Size = new System.Drawing.Size(120, 25);
+            this.labelCDescription.Size = new System.Drawing.Size(60, 13);
             this.labelCDescription.TabIndex = 19;
             this.labelCDescription.Text = "Description";
             // 
             // textBoxCMail
             // 
-            this.textBoxCMail.Location = new System.Drawing.Point(198, 167);
-            this.textBoxCMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCMail.Location = new System.Drawing.Point(99, 87);
+            this.textBoxCMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCMail.Name = "textBoxCMail";
             this.textBoxCMail.ReadOnly = true;
-            this.textBoxCMail.Size = new System.Drawing.Size(286, 31);
+            this.textBoxCMail.Size = new System.Drawing.Size(145, 20);
             this.textBoxCMail.TabIndex = 18;
             // 
             // labelCMail
             // 
             this.labelCMail.AutoSize = true;
-            this.labelCMail.Location = new System.Drawing.Point(116, 171);
-            this.labelCMail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCMail.Location = new System.Drawing.Point(58, 89);
+            this.labelCMail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCMail.Name = "labelCMail";
-            this.labelCMail.Size = new System.Drawing.Size(64, 25);
+            this.labelCMail.Size = new System.Drawing.Size(32, 13);
             this.labelCMail.TabIndex = 17;
             this.labelCMail.Text = "eMail";
             // 
             // textBoxCNom
             // 
-            this.textBoxCNom.Location = new System.Drawing.Point(198, 44);
-            this.textBoxCNom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCNom.Location = new System.Drawing.Point(99, 23);
+            this.textBoxCNom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCNom.Name = "textBoxCNom";
             this.textBoxCNom.ReadOnly = true;
-            this.textBoxCNom.Size = new System.Drawing.Size(286, 31);
+            this.textBoxCNom.Size = new System.Drawing.Size(145, 20);
             this.textBoxCNom.TabIndex = 16;
             // 
             // labelCNom
             // 
             this.labelCNom.AutoSize = true;
-            this.labelCNom.Location = new System.Drawing.Point(124, 52);
-            this.labelCNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCNom.Location = new System.Drawing.Point(62, 27);
+            this.labelCNom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCNom.Name = "labelCNom";
-            this.labelCNom.Size = new System.Drawing.Size(56, 25);
+            this.labelCNom.Size = new System.Drawing.Size(29, 13);
             this.labelCNom.TabIndex = 15;
             this.labelCNom.Text = "Nom";
             // 
             // comboBoxCFiltre
             // 
             this.comboBoxCFiltre.FormattingEnabled = true;
-            this.comboBoxCFiltre.Location = new System.Drawing.Point(672, 117);
-            this.comboBoxCFiltre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxCFiltre.Location = new System.Drawing.Point(336, 61);
+            this.comboBoxCFiltre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxCFiltre.Name = "comboBoxCFiltre";
-            this.comboBoxCFiltre.Size = new System.Drawing.Size(772, 33);
+            this.comboBoxCFiltre.Size = new System.Drawing.Size(388, 21);
             this.comboBoxCFiltre.TabIndex = 15;
             this.comboBoxCFiltre.Text = "Filtres";
             // 
             // textBoxCRecherche
             // 
-            this.textBoxCRecherche.Location = new System.Drawing.Point(122, 48);
-            this.textBoxCRecherche.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCRecherche.Location = new System.Drawing.Point(61, 25);
+            this.textBoxCRecherche.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCRecherche.Name = "textBoxCRecherche";
-            this.textBoxCRecherche.Size = new System.Drawing.Size(1322, 31);
+            this.textBoxCRecherche.Size = new System.Drawing.Size(663, 20);
             this.textBoxCRecherche.TabIndex = 13;
+            this.textBoxCRecherche.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxCRecherche_KeyUp);
             // 
             // buttonListeCRetour
             // 
-            this.buttonListeCRetour.Location = new System.Drawing.Point(610, 769);
-            this.buttonListeCRetour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonListeCRetour.Location = new System.Drawing.Point(305, 400);
+            this.buttonListeCRetour.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonListeCRetour.Name = "buttonListeCRetour";
-            this.buttonListeCRetour.Size = new System.Drawing.Size(242, 87);
+            this.buttonListeCRetour.Size = new System.Drawing.Size(121, 45);
             this.buttonListeCRetour.TabIndex = 12;
             this.buttonListeCRetour.Text = "Retour";
             this.buttonListeCRetour.UseVisualStyleBackColor = true;
@@ -198,62 +220,42 @@ namespace GestionMatos
             // listBoxClient
             // 
             this.listBoxClient.FormattingEnabled = true;
-            this.listBoxClient.ItemHeight = 25;
-            this.listBoxClient.Location = new System.Drawing.Point(20, 102);
-            this.listBoxClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxClient.Location = new System.Drawing.Point(10, 53);
+            this.listBoxClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxClient.Name = "listBoxClient";
-            this.listBoxClient.Size = new System.Drawing.Size(352, 754);
+            this.listBoxClient.Size = new System.Drawing.Size(178, 394);
             this.listBoxClient.TabIndex = 11;
             this.listBoxClient.SelectedIndexChanged += new System.EventHandler(this.listBoxClient_SelectedIndexChanged);
             // 
             // buttonCFiltre
             // 
-            this.buttonCFiltre.Location = new System.Drawing.Point(440, 102);
-            this.buttonCFiltre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCFiltre.Location = new System.Drawing.Point(220, 53);
+            this.buttonCFiltre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCFiltre.Name = "buttonCFiltre";
-            this.buttonCFiltre.Size = new System.Drawing.Size(208, 60);
+            this.buttonCFiltre.Size = new System.Drawing.Size(104, 31);
             this.buttonCFiltre.TabIndex = 9;
             this.buttonCFiltre.Text = "Filtre";
             this.buttonCFiltre.UseVisualStyleBackColor = true;
             // 
             // buttonNewClient
             // 
-            this.buttonNewClient.Location = new System.Drawing.Point(1204, 769);
-            this.buttonNewClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonNewClient.Location = new System.Drawing.Point(602, 400);
+            this.buttonNewClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonNewClient.Name = "buttonNewClient";
-            this.buttonNewClient.Size = new System.Drawing.Size(242, 87);
+            this.buttonNewClient.Size = new System.Drawing.Size(121, 45);
             this.buttonNewClient.TabIndex = 8;
             this.buttonNewClient.Text = "Nouveau Client";
             this.buttonNewClient.UseVisualStyleBackColor = true;
             this.buttonNewClient.Click += new System.EventHandler(this.buttonNewClient_Click);
             // 
-            // labelCChercher
-            // 
-            this.labelCChercher.AutoSize = true;
-            this.labelCChercher.Location = new System.Drawing.Point(15, 51);
-            this.labelCChercher.Name = "labelCChercher";
-            this.labelCChercher.Size = new System.Drawing.Size(100, 25);
-            this.labelCChercher.TabIndex = 31;
-            this.labelCChercher.Text = "Chercher";
-            // 
-            // buttonModifierClient
-            // 
-            this.buttonModifierClient.Location = new System.Drawing.Point(911, 769);
-            this.buttonModifierClient.Name = "buttonModifierClient";
-            this.buttonModifierClient.Size = new System.Drawing.Size(242, 86);
-            this.buttonModifierClient.TabIndex = 32;
-            this.buttonModifierClient.Text = "Modifer";
-            this.buttonModifierClient.UseVisualStyleBackColor = true;
-            this.buttonModifierClient.Click += new System.EventHandler(this.buttonModifierClient_Click);
-            // 
             // FormulaireListeClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1546, 937);
+            this.ClientSize = new System.Drawing.Size(773, 487);
             this.Controls.Add(this.groupBoxClient);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormulaireListeClient";
             this.Text = " ";
             this.Load += new System.EventHandler(this.FormulaireListeClient_Load);
