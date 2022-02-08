@@ -32,6 +32,8 @@ namespace GestionMatos
 
         private void FormulaireListeClient_Load(object sender, EventArgs e)
         {
+            buttonModifierClient.Enabled = false;
+
             string s = "select * from Client";
 
             Requete(s);
@@ -67,6 +69,8 @@ namespace GestionMatos
 
         private void listBoxClient_SelectedIndexChanged(object sender, EventArgs e)
         {
+            buttonModifierClient.Enabled = true;
+
             IdClient truc = (IdClient)(listBoxClient.SelectedItem);
             int id = truc.id;
 
