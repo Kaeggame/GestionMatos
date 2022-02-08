@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace GestionMatos
 {
@@ -54,7 +55,37 @@ namespace GestionMatos
 
         private void textBoxIRecherche_KeyUp(object sender, KeyEventArgs e)
         {
+            string str = textBoxIRecherche.Text;
+            string sql = "select * from Intervention where NomInter like '" + str + "%'";
+            Requete(sql);
+        }
 
+        private void Requete(string strsql)
+        {
+            listBoxIntervention.Items.Clear();
+
+            string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
+
+            SqlConnection cn = new SqlConnection(cnsql);
+            cn.Open();
+
+            SqlCommand com = new SqlCommand(strsql, cn);
+
+            SqlDataReader sqr = com.ExecuteReader();
+
+            while (sqr.Read() != false)
+            {
+                int id = Convert.ToInt32(sqr["InterID"]);
+                string lenominter = sqr["NomInter"].ToString();
+                string lainterdate = sqr["InterDate"].ToString();
+                string lecommentaire = sqr["Commentaire"].ToString();
+                IdInter Inter = new IdInter(id, lenominter, lainterdate, lecommentaire);
+
+                listBoxIntervention.Items.Add(Inter);
+            }
+
+            sqr.Close();
+            cn.Close();
         }
     }
 }
