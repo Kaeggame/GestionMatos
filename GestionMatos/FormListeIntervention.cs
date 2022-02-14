@@ -90,5 +90,22 @@ namespace GestionMatos
             sqr.Close();
             cn.Close();
         }
+        private void listBoxIntervention_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            IdInter truc = (IdInter)(listBoxIntervention.SelectedItem);
+            int id = truc.id;
+
+            string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
+            SqlConnection cn = new SqlConnection(cnsql);
+            cn.Open();
+            string sql = "select * from Intervention where InterID = " + id.ToString();
+            SqlCommand com = new SqlCommand(sql, cn);
+            SqlDataReader sqr = com.ExecuteReader();
+            sqr.Read();
+            textBoxINom.Text = sqr["InterNom"].ToString();
+            textBoxIDate.Text = sqr["InterDate"].ToString();
+            textBoxICommentaire.Text = sqr["Commentaire"].ToString();
+            cn.Close();
+        }
     }
 }
