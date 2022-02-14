@@ -82,6 +82,8 @@ namespace GestionMatos
             buttonModifierMateriel.Enabled = true;
 
             IdMat truc = (IdMat)(listBoxMateriel.SelectedItem);
+            if (truc == null)
+                return;
             int id = truc.id;
 
             string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";

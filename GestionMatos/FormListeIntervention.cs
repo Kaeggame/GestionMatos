@@ -97,6 +97,8 @@ namespace GestionMatos
             buttonModifierIntervention.Enabled = true;
 
             IdInter truc = (IdInter)(listBoxIntervention.SelectedItem);
+            if (truc == null)
+                return;
             int id = truc.id;
 
             string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";

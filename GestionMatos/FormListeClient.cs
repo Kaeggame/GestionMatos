@@ -72,6 +72,8 @@ namespace GestionMatos
             buttonModifierClient.Enabled = true;
 
             IdClient truc = (IdClient)(listBoxClient.SelectedItem);
+            if (truc == null)
+                return;
             int id = truc.id;
 
             string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
