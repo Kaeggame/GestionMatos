@@ -10,7 +10,7 @@
 
 
 
-        public IdInter(int leid, string lainterdate, string lenominter, string lecommentaire)
+        public IdInter(int leid, string lenominter, string lainterdate, string lecommentaire)
         {
             this.id = leid;
             this.nominter = lenominter;

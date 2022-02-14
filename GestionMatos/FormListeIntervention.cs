@@ -44,6 +44,9 @@ namespace GestionMatos
             FormConnexion fr = new FormConnexion();
 
             fr.ShowDialog();
+            string s = "select * from Intervention";
+
+            Requete(s);
         }
 
         private void buttonModifierIntervention_Click(object sender, EventArgs e)
@@ -56,7 +59,7 @@ namespace GestionMatos
         private void textBoxIRecherche_KeyUp(object sender, KeyEventArgs e)
         {
             string str = textBoxIRecherche.Text;
-            string sql = "select * from Intervention where NomInter like '" + str + "%'";
+            string sql = "select * from Intervention where InterNom like '" + str + "%'";
             Requete(sql);
         }
 
@@ -76,7 +79,7 @@ namespace GestionMatos
             while (sqr.Read() != false)
             {
                 int id = Convert.ToInt32(sqr["InterID"]);
-                string lenominter = sqr["NomInter"].ToString();
+                string lenominter = sqr["InterNom"].ToString();
                 string lainterdate = sqr["InterDate"].ToString();
                 string lecommentaire = sqr["Commentaire"].ToString();
                 IdInter Inter = new IdInter(id, lenominter, lainterdate, lecommentaire);
