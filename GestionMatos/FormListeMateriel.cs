@@ -39,6 +39,8 @@ namespace GestionMatos
 
         private void FormulaireListeMateriel_Load(object sender, EventArgs e)
         {
+            buttonModifierMateriel.Enabled = false;
+
             string s = "select * from Materiel";
 
             Requete(s);
@@ -77,6 +79,8 @@ namespace GestionMatos
 
         private void listBoxMateriel_SelectedIndexChanged(object sender, EventArgs e)
         {
+            buttonModifierMateriel.Enabled = true;
+
             IdMat truc = (IdMat)(listBoxMateriel.SelectedItem);
             int id = truc.id;
 

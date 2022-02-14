@@ -43,6 +43,8 @@ namespace GestionMatos
         {
             FormConnexion fr = new FormConnexion();
 
+            buttonModifierIntervention.Enabled = false;
+
             fr.ShowDialog();
             string s = "select * from Intervention";
 
@@ -92,6 +94,8 @@ namespace GestionMatos
         }
         private void listBoxIntervention_SelectedIndexChanged(object sender, EventArgs e)
         {
+            buttonModifierIntervention.Enabled = true;
+
             IdInter truc = (IdInter)(listBoxIntervention.SelectedItem);
             int id = truc.id;
 
