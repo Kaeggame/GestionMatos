@@ -55,6 +55,14 @@ namespace GestionMatos
         {
             FormulaireModifierIntervention ChildForm = new FormulaireModifierIntervention();
 
+            ChildForm.NomIntervention = textBoxINom.Text;
+            ChildForm.CommentaireIntervention = textBoxICommentaire.Text;
+            //ChildForm.ClientIntervention = textBoxIClient .Text;
+            //ChildForm.SiteIntervention = textBoxISite.Text;
+            //ChildForm.MaterielIntervention = textBoxIMateriel.Text;
+            //ChildForm.TypeMaterielIntervention = textBoxIType.Text;
+            ChildForm.DateIntervention = textBoxIDate.Text;
+
             ChildForm.ShowDialog();
         }
 

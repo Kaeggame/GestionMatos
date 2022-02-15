@@ -205,14 +205,15 @@ namespace GestionMatos
             this.labelMModifierDate.TabIndex = 0;
             this.labelMModifierDate.Text = "Date d\'Instalation";
             // 
-            // FormModifierMateriel
+            // FormulaireModifierMateriel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1553, 768);
             this.Controls.Add(this.groupBoxModifierMateriel);
-            this.Name = "FormModifierMateriel";
+            this.Name = "FormulaireModifierMateriel";
             this.Text = "Modifier Materiel";
+            this.Load += new System.EventHandler(this.FormulaireModifierMateriel_Load);
             this.groupBoxModifierMateriel.ResumeLayout(false);
             this.groupBoxModifierMateriel.PerformLayout();
             this.ResumeLayout(false);

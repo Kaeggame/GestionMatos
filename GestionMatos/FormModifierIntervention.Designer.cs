@@ -213,6 +213,7 @@ namespace GestionMatos
             this.Controls.Add(this.groupBoxModifierIntervention);
             this.Name = "FormulaireModifierIntervention";
             this.Text = "Modifier Intervention";
+            this.Load += new System.EventHandler(this.FormulaireModifierIntervention_Load);
             this.groupBoxModifierIntervention.ResumeLayout(false);
             this.groupBoxModifierIntervention.PerformLayout();
             this.ResumeLayout(false);

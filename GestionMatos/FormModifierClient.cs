@@ -12,6 +12,12 @@ namespace GestionMatos
 {
     public partial class FormulaireModifierClient : Form
     {
+        public string NomClient;
+        public string MailClient;
+        public string TelClient;
+        public string DescriptionClient;
+
+
         public FormulaireModifierClient()
         {
             InitializeComponent();
@@ -20,6 +26,15 @@ namespace GestionMatos
         private void buttonCModifierAnnuler_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormulaireModifierClient_Load(object sender, EventArgs e)
+        {
+            this.textBoxCModifierNom.Text = this.NomClient;
+            this.textBoxCModifierMail.Text = this.MailClient;
+            this.textBoxCModifierTel.Text = this.TelClient;
+            this.textBoxCModifierDescription.Text = this.DescriptionClient;
+
         }
     }
 }

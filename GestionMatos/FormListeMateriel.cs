@@ -34,6 +34,13 @@ namespace GestionMatos
         {
             FormulaireModifierMateriel ChildForm = new FormulaireModifierMateriel();
 
+            ChildForm.DateMateriel = textBoxMDate.Text;
+            ChildForm.CommentaireMateriel = textBoxMDescription.Text;
+            ChildForm.ClientMateriel = textBoxMClient.Text;
+            ChildForm.NomMateriel = textBoxMNom.Text;
+            ChildForm.TypeMateriel = textBoxMType.Text;
+            ChildForm.NserieMateriel = textBoxMNserie.Text;
+
             ChildForm.ShowDialog();
         }
 

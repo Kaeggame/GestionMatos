@@ -12,6 +12,14 @@ namespace GestionMatos
 {
     public partial class FormulaireModifierIntervention : Form
     {
+        public string NomIntervention;
+        public string CommentaireIntervention;
+        //public string ClientIntervention;
+        //public string SiteIntervention;
+        //public string MaterielIntervention;
+        //public string TypeMaterielIntervention;
+        public string DateIntervention;
+
         public FormulaireModifierIntervention()
         {
             InitializeComponent();
@@ -20,6 +28,17 @@ namespace GestionMatos
         private void buttonIModifierAnnuler_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormulaireModifierIntervention_Load(object sender, EventArgs e)
+        {
+            this.textBoxIModifierNom.Text = this.NomIntervention;
+            this.textBoxIModifierCommentaire.Text = this.CommentaireIntervention;
+            //this.textBoxIModifierClient.Text = this.ClientIntervention;
+            //this.textBoxIModifierSite.Text = this.SiteIntervention;
+            //this.textBoxIModifierMateriel.Text = this.MaterielIntervention;
+            //this.textBoxIModifierTypeMateriel.Text = this.TypeMaterielIntervention;
+            this.textBoxIModifierDate.Text = this.DateIntervention;
         }
     }
 }

@@ -30,6 +30,8 @@ namespace GestionMatos
         private void InitializeComponent()
         {
             this.groupBoxModifierClient = new System.Windows.Forms.GroupBox();
+            this.textBoxCModifierDescription = new System.Windows.Forms.TextBox();
+            this.labelCModifierDescription = new System.Windows.Forms.Label();
             this.buttonCModifier = new System.Windows.Forms.Button();
             this.buttonCModifierAnnuler = new System.Windows.Forms.Button();
             this.textBoxCModifierTel = new System.Windows.Forms.TextBox();
@@ -38,8 +40,6 @@ namespace GestionMatos
             this.labelCModifierMail = new System.Windows.Forms.Label();
             this.labelCModifierTel = new System.Windows.Forms.Label();
             this.labelCModifierNom = new System.Windows.Forms.Label();
-            this.textBoxCModifierDescription = new System.Windows.Forms.TextBox();
-            this.labelCModifierDescription = new System.Windows.Forms.Label();
             this.groupBoxModifierClient.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,22 @@ namespace GestionMatos
             this.groupBoxModifierClient.TabIndex = 14;
             this.groupBoxModifierClient.TabStop = false;
             this.groupBoxModifierClient.Text = "Client";
+            // 
+            // textBoxCModifierDescription
+            // 
+            this.textBoxCModifierDescription.Location = new System.Drawing.Point(998, 220);
+            this.textBoxCModifierDescription.Name = "textBoxCModifierDescription";
+            this.textBoxCModifierDescription.Size = new System.Drawing.Size(260, 31);
+            this.textBoxCModifierDescription.TabIndex = 17;
+            // 
+            // labelCModifierDescription
+            // 
+            this.labelCModifierDescription.AutoSize = true;
+            this.labelCModifierDescription.Location = new System.Drawing.Point(823, 220);
+            this.labelCModifierDescription.Name = "labelCModifierDescription";
+            this.labelCModifierDescription.Size = new System.Drawing.Size(120, 25);
+            this.labelCModifierDescription.TabIndex = 16;
+            this.labelCModifierDescription.Text = "Description";
             // 
             // buttonCModifier
             // 
@@ -129,22 +145,6 @@ namespace GestionMatos
             this.labelCModifierNom.TabIndex = 0;
             this.labelCModifierNom.Text = "Nom";
             // 
-            // textBoxCModifierDescription
-            // 
-            this.textBoxCModifierDescription.Location = new System.Drawing.Point(998, 220);
-            this.textBoxCModifierDescription.Name = "textBoxCModifierDescription";
-            this.textBoxCModifierDescription.Size = new System.Drawing.Size(260, 31);
-            this.textBoxCModifierDescription.TabIndex = 17;
-            // 
-            // labelCModifierDescription
-            // 
-            this.labelCModifierDescription.AutoSize = true;
-            this.labelCModifierDescription.Location = new System.Drawing.Point(823, 220);
-            this.labelCModifierDescription.Name = "labelCModifierDescription";
-            this.labelCModifierDescription.Size = new System.Drawing.Size(120, 25);
-            this.labelCModifierDescription.TabIndex = 16;
-            this.labelCModifierDescription.Text = "Description";
-            // 
             // FormulaireModifierClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -153,6 +153,7 @@ namespace GestionMatos
             this.Controls.Add(this.groupBoxModifierClient);
             this.Name = "FormulaireModifierClient";
             this.Text = "Modifier Client";
+            this.Load += new System.EventHandler(this.FormulaireModifierClient_Load);
             this.groupBoxModifierClient.ResumeLayout(false);
             this.groupBoxModifierClient.PerformLayout();
             this.ResumeLayout(false);

@@ -13,6 +13,8 @@ namespace GestionMatos
 {
     public partial class FormulaireListeClient : System.Windows.Forms.Form
     {
+        public string TextCNomVariable = "ABBA";
+
         public FormulaireListeClient()
         {
             InitializeComponent();
@@ -92,6 +94,11 @@ namespace GestionMatos
         private void buttonModifierClient_Click(object sender, EventArgs e)
         {
             FormulaireModifierClient ChildForm = new FormulaireModifierClient();
+
+            ChildForm.NomClient = textBoxCNom.Text;
+            ChildForm.MailClient = textBoxCMail.Text;
+            ChildForm.TelClient = textBoxCTel.Text;
+            ChildForm.DescriptionClient = textBoxCDescription.Text;
 
             ChildForm.ShowDialog();
         }
