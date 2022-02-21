@@ -16,10 +16,11 @@ namespace GestionMatos
             public FormConnexion()
             {
                 InitializeComponent();
+                this.Connexion = false;
             }
 
-        string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
-  
+            private string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
+            private bool Connexion;
         
         //btn_Submit Click event
 
@@ -46,6 +47,7 @@ namespace GestionMatos
                 //If count is equal to 1, than show frmMain form
                 if (count == 1)
                 {
+                    this.Connexion = true;
                     this.Close();
                 }
                 else
@@ -62,6 +64,14 @@ namespace GestionMatos
         private void FormConnexion_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormConnexion_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(this.Connexion == false)
+            {
+                Application.Exit();
+            }
         }
     }
 }
