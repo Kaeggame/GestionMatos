@@ -13,6 +13,13 @@ namespace GestionMatos
 {
     public partial class FormulaireListeMateriel : System.Windows.Forms.Form
     {
+
+        private string IDCrashTest;
+        public string GetTheFuckingID()
+        {
+            return this.IDCrashTest;
+        }
+
         public FormulaireListeMateriel()
         {
             InitializeComponent();
@@ -30,7 +37,7 @@ namespace GestionMatos
             ChildForm.ShowDialog();
         }
 
-        private void buttonModifierMateriel_Click(object sender, EventArgs e)
+        protected void buttonModifierMateriel_Click(object sender, EventArgs e)
         {
             FormulaireModifierMateriel ChildForm = new FormulaireModifierMateriel();
 
@@ -40,6 +47,7 @@ namespace GestionMatos
             ChildForm.NomMateriel = textBoxMNom.Text;
             ChildForm.TypeMateriel = textBoxMType.Text;
             ChildForm.NserieMateriel = textBoxMNserie.Text;
+            ChildForm.IdTest = GetTheFuckingID();
 
             ChildForm.ShowDialog();
         }
@@ -69,6 +77,9 @@ namespace GestionMatos
             while (sqr.Read() != false)
             {
                 int id = Convert.ToInt32(sqr["MatID"]);
+
+                //id = ;
+
                 string lenommat = sqr["Nom"].ToString();
                 string lenumserie = sqr["NumSerie"].ToString();
                 string letypemat = sqr["TypeMat"].ToString();
@@ -92,6 +103,7 @@ namespace GestionMatos
             if (truc == null)
                 return;
             int id = truc.id;
+            IDCrashTest = id.ToString();
 
             string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
             SqlConnection cn = new SqlConnection(cnsql);
