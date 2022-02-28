@@ -21,8 +21,6 @@ namespace GestionMatos
 
             private string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
             private bool Connexion;
-        
-        //btn_Submit Click event
 
         private void buttonConnexion_Click(object sender, EventArgs e)
         {
@@ -33,7 +31,6 @@ namespace GestionMatos
             }
             try
             {
-                //Create SqlConnection
                 SqlConnection con = new SqlConnection(cnsql);
                 SqlCommand cmd = new SqlCommand("Select * from Utilisateur where Nom_User=@username and Mdp=@password", con);
                 cmd.Parameters.AddWithValue("@username", textBoxEmail.Text);
@@ -44,7 +41,7 @@ namespace GestionMatos
                 adapt.Fill(ds);
                 con.Close();
                 int count = ds.Tables[0].Rows.Count;
-                //If count is equal to 1, than show frmMain form
+               
                 if (count == 1)
                 {
                     this.Connexion = true;

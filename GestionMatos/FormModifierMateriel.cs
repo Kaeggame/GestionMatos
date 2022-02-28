@@ -52,10 +52,13 @@ namespace GestionMatos
             string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
             SqlConnection sqlConn = new SqlConnection(cnsql);
             
-            string query = "UPDATE Materiel SET Nom = @Nom,NumSerie = @NumSerie where MatID = " + IdTest.ToString();
+            string query = "UPDATE Materiel SET Nom = @Nom,NumSerie = @NumSerie,Description = @Description,TypeMat = @TypeMat,DateInstallation = @DateInstallation where MatID = " + IdTest.ToString();
             SqlCommand cmd = new SqlCommand(query, sqlConn);
             cmd.Parameters.AddWithValue("@Nom", textBoxMModifierNomMateriel.Text);
             cmd.Parameters.AddWithValue("@NumSerie", textBoxMModifierNserie.Text);
+            cmd.Parameters.AddWithValue("@Description", textBoxMModifierCommentaire.Text);
+            cmd.Parameters.AddWithValue("@TypeMat", textBoxMModifierTypeMateriel.Text);
+            cmd.Parameters.AddWithValue("@DateInstallation", textBoxMModifierDate.Text);
             cmd.Connection.Open();
             try
             {              
@@ -65,8 +68,10 @@ namespace GestionMatos
             {
                 throw new Exception("Error " + ex.Message);
             }
+            //Form.ActiveForm.Close(); // Ferme la fenetre actuelle apres la confirmation de la modification
             MessageBox.Show("Modification enregistrée");
             sqlConn.Close();
+            
         }
     }
 }

@@ -46,13 +46,11 @@ namespace GestionMatos
             this.labelMModifierCommentaire = new System.Windows.Forms.Label();
             this.labelMModifierClient = new System.Windows.Forms.Label();
             this.labelMModifierDate = new System.Windows.Forms.Label();
-            this.textBox1textBoxMModifierID = new System.Windows.Forms.TextBox();
             this.groupBoxModifierMateriel.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxModifierMateriel
             // 
-            this.groupBoxModifierMateriel.Controls.Add(this.textBox1textBoxMModifierID);
             this.groupBoxModifierMateriel.Controls.Add(this.textBoxMModifierNserie);
             this.groupBoxModifierMateriel.Controls.Add(this.labelMModifierNserie);
             this.groupBoxModifierMateriel.Controls.Add(this.textBoxMModifierTypeMateriel);
@@ -70,9 +68,9 @@ namespace GestionMatos
             this.groupBoxModifierMateriel.Controls.Add(this.labelMModifierClient);
             this.groupBoxModifierMateriel.Controls.Add(this.labelMModifierDate);
             this.groupBoxModifierMateriel.Location = new System.Drawing.Point(23, 23);
-            this.groupBoxModifierMateriel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxModifierMateriel.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxModifierMateriel.Name = "groupBoxModifierMateriel";
-            this.groupBoxModifierMateriel.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxModifierMateriel.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxModifierMateriel.Size = new System.Drawing.Size(730, 353);
             this.groupBoxModifierMateriel.TabIndex = 14;
             this.groupBoxModifierMateriel.TabStop = false;
@@ -81,7 +79,7 @@ namespace GestionMatos
             // textBoxMModifierNserie
             // 
             this.textBoxMModifierNserie.Location = new System.Drawing.Point(180, 215);
-            this.textBoxMModifierNserie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMModifierNserie.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMModifierNserie.Name = "textBoxMModifierNserie";
             this.textBoxMModifierNserie.Size = new System.Drawing.Size(132, 20);
             this.textBoxMModifierNserie.TabIndex = 19;
@@ -99,7 +97,7 @@ namespace GestionMatos
             // textBoxMModifierTypeMateriel
             // 
             this.textBoxMModifierTypeMateriel.Location = new System.Drawing.Point(499, 155);
-            this.textBoxMModifierTypeMateriel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMModifierTypeMateriel.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMModifierTypeMateriel.Name = "textBoxMModifierTypeMateriel";
             this.textBoxMModifierTypeMateriel.Size = new System.Drawing.Size(132, 20);
             this.textBoxMModifierTypeMateriel.TabIndex = 17;
@@ -107,7 +105,7 @@ namespace GestionMatos
             // textBoxMModifierNomMateriel
             // 
             this.textBoxMModifierNomMateriel.Location = new System.Drawing.Point(180, 157);
-            this.textBoxMModifierNomMateriel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMModifierNomMateriel.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMModifierNomMateriel.Name = "textBoxMModifierNomMateriel";
             this.textBoxMModifierNomMateriel.Size = new System.Drawing.Size(132, 20);
             this.textBoxMModifierNomMateriel.TabIndex = 16;
@@ -135,7 +133,7 @@ namespace GestionMatos
             // buttonMModifier
             // 
             this.buttonMModifier.Location = new System.Drawing.Point(414, 272);
-            this.buttonMModifier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonMModifier.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMModifier.Name = "buttonMModifier";
             this.buttonMModifier.Size = new System.Drawing.Size(130, 32);
             this.buttonMModifier.TabIndex = 13;
@@ -146,7 +144,7 @@ namespace GestionMatos
             // buttonMModifierAnnuler
             // 
             this.buttonMModifierAnnuler.Location = new System.Drawing.Point(180, 272);
-            this.buttonMModifierAnnuler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonMModifierAnnuler.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMModifierAnnuler.Name = "buttonMModifierAnnuler";
             this.buttonMModifierAnnuler.Size = new System.Drawing.Size(130, 32);
             this.buttonMModifierAnnuler.TabIndex = 12;
@@ -157,7 +155,7 @@ namespace GestionMatos
             // textBoxMModifierClient
             // 
             this.textBoxMModifierClient.Location = new System.Drawing.Point(180, 99);
-            this.textBoxMModifierClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMModifierClient.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMModifierClient.Name = "textBoxMModifierClient";
             this.textBoxMModifierClient.Size = new System.Drawing.Size(132, 20);
             this.textBoxMModifierClient.TabIndex = 9;
@@ -165,7 +163,7 @@ namespace GestionMatos
             // textBoxMModifierSite
             // 
             this.textBoxMModifierSite.Location = new System.Drawing.Point(499, 99);
-            this.textBoxMModifierSite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMModifierSite.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMModifierSite.Name = "textBoxMModifierSite";
             this.textBoxMModifierSite.Size = new System.Drawing.Size(132, 20);
             this.textBoxMModifierSite.TabIndex = 8;
@@ -173,7 +171,7 @@ namespace GestionMatos
             // textBoxMModifierCommentaire
             // 
             this.textBoxMModifierCommentaire.Location = new System.Drawing.Point(499, 45);
-            this.textBoxMModifierCommentaire.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMModifierCommentaire.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMModifierCommentaire.Name = "textBoxMModifierCommentaire";
             this.textBoxMModifierCommentaire.Size = new System.Drawing.Size(132, 20);
             this.textBoxMModifierCommentaire.TabIndex = 7;
@@ -181,7 +179,7 @@ namespace GestionMatos
             // textBoxMModifierDate
             // 
             this.textBoxMModifierDate.Location = new System.Drawing.Point(180, 45);
-            this.textBoxMModifierDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMModifierDate.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMModifierDate.Name = "textBoxMModifierDate";
             this.textBoxMModifierDate.Size = new System.Drawing.Size(132, 20);
             this.textBoxMModifierDate.TabIndex = 6;
@@ -226,21 +224,13 @@ namespace GestionMatos
             this.labelMModifierDate.TabIndex = 0;
             this.labelMModifierDate.Text = "Date d\'Instalation";
             // 
-            // textBox1textBoxMModifierID
-            // 
-            this.textBox1textBoxMModifierID.Location = new System.Drawing.Point(499, 210);
-            this.textBox1textBoxMModifierID.Name = "textBox1textBoxMModifierID";
-            this.textBox1textBoxMModifierID.Size = new System.Drawing.Size(100, 20);
-            this.textBox1textBoxMModifierID.TabIndex = 20;
-            this.textBox1textBoxMModifierID.Visible = false;
-            // 
             // FormulaireModifierMateriel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 399);
             this.Controls.Add(this.groupBoxModifierMateriel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormulaireModifierMateriel";
             this.Text = "Modifier Materiel";
             this.Load += new System.EventHandler(this.FormulaireModifierMateriel_Load);
@@ -269,6 +259,5 @@ namespace GestionMatos
         private System.Windows.Forms.Label labelMModifierCommentaire;
         private System.Windows.Forms.Label labelMModifierClient;
         private System.Windows.Forms.Label labelMModifierDate;
-        private System.Windows.Forms.TextBox textBox1textBoxMModifierID;
     }
 }

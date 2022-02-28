@@ -78,8 +78,6 @@ namespace GestionMatos
             {
                 int id = Convert.ToInt32(sqr["MatID"]);
 
-                //id = ;
-
                 string lenommat = sqr["Nom"].ToString();
                 string lenumserie = sqr["NumSerie"].ToString();
                 string letypemat = sqr["TypeMat"].ToString();
