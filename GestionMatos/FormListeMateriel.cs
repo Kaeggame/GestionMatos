@@ -14,10 +14,11 @@ namespace GestionMatos
     public partial class FormulaireListeMateriel : System.Windows.Forms.Form
     {
 
-        private string IDCrashTest;
-        public string GetTheFuckingID()
+        // Pour récup l'ID du materiel
+        private string IDMateriel;
+        public string GetTheIDPlease()
         {
-            return this.IDCrashTest;
+            return this.IDMateriel;
         }
 
         public FormulaireListeMateriel()
@@ -25,11 +26,14 @@ namespace GestionMatos
             InitializeComponent();
         }
 
+        // Le premier qui me demande ce que ça fait, je lui NuclearGandhi la gueule !!!
         private void buttonListeMRetour_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); // Je suis sérieux !!!
         }
 
+        // Bouton pour créer un nouveau materiel, enfin ça ouvre la fenêtre pour quoi
+        // (en cours)
         private void buttonNewMateriel_Click(object sender, EventArgs e)
         {
             FormulaireNewMateriel ChildForm = new FormulaireNewMateriel();
@@ -37,6 +41,7 @@ namespace GestionMatos
             ChildForm.ShowDialog();
         }
 
+        // Bouton pour modifier les infos de l'élément sélectionné, enfin ça ouvre la fenêtre pour quoi
         protected void buttonModifierMateriel_Click(object sender, EventArgs e)
         {
             FormulaireModifierMateriel ChildForm = new FormulaireModifierMateriel();
@@ -47,11 +52,12 @@ namespace GestionMatos
             ChildForm.NomMateriel = textBoxMNom.Text;
             ChildForm.TypeMateriel = textBoxMType.Text;
             ChildForm.NserieMateriel = textBoxMNserie.Text;
-            ChildForm.IdTest = GetTheFuckingID();
+            ChildForm.IdTest = GetTheIDPlease(); // on utilise le getteur du début pour récup l'ID... comment ça "c'est quoi un getteur" ?
 
             ChildForm.ShowDialog();
         }
 
+        // tiens c'est marrant que ça soit pas en haut du code... bah tant pis
         private void FormulaireListeMateriel_Load(object sender, EventArgs e)
         {
             buttonModifierMateriel.Enabled = false;
@@ -61,6 +67,7 @@ namespace GestionMatos
             Requete(s);
         }
 
+        // Requette de la barre de recherche
         private void Requete(string strsql)
         {
             listBoxMateriel.Items.Clear();
@@ -93,6 +100,7 @@ namespace GestionMatos
             cn.Close();
         }
 
+        // Affiche les infos de l'élément sélectionné 
         private void listBoxMateriel_SelectedIndexChanged(object sender, EventArgs e)
         {
             buttonModifierMateriel.Enabled = true;
@@ -101,7 +109,7 @@ namespace GestionMatos
             if (truc == null)
                 return;
             int id = truc.id;
-            IDCrashTest = id.ToString();
+            IDMateriel = id.ToString();
 
             string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
             SqlConnection cn = new SqlConnection(cnsql);
@@ -120,6 +128,7 @@ namespace GestionMatos
             cn.Close();
         }
 
+        // Barre de recherche
         private void textBoxMRecherche_KeyUp(object sender, KeyEventArgs e)
         {
             string str = textBoxMRecherche.Text;

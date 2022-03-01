@@ -13,24 +13,27 @@ namespace GestionMatos
 {
     public partial class FormulaireListeClient : System.Windows.Forms.Form
     {
-        public string TextCNomVariable = "ABBA";
 
         public FormulaireListeClient()
         {
             InitializeComponent();
         }
 
+        // bon...
         private void buttonListeCRetour_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // bouton qui permet de créer un nouveau Client
+        // (en cours)
         private void buttonNewClient_Click(object sender, EventArgs e)
         {
             FormulaireNewClient ChildForm = new FormulaireNewClient();
 
             ChildForm.ShowDialog();
         }
+
 
         private void FormulaireListeClient_Load(object sender, EventArgs e)
         {
@@ -41,6 +44,7 @@ namespace GestionMatos
             Requete(s);
         }
 
+        // Requette de la Barre de recherche 
         private void Requete(string strsql)
         {
             listBoxClient.Items.Clear();
@@ -69,6 +73,7 @@ namespace GestionMatos
             cn.Close();
         }
 
+        // Affiche les infos de l'élément selectionné 
         private void listBoxClient_SelectedIndexChanged(object sender, EventArgs e)
         {
             buttonModifierClient.Enabled = true;
@@ -91,6 +96,7 @@ namespace GestionMatos
             cn.Close();
         }
 
+        // Bouton pour modifier les infos du client sélectionné (enfin ça renvoi sur la page modifier quoi)
         private void buttonModifierClient_Click(object sender, EventArgs e)
         {
             FormulaireModifierClient ChildForm = new FormulaireModifierClient();
@@ -103,11 +109,13 @@ namespace GestionMatos
             ChildForm.ShowDialog();
         }
 
+        // Barre de recherche
         private void textBoxCRecherche_KeyUp(object sender, KeyEventArgs e)
         {
             string str = textBoxCRecherche.Text;
             string sql = "select * from Client where NomClient like '" + str + "%'";
             Requete(sql);
         }
+        
     }
 }

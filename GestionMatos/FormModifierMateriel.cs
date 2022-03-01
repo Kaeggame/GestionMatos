@@ -29,9 +29,10 @@ namespace GestionMatos
             InitializeComponent();
         }
 
+        // la blague commence à être lourde non ?
         private void buttonMModifierAnnuler_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); // ...meh
         }
 
         private void FormulaireModifierMateriel_Load(object sender, EventArgs e)
@@ -47,6 +48,7 @@ namespace GestionMatos
             this.textBoxMModifierNserie.Text = this.NserieMateriel;
         }
 
+        // Boutton qui remplace les infos de la base de données avec ce qui est écrits dans les champs (Vraiment faites gaffes avec ça, c'est pas un jouet)
         private void buttonMModifier_Click(object sender, EventArgs e)
         {
             string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
@@ -68,7 +70,7 @@ namespace GestionMatos
             {
                 throw new Exception("Error " + ex.Message);
             }
-            //Form.ActiveForm.Close(); // Ferme la fenetre actuelle apres la confirmation de la modification
+            Form.ActiveForm.Close(); // Ferme la fenetre actuelle apres la confirmation de la modification
             MessageBox.Show("Modification enregistrée");
             sqlConn.Close();
             

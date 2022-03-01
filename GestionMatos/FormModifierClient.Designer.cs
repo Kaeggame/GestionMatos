@@ -86,6 +86,7 @@ namespace GestionMatos
             this.buttonCModifier.TabIndex = 13;
             this.buttonCModifier.Text = "Modifier";
             this.buttonCModifier.UseVisualStyleBackColor = true;
+            this.buttonCModifier.Click += new System.EventHandler(this.buttonCModifier_Click);
             // 
             // buttonCModifierAnnuler
             // 

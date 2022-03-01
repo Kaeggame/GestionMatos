@@ -25,9 +25,10 @@ namespace GestionMatos
             InitializeComponent();
         }
 
+        // vraiment besoin d'explications ?
         private void buttonIModifierAnnuler_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); // Je veux dire, VRAIMENT ?
         }
 
         private void FormulaireModifierIntervention_Load(object sender, EventArgs e)

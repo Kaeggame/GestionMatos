@@ -18,30 +18,10 @@ namespace GestionMatos
             InitializeComponent();
         }
 
-        private void buttonListeIMateriel_Click(object sender, EventArgs e)
-        {
-            FormulaireListeMateriel ChildForm = new FormulaireListeMateriel();
-
-            ChildForm.ShowDialog();
-        }
-
-        private void buttonListeIClient_Click(object sender, EventArgs e)
-        {
-            FormulaireListeClient ChildForm = new FormulaireListeClient();
-
-            ChildForm.ShowDialog();
-        }
-
-        private void buttonNewIntervention_Click(object sender, EventArgs e)
-        {
-            FormulaireNewIntervention ChildForm = new FormulaireNewIntervention();
-
-            ChildForm.ShowDialog();
-        }
-
+        
         private void FormulaireListeIntervention_Load(object sender, EventArgs e)
         {
-            FormConnexion fr = new FormConnexion();
+            FormConnexion fr = new FormConnexion(); // Au lancement de l'application, ouvre la fenêtre de connexion
 
             buttonModifierIntervention.Enabled = false;
 
@@ -51,8 +31,35 @@ namespace GestionMatos
             Requete(s);
         }
 
+        // Bouton qui affiche la Liste des Materiels
+        private void buttonListeIMateriel_Click(object sender, EventArgs e)
+        {
+            FormulaireListeMateriel ChildForm = new FormulaireListeMateriel();
+
+            ChildForm.ShowDialog();
+        }
+
+        // Bouton qui affiche la Liste des Clients
+        private void buttonListeIClient_Click(object sender, EventArgs e)
+        {
+            FormulaireListeClient ChildForm = new FormulaireListeClient();
+
+            ChildForm.ShowDialog();
+        }
+
+        // Bouton pour Créer une nouvelle intervention
+        // (en cours)
+        private void buttonNewIntervention_Click(object sender, EventArgs e)
+        {
+            FormulaireNewIntervention ChildForm = new FormulaireNewIntervention();
+
+            ChildForm.ShowDialog();
+        }
+
+        // Bouton pour modifier une intervention
         private void buttonModifierIntervention_Click(object sender, EventArgs e)
         {
+            // Ouvre la page de madification avec les infos affichés par la liste
             FormulaireModifierIntervention ChildForm = new FormulaireModifierIntervention();
 
             ChildForm.NomIntervention = textBoxINom.Text;
@@ -66,6 +73,7 @@ namespace GestionMatos
             ChildForm.ShowDialog();
         }
 
+        // Barre de Recherche
         private void textBoxIRecherche_KeyUp(object sender, KeyEventArgs e)
         {
             string str = textBoxIRecherche.Text;
@@ -73,6 +81,7 @@ namespace GestionMatos
             Requete(sql);
         }
 
+        // Requette de la barre de recherche 
         private void Requete(string strsql)
         {
             listBoxIntervention.Items.Clear();
@@ -100,6 +109,8 @@ namespace GestionMatos
             sqr.Close();
             cn.Close();
         }
+
+        // Affiche les infos de l'élément sectionné 
         private void listBoxIntervention_SelectedIndexChanged(object sender, EventArgs e)
         {
             buttonModifierIntervention.Enabled = true;

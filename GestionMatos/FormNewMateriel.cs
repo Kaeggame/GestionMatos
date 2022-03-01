@@ -17,9 +17,10 @@ namespace GestionMatos
             InitializeComponent();
         }
 
+        // prout
         private void buttonMAnnuler_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); // quoi ?
         }
     }
 }
