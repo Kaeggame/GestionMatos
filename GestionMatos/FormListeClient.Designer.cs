@@ -35,8 +35,6 @@ namespace GestionMatos
             this.groupBoxMInfos = new System.Windows.Forms.GroupBox();
             this.textBoxCTel = new System.Windows.Forms.TextBox();
             this.labelCTel = new System.Windows.Forms.Label();
-            this.textBoxCDescription = new System.Windows.Forms.TextBox();
-            this.labelCDescription = new System.Windows.Forms.Label();
             this.textBoxCMail = new System.Windows.Forms.TextBox();
             this.labelCMail = new System.Windows.Forms.Label();
             this.textBoxCNom = new System.Windows.Forms.TextBox();
@@ -63,9 +61,9 @@ namespace GestionMatos
             this.groupBoxClient.Controls.Add(this.buttonCFiltre);
             this.groupBoxClient.Controls.Add(this.buttonNewClient);
             this.groupBoxClient.Location = new System.Drawing.Point(16, 18);
-            this.groupBoxClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxClient.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxClient.Name = "groupBoxClient";
-            this.groupBoxClient.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxClient.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxClient.Size = new System.Drawing.Size(739, 455);
             this.groupBoxClient.TabIndex = 1;
             this.groupBoxClient.TabStop = false;
@@ -74,7 +72,7 @@ namespace GestionMatos
             // buttonModifierClient
             // 
             this.buttonModifierClient.Location = new System.Drawing.Point(456, 400);
-            this.buttonModifierClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonModifierClient.Margin = new System.Windows.Forms.Padding(2);
             this.buttonModifierClient.Name = "buttonModifierClient";
             this.buttonModifierClient.Size = new System.Drawing.Size(121, 45);
             this.buttonModifierClient.TabIndex = 32;
@@ -96,16 +94,14 @@ namespace GestionMatos
             // 
             this.groupBoxMInfos.Controls.Add(this.textBoxCTel);
             this.groupBoxMInfos.Controls.Add(this.labelCTel);
-            this.groupBoxMInfos.Controls.Add(this.textBoxCDescription);
-            this.groupBoxMInfos.Controls.Add(this.labelCDescription);
             this.groupBoxMInfos.Controls.Add(this.textBoxCMail);
             this.groupBoxMInfos.Controls.Add(this.labelCMail);
             this.groupBoxMInfos.Controls.Add(this.textBoxCNom);
             this.groupBoxMInfos.Controls.Add(this.labelCNom);
             this.groupBoxMInfos.Location = new System.Drawing.Point(206, 108);
-            this.groupBoxMInfos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxMInfos.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxMInfos.Name = "groupBoxMInfos";
-            this.groupBoxMInfos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxMInfos.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxMInfos.Size = new System.Drawing.Size(517, 262);
             this.groupBoxMInfos.TabIndex = 30;
             this.groupBoxMInfos.TabStop = false;
@@ -114,7 +110,7 @@ namespace GestionMatos
             // textBoxCTel
             // 
             this.textBoxCTel.Location = new System.Drawing.Point(99, 156);
-            this.textBoxCTel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCTel.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCTel.Name = "textBoxCTel";
             this.textBoxCTel.ReadOnly = true;
             this.textBoxCTel.Size = new System.Drawing.Size(145, 20);
@@ -130,29 +126,10 @@ namespace GestionMatos
             this.labelCTel.TabIndex = 21;
             this.labelCTel.Text = "N° de Téléphone";
             // 
-            // textBoxCDescription
-            // 
-            this.textBoxCDescription.Location = new System.Drawing.Point(99, 219);
-            this.textBoxCDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBoxCDescription.Name = "textBoxCDescription";
-            this.textBoxCDescription.ReadOnly = true;
-            this.textBoxCDescription.Size = new System.Drawing.Size(405, 20);
-            this.textBoxCDescription.TabIndex = 20;
-            // 
-            // labelCDescription
-            // 
-            this.labelCDescription.AutoSize = true;
-            this.labelCDescription.Location = new System.Drawing.Point(30, 219);
-            this.labelCDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelCDescription.Name = "labelCDescription";
-            this.labelCDescription.Size = new System.Drawing.Size(60, 13);
-            this.labelCDescription.TabIndex = 19;
-            this.labelCDescription.Text = "Description";
-            // 
             // textBoxCMail
             // 
             this.textBoxCMail.Location = new System.Drawing.Point(99, 87);
-            this.textBoxCMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCMail.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCMail.Name = "textBoxCMail";
             this.textBoxCMail.ReadOnly = true;
             this.textBoxCMail.Size = new System.Drawing.Size(145, 20);
@@ -171,7 +148,7 @@ namespace GestionMatos
             // textBoxCNom
             // 
             this.textBoxCNom.Location = new System.Drawing.Point(99, 23);
-            this.textBoxCNom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCNom.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCNom.Name = "textBoxCNom";
             this.textBoxCNom.ReadOnly = true;
             this.textBoxCNom.Size = new System.Drawing.Size(145, 20);
@@ -191,7 +168,7 @@ namespace GestionMatos
             // 
             this.comboBoxCFiltre.FormattingEnabled = true;
             this.comboBoxCFiltre.Location = new System.Drawing.Point(336, 61);
-            this.comboBoxCFiltre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCFiltre.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCFiltre.Name = "comboBoxCFiltre";
             this.comboBoxCFiltre.Size = new System.Drawing.Size(388, 21);
             this.comboBoxCFiltre.TabIndex = 15;
@@ -200,7 +177,7 @@ namespace GestionMatos
             // textBoxCRecherche
             // 
             this.textBoxCRecherche.Location = new System.Drawing.Point(61, 25);
-            this.textBoxCRecherche.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCRecherche.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCRecherche.Name = "textBoxCRecherche";
             this.textBoxCRecherche.Size = new System.Drawing.Size(663, 20);
             this.textBoxCRecherche.TabIndex = 13;
@@ -209,7 +186,7 @@ namespace GestionMatos
             // buttonListeCRetour
             // 
             this.buttonListeCRetour.Location = new System.Drawing.Point(305, 400);
-            this.buttonListeCRetour.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonListeCRetour.Margin = new System.Windows.Forms.Padding(2);
             this.buttonListeCRetour.Name = "buttonListeCRetour";
             this.buttonListeCRetour.Size = new System.Drawing.Size(121, 45);
             this.buttonListeCRetour.TabIndex = 12;
@@ -221,7 +198,7 @@ namespace GestionMatos
             // 
             this.listBoxClient.FormattingEnabled = true;
             this.listBoxClient.Location = new System.Drawing.Point(10, 53);
-            this.listBoxClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxClient.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxClient.Name = "listBoxClient";
             this.listBoxClient.Size = new System.Drawing.Size(178, 394);
             this.listBoxClient.TabIndex = 11;
@@ -230,7 +207,7 @@ namespace GestionMatos
             // buttonCFiltre
             // 
             this.buttonCFiltre.Location = new System.Drawing.Point(220, 53);
-            this.buttonCFiltre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCFiltre.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCFiltre.Name = "buttonCFiltre";
             this.buttonCFiltre.Size = new System.Drawing.Size(104, 31);
             this.buttonCFiltre.TabIndex = 9;
@@ -240,7 +217,7 @@ namespace GestionMatos
             // buttonNewClient
             // 
             this.buttonNewClient.Location = new System.Drawing.Point(602, 400);
-            this.buttonNewClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonNewClient.Margin = new System.Windows.Forms.Padding(2);
             this.buttonNewClient.Name = "buttonNewClient";
             this.buttonNewClient.Size = new System.Drawing.Size(121, 45);
             this.buttonNewClient.TabIndex = 8;
@@ -255,7 +232,7 @@ namespace GestionMatos
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(773, 487);
             this.Controls.Add(this.groupBoxClient);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormulaireListeClient";
             this.Text = " ";
             this.Load += new System.EventHandler(this.FormulaireListeClient_Load);
@@ -279,8 +256,6 @@ namespace GestionMatos
         private System.Windows.Forms.GroupBox groupBoxMInfos;
         private System.Windows.Forms.TextBox textBoxCTel;
         private System.Windows.Forms.Label labelCTel;
-        private System.Windows.Forms.TextBox textBoxCDescription;
-        private System.Windows.Forms.Label labelCDescription;
         private System.Windows.Forms.TextBox textBoxCMail;
         private System.Windows.Forms.Label labelCMail;
         private System.Windows.Forms.TextBox textBoxCNom;

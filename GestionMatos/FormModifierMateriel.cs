@@ -68,7 +68,7 @@ namespace GestionMatos
             {
                 throw new Exception("Error " + ex.Message);
             }
-            //Form.ActiveForm.Close(); // Ferme la fenetre actuelle apres la confirmation de la modification
+            Form.ActiveForm.Close(); // Ferme la fenetre actuelle apres la confirmation de la modification
             MessageBox.Show("Modification enregistrée");
             sqlConn.Close();
             

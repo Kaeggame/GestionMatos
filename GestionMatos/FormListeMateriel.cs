@@ -56,7 +56,7 @@ namespace GestionMatos
         {
             buttonModifierMateriel.Enabled = false;
 
-            string s = "select * from Materiel";
+            string s = "SELECT * FROM Materiel INNER JOIN Client ON Materiel.ClientID = Client.ClientID";
 
             Requete(s);
         }
@@ -74,6 +74,7 @@ namespace GestionMatos
 
             SqlDataReader sqr = com.ExecuteReader();
 
+
             while (sqr.Read() != false)
             {
                 int id = Convert.ToInt32(sqr["MatID"]);
@@ -84,7 +85,8 @@ namespace GestionMatos
                 string ladateinstall = sqr["DateInstallation"].ToString();
                 string ladesc = sqr["Description"].ToString();
                 string lemtbf = sqr["MTBF"].ToString();
-                IdMat Mat = new IdMat(id, lenommat, lenumserie, letypemat, ladateinstall, ladesc, lemtbf);
+                string lenomclient = sqr["NomClient"].ToString();
+                IdMat Mat = new IdMat(id, lenommat, lenumserie, letypemat, ladateinstall, ladesc, lemtbf, lenomclient);
 
                 listBoxMateriel.Items.Add(Mat);
             }
@@ -104,19 +106,24 @@ namespace GestionMatos
             IDCrashTest = id.ToString();
 
             string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
+
             SqlConnection cn = new SqlConnection(cnsql);
             cn.Open();
-            string sql = "select * from Materiel where MatID = " + id.ToString();
+            string sql = "SELECT * FROM Materiel INNER JOIN Client ON Materiel.ClientID = Client.ClientID WHERE MatID = " + id.ToString();
             SqlCommand com = new SqlCommand(sql, cn);
             SqlDataReader sqr = com.ExecuteReader();
             sqr.Read();
             textBoxMNom.Text = sqr["Nom"].ToString();
             textBoxMNserie.Text = sqr["NumSerie"].ToString();
             textBoxMType.Text = sqr["TypeMat"].ToString();
-            textBoxMClient.Text = "badaboup";
             textBoxMDate.Text = sqr["DateInstallation"].ToString();
             textBoxMmtbf.Text = sqr["MTBF"].ToString() + " ans";
             textBoxMDescription.Text = sqr["Description"].ToString();
+            textBoxMClient.Text = sqr["NomClient"].ToString();
+
+            sqr.Close();
+
+          
             cn.Close();
         }
 
