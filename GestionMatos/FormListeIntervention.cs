@@ -26,7 +26,7 @@ namespace GestionMatos
             buttonModifierIntervention.Enabled = false;
 
             fr.ShowDialog();
-            string s = "select * from Intervention";
+            string s = "SELECT * FROM Intervention INNER JOIN Materiel ON Intervention.MatID = Materiel.MatID INNER JOIN Client ON Materiel.ClientID = Client.ClientID INNER JOIN Site ON Materiel.SiteID = Site.SiteID";
 
             Requete(s);
         }
@@ -77,7 +77,7 @@ namespace GestionMatos
         private void textBoxIRecherche_KeyUp(object sender, KeyEventArgs e)
         {
             string str = textBoxIRecherche.Text;
-            string sql = "select * from Intervention where InterNom like '" + str + "%'";
+            string sql = "SELECT * FROM Intervention INNER JOIN Materiel ON Intervention.MatID = Materiel.MatID INNER JOIN Client ON Materiel.ClientID = Client.ClientID INNER JOIN Site ON Materiel.SiteID = Site.SiteID where InterNom like '" + str + "%'";
             Requete(sql);
         }
 
@@ -101,7 +101,12 @@ namespace GestionMatos
                 string lenominter = sqr["InterNom"].ToString();
                 string lainterdate = sqr["InterDate"].ToString();
                 string lecommentaire = sqr["Commentaire"].ToString();
-                IdInter Inter = new IdInter(id, lenominter, lainterdate, lecommentaire);
+                string lenommat = sqr["Nom"].ToString();
+                string letypemat = sqr["TypeMat"].ToString();
+                string lenomclient = sqr["NomClient"].ToString();
+                string lesite = sqr["SiteNom"].ToString();
+
+                IdInter Inter = new IdInter(id, lenominter, lainterdate, lecommentaire, lenommat, letypemat, lenomclient, lesite);
 
                 listBoxIntervention.Items.Add(Inter);
             }
@@ -123,13 +128,18 @@ namespace GestionMatos
             string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
             SqlConnection cn = new SqlConnection(cnsql);
             cn.Open();
-            string sql = "select * from Intervention where InterID = " + id.ToString();
+            string sql = "SELECT * FROM Intervention INNER JOIN Materiel ON Intervention.MatID = Materiel.MatID INNER JOIN Client ON Materiel.ClientID = Client.ClientID INNER JOIN Site ON Materiel.SiteID = Site.SiteID where InterID = " + id.ToString();
             SqlCommand com = new SqlCommand(sql, cn);
             SqlDataReader sqr = com.ExecuteReader();
             sqr.Read();
             textBoxINom.Text = sqr["InterNom"].ToString();
             textBoxIDate.Text = sqr["InterDate"].ToString();
             textBoxICommentaire.Text = sqr["Commentaire"].ToString();
+            textBoxIMateriel.Text = sqr["Nom"].ToString();
+            textBoxIType.Text = sqr["TypeMat"].ToString();
+            textBoxIClient.Text = sqr["NomClient"].ToString();
+            textBoxISite.Text = sqr["Commentaire"].ToString();
+
             cn.Close();
         }
     }

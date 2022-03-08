@@ -71,6 +71,7 @@ namespace GestionMatos
             // Yep
         }
 
+
         // Si on ferme la fenêtre mais que la variable Connexion est toujours "false" (et donc qu'aucune connexion n'a été authorisé), on ferme l'application avec
         private void FormConnexion_FormClosing(object sender, FormClosingEventArgs e)
         {

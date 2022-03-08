@@ -139,7 +139,7 @@ namespace GestionMatos
         private void textBoxMRecherche_KeyUp(object sender, KeyEventArgs e)
         {
             string str = textBoxMRecherche.Text;
-            string sql = "select * from Materiel where Nom like '" + str + "%'";
+            string sql = "SELECT * FROM Materiel INNER JOIN Client ON Materiel.ClientID = Client.ClientID WHERE Nom like '" + str + "%'";
             Requete(sql);
         }
     }
