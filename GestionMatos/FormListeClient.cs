@@ -98,7 +98,6 @@ namespace GestionMatos
             ChildForm.NomClient = textBoxCNom.Text;
             ChildForm.MailClient = textBoxCMail.Text;
             ChildForm.TelClient = textBoxCTel.Text;
-            ChildForm.DescriptionClient = textBoxCDescription.Text;
 
             ChildForm.ShowDialog();
         }
