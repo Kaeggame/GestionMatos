@@ -30,6 +30,9 @@ namespace GestionMatos
         private void InitializeComponent()
         {
             this.groupBoxNewMateriel = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxSite = new System.Windows.Forms.ComboBox();
+            this.comboBoxClient = new System.Windows.Forms.ComboBox();
             this.textBoxMNserie = new System.Windows.Forms.TextBox();
             this.labelMNserie = new System.Windows.Forms.Label();
             this.textBoxMTypeMateriel = new System.Windows.Forms.TextBox();
@@ -43,14 +46,15 @@ namespace GestionMatos
             this.labelMCommentaire = new System.Windows.Forms.Label();
             this.labelMClient = new System.Windows.Forms.Label();
             this.labelMDate = new System.Windows.Forms.Label();
-            this.comboBoxClient = new System.Windows.Forms.ComboBox();
-            this.comboBoxSite = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxNMmtbf = new System.Windows.Forms.TextBox();
             this.groupBoxNewMateriel.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxNewMateriel
             // 
+            this.groupBoxNewMateriel.Controls.Add(this.textBoxNMmtbf);
+            this.groupBoxNewMateriel.Controls.Add(this.label1);
             this.groupBoxNewMateriel.Controls.Add(this.dateTimePicker1);
             this.groupBoxNewMateriel.Controls.Add(this.comboBoxSite);
             this.groupBoxNewMateriel.Controls.Add(this.comboBoxClient);
@@ -68,18 +72,43 @@ namespace GestionMatos
             this.groupBoxNewMateriel.Controls.Add(this.labelMClient);
             this.groupBoxNewMateriel.Controls.Add(this.labelMDate);
             this.groupBoxNewMateriel.Location = new System.Drawing.Point(23, 23);
-            this.groupBoxNewMateriel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxNewMateriel.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxNewMateriel.Name = "groupBoxNewMateriel";
-            this.groupBoxNewMateriel.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxNewMateriel.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxNewMateriel.Size = new System.Drawing.Size(730, 353);
             this.groupBoxNewMateriel.TabIndex = 13;
             this.groupBoxNewMateriel.TabStop = false;
             this.groupBoxNewMateriel.Text = "Materiel";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(180, 45);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 22;
+            // 
+            // comboBoxSite
+            // 
+            this.comboBoxSite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSite.FormattingEnabled = true;
+            this.comboBoxSite.Location = new System.Drawing.Point(499, 96);
+            this.comboBoxSite.Name = "comboBoxSite";
+            this.comboBoxSite.Size = new System.Drawing.Size(130, 21);
+            this.comboBoxSite.TabIndex = 21;
+            // 
+            // comboBoxClient
+            // 
+            this.comboBoxClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxClient.FormattingEnabled = true;
+            this.comboBoxClient.Location = new System.Drawing.Point(180, 96);
+            this.comboBoxClient.Name = "comboBoxClient";
+            this.comboBoxClient.Size = new System.Drawing.Size(130, 21);
+            this.comboBoxClient.TabIndex = 20;
+            // 
             // textBoxMNserie
             // 
             this.textBoxMNserie.Location = new System.Drawing.Point(180, 215);
-            this.textBoxMNserie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMNserie.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMNserie.Name = "textBoxMNserie";
             this.textBoxMNserie.Size = new System.Drawing.Size(132, 20);
             this.textBoxMNserie.TabIndex = 19;
@@ -97,7 +126,7 @@ namespace GestionMatos
             // textBoxMTypeMateriel
             // 
             this.textBoxMTypeMateriel.Location = new System.Drawing.Point(499, 155);
-            this.textBoxMTypeMateriel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMTypeMateriel.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMTypeMateriel.Name = "textBoxMTypeMateriel";
             this.textBoxMTypeMateriel.Size = new System.Drawing.Size(132, 20);
             this.textBoxMTypeMateriel.TabIndex = 17;
@@ -105,7 +134,7 @@ namespace GestionMatos
             // textBoxMNomMateriel
             // 
             this.textBoxMNomMateriel.Location = new System.Drawing.Point(180, 157);
-            this.textBoxMNomMateriel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMNomMateriel.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMNomMateriel.Name = "textBoxMNomMateriel";
             this.textBoxMNomMateriel.Size = new System.Drawing.Size(132, 20);
             this.textBoxMNomMateriel.TabIndex = 16;
@@ -133,17 +162,18 @@ namespace GestionMatos
             // buttonMCreer
             // 
             this.buttonMCreer.Location = new System.Drawing.Point(414, 272);
-            this.buttonMCreer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonMCreer.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMCreer.Name = "buttonMCreer";
             this.buttonMCreer.Size = new System.Drawing.Size(130, 32);
             this.buttonMCreer.TabIndex = 13;
             this.buttonMCreer.Text = "Créer";
             this.buttonMCreer.UseVisualStyleBackColor = true;
+            this.buttonMCreer.Click += new System.EventHandler(this.buttonMCreer_Click);
             // 
             // buttonMAnnuler
             // 
             this.buttonMAnnuler.Location = new System.Drawing.Point(180, 272);
-            this.buttonMAnnuler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonMAnnuler.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMAnnuler.Name = "buttonMAnnuler";
             this.buttonMAnnuler.Size = new System.Drawing.Size(130, 32);
             this.buttonMAnnuler.TabIndex = 12;
@@ -154,7 +184,7 @@ namespace GestionMatos
             // textBoxMCommentaire
             // 
             this.textBoxMCommentaire.Location = new System.Drawing.Point(499, 45);
-            this.textBoxMCommentaire.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMCommentaire.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMCommentaire.Name = "textBoxMCommentaire";
             this.textBoxMCommentaire.Size = new System.Drawing.Size(132, 20);
             this.textBoxMCommentaire.TabIndex = 7;
@@ -199,30 +229,23 @@ namespace GestionMatos
             this.labelMDate.TabIndex = 0;
             this.labelMDate.Text = "Date d\'Instalation";
             // 
-            // comboBoxClient
+            // label1
             // 
-            this.comboBoxClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxClient.FormattingEnabled = true;
-            this.comboBoxClient.Location = new System.Drawing.Point(180, 96);
-            this.comboBoxClient.Name = "comboBoxClient";
-            this.comboBoxClient.Size = new System.Drawing.Size(130, 21);
-            this.comboBoxClient.TabIndex = 20;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(436, 217);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "MTBF";
             // 
-            // comboBoxSite
+            // textBoxNMmtbf
             // 
-            this.comboBoxSite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSite.FormattingEnabled = true;
-            this.comboBoxSite.Location = new System.Drawing.Point(499, 96);
-            this.comboBoxSite.Name = "comboBoxSite";
-            this.comboBoxSite.Size = new System.Drawing.Size(130, 21);
-            this.comboBoxSite.TabIndex = 21;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(180, 45);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 22;
+            this.textBoxNMmtbf.Location = new System.Drawing.Point(497, 214);
+            this.textBoxNMmtbf.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxNMmtbf.Name = "textBoxNMmtbf";
+            this.textBoxNMmtbf.Size = new System.Drawing.Size(132, 20);
+            this.textBoxNMmtbf.TabIndex = 24;
             // 
             // FormulaireNewMateriel
             // 
@@ -231,7 +254,7 @@ namespace GestionMatos
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(776, 399);
             this.Controls.Add(this.groupBoxNewMateriel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormulaireNewMateriel";
             this.Text = "Nouveau Materiel";
             this.Load += new System.EventHandler(this.FormulaireNewMateriel_Load);
@@ -260,5 +283,7 @@ namespace GestionMatos
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBoxSite;
         private System.Windows.Forms.ComboBox comboBoxClient;
+        private System.Windows.Forms.TextBox textBoxNMmtbf;
+        private System.Windows.Forms.Label label1;
     }
 }
