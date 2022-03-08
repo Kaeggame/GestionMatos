@@ -9,10 +9,11 @@
         public string dateinstall;
         public string desc;
         public string mtbf;
+        public string nomclient;
 
 
 
-        public IdMat(int leid, string lenommat, string lenumserie, string letypemat, string ladateinstall, string ladesc, string lemtbf)
+        public IdMat(int leid, string lenommat, string lenumserie, string letypemat, string ladateinstall, string ladesc, string lemtbf, string lenomclient)
         {
             this.id = leid;
             this.nommat = lenommat;
@@ -21,6 +22,7 @@
             this.typemat = letypemat;
             this.desc = ladesc;
             this.mtbf = lemtbf;
+            this.nomclient = lenomclient;
         }
         public override string ToString()
         {
@@ -30,6 +32,7 @@
             return this.typemat;
             return this.desc;
             return this.mtbf;
+            return this.nomclient;
         }
     }
 }
