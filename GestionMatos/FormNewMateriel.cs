@@ -104,8 +104,6 @@ namespace GestionMatos
             string getIDSite = "Select SiteID FROM Site where SiteNom = " + comboBoxSite.Text;
 
             SqlCommand cmd = new SqlCommand(query, sqlConn);
-            SqlCommand testchouette = new SqlCommand(getIDClient, sqlConn);
-            SqlCommand testhibou = new SqlCommand(getIDSite, sqlConn);
 
             int idclient = this.getClientId(comboBoxClient.Text);
             int idsite = this.getSiteId(comboBoxSite.Text);
@@ -121,12 +119,12 @@ namespace GestionMatos
             cmd.Parameters.AddWithValue("@SiteID", idsite);
 
 
-            string query22 = cmd.CommandText;
-
-            foreach (SqlParameter p in cmd.Parameters)
-            {
-                query22 = query22.Replace(p.ParameterName, p.Value.ToString());
-            }
+            //            string query22 = cmd.CommandText;
+            //
+            //           foreach (SqlParameter p in cmd.Parameters)
+            //           {
+            //           query22 = query22.Replace(p.ParameterName, p.Value.ToString());
+            //           }
 
 
 

@@ -54,12 +54,14 @@ namespace GestionMatos
             this.listBoxIntervention = new System.Windows.Forms.ListBox();
             this.buttonIFiltre = new System.Windows.Forms.Button();
             this.buttonNewIntervention = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxIntervention.SuspendLayout();
             this.groupBoxIInfos.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxIntervention
             // 
+            this.groupBoxIntervention.Controls.Add(this.button1);
             this.groupBoxIntervention.Controls.Add(this.labelIChercher);
             this.groupBoxIntervention.Controls.Add(this.buttonModifierIntervention);
             this.groupBoxIntervention.Controls.Add(this.comboBoxIFiltre);
@@ -312,10 +314,10 @@ namespace GestionMatos
             // 
             // buttonIFiltre
             // 
-            this.buttonIFiltre.Location = new System.Drawing.Point(225, 64);
+            this.buttonIFiltre.Location = new System.Drawing.Point(233, 64);
             this.buttonIFiltre.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIFiltre.Name = "buttonIFiltre";
-            this.buttonIFiltre.Size = new System.Drawing.Size(104, 31);
+            this.buttonIFiltre.Size = new System.Drawing.Size(96, 31);
             this.buttonIFiltre.TabIndex = 3;
             this.buttonIFiltre.Text = "Filtre";
             this.buttonIFiltre.UseVisualStyleBackColor = true;
@@ -330,6 +332,16 @@ namespace GestionMatos
             this.buttonNewIntervention.Text = "Nouvelle Intervention";
             this.buttonNewIntervention.UseVisualStyleBackColor = true;
             this.buttonNewIntervention.Click += new System.EventHandler(this.buttonNewIntervention_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(191, 64);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 27);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormulaireListeIntervention
             // 
@@ -378,5 +390,6 @@ namespace GestionMatos
         private System.Windows.Forms.ComboBox comboBoxIFiltre;
         private System.Windows.Forms.Button buttonModifierIntervention;
         private System.Windows.Forms.Label labelIChercher;
+        private System.Windows.Forms.Button button1;
     }
 }

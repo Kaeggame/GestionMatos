@@ -31,6 +31,14 @@ namespace GestionMatos
             Requete(s);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            string s = "SELECT * FROM Intervention INNER JOIN Materiel ON Intervention.MatID = Materiel.MatID INNER JOIN Client ON Materiel.ClientID = Client.ClientID INNER JOIN Site ON Materiel.SiteID = Site.SiteID";
+           
+            Requete(s);
+        }
+
         // Bouton qui affiche la Liste des Materiels
         private void buttonListeIMateriel_Click(object sender, EventArgs e)
         {
@@ -69,7 +77,6 @@ namespace GestionMatos
             //ChildForm.MaterielIntervention = textBoxIMateriel.Text;
             //ChildForm.TypeMaterielIntervention = textBoxIType.Text;
             ChildForm.DateIntervention = textBoxIDate.Text;
-
             ChildForm.ShowDialog();
         }
 
@@ -142,5 +149,7 @@ namespace GestionMatos
 
             cn.Close();
         }
+
+
     }
 }
