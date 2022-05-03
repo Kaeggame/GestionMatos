@@ -30,9 +30,9 @@ namespace GestionMatos
         private void InitializeComponent()
         {
             this.groupBoxIntervention = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.labelIChercher = new System.Windows.Forms.Label();
             this.buttonModifierIntervention = new System.Windows.Forms.Button();
-            this.comboBoxIFiltre = new System.Windows.Forms.ComboBox();
             this.groupBoxIInfos = new System.Windows.Forms.GroupBox();
             this.textBoxIDate = new System.Windows.Forms.TextBox();
             this.labelIDate = new System.Windows.Forms.Label();
@@ -52,9 +52,7 @@ namespace GestionMatos
             this.buttonListeIClient = new System.Windows.Forms.Button();
             this.buttonListeIMateriel = new System.Windows.Forms.Button();
             this.listBoxIntervention = new System.Windows.Forms.ListBox();
-            this.buttonIFiltre = new System.Windows.Forms.Button();
             this.buttonNewIntervention = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxIntervention.SuspendLayout();
             this.groupBoxIInfos.SuspendLayout();
             this.SuspendLayout();
@@ -64,13 +62,11 @@ namespace GestionMatos
             this.groupBoxIntervention.Controls.Add(this.button1);
             this.groupBoxIntervention.Controls.Add(this.labelIChercher);
             this.groupBoxIntervention.Controls.Add(this.buttonModifierIntervention);
-            this.groupBoxIntervention.Controls.Add(this.comboBoxIFiltre);
             this.groupBoxIntervention.Controls.Add(this.groupBoxIInfos);
             this.groupBoxIntervention.Controls.Add(this.textBoxIRecherche);
             this.groupBoxIntervention.Controls.Add(this.buttonListeIClient);
             this.groupBoxIntervention.Controls.Add(this.buttonListeIMateriel);
             this.groupBoxIntervention.Controls.Add(this.listBoxIntervention);
-            this.groupBoxIntervention.Controls.Add(this.buttonIFiltre);
             this.groupBoxIntervention.Controls.Add(this.buttonNewIntervention);
             this.groupBoxIntervention.Location = new System.Drawing.Point(18, 18);
             this.groupBoxIntervention.Margin = new System.Windows.Forms.Padding(2);
@@ -80,6 +76,16 @@ namespace GestionMatos
             this.groupBoxIntervention.TabIndex = 0;
             this.groupBoxIntervention.TabStop = false;
             this.groupBoxIntervention.Text = "Interventions";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(191, 64);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(72, 46);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Actualiser";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // labelIChercher
             // 
@@ -101,16 +107,6 @@ namespace GestionMatos
             this.buttonModifierIntervention.Text = "Modifier";
             this.buttonModifierIntervention.UseVisualStyleBackColor = true;
             this.buttonModifierIntervention.Click += new System.EventHandler(this.buttonModifierIntervention_Click);
-            // 
-            // comboBoxIFiltre
-            // 
-            this.comboBoxIFiltre.FormattingEnabled = true;
-            this.comboBoxIFiltre.Location = new System.Drawing.Point(342, 72);
-            this.comboBoxIFiltre.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxIFiltre.Name = "comboBoxIFiltre";
-            this.comboBoxIFiltre.Size = new System.Drawing.Size(388, 21);
-            this.comboBoxIFiltre.TabIndex = 31;
-            this.comboBoxIFiltre.Text = "Filtres";
             // 
             // groupBoxIInfos
             // 
@@ -312,16 +308,6 @@ namespace GestionMatos
             this.listBoxIntervention.TabIndex = 5;
             this.listBoxIntervention.SelectedIndexChanged += new System.EventHandler(this.listBoxIntervention_SelectedIndexChanged);
             // 
-            // buttonIFiltre
-            // 
-            this.buttonIFiltre.Location = new System.Drawing.Point(233, 64);
-            this.buttonIFiltre.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonIFiltre.Name = "buttonIFiltre";
-            this.buttonIFiltre.Size = new System.Drawing.Size(96, 31);
-            this.buttonIFiltre.TabIndex = 3;
-            this.buttonIFiltre.Text = "Filtre";
-            this.buttonIFiltre.UseVisualStyleBackColor = true;
-            // 
             // buttonNewIntervention
             // 
             this.buttonNewIntervention.Location = new System.Drawing.Point(606, 398);
@@ -332,16 +318,6 @@ namespace GestionMatos
             this.buttonNewIntervention.Text = "Nouvelle Intervention";
             this.buttonNewIntervention.UseVisualStyleBackColor = true;
             this.buttonNewIntervention.Click += new System.EventHandler(this.buttonNewIntervention_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(191, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 27);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormulaireListeIntervention
             // 
@@ -369,7 +345,6 @@ namespace GestionMatos
         private System.Windows.Forms.Button buttonListeIClient;
         private System.Windows.Forms.Button buttonListeIMateriel;
         private System.Windows.Forms.ListBox listBoxIntervention;
-        private System.Windows.Forms.Button buttonIFiltre;
         private System.Windows.Forms.Button buttonNewIntervention;
         private System.Windows.Forms.TextBox textBoxIRecherche;
         private System.Windows.Forms.GroupBox groupBoxIInfos;
@@ -387,7 +362,6 @@ namespace GestionMatos
         private System.Windows.Forms.Label labelIMateriel;
         private System.Windows.Forms.TextBox textBoxINom;
         private System.Windows.Forms.Label labelINom;
-        private System.Windows.Forms.ComboBox comboBoxIFiltre;
         private System.Windows.Forms.Button buttonModifierIntervention;
         private System.Windows.Forms.Label labelIChercher;
         private System.Windows.Forms.Button button1;
