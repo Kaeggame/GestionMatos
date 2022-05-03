@@ -30,6 +30,8 @@ namespace GestionMatos
         private void InitializeComponent()
         {
             this.groupBoxIntervention = new System.Windows.Forms.GroupBox();
+            this.buttonFinIntervention = new System.Windows.Forms.Button();
+            this.buttonISupprimer = new System.Windows.Forms.Button();
             this.buttonIActualiser = new System.Windows.Forms.Button();
             this.labelIChercher = new System.Windows.Forms.Label();
             this.buttonModifierIntervention = new System.Windows.Forms.Button();
@@ -53,8 +55,6 @@ namespace GestionMatos
             this.buttonListeIMateriel = new System.Windows.Forms.Button();
             this.listBoxIntervention = new System.Windows.Forms.ListBox();
             this.buttonNewIntervention = new System.Windows.Forms.Button();
-            this.buttonISupprimer = new System.Windows.Forms.Button();
-            this.buttonFinIntervention = new System.Windows.Forms.Button();
             this.groupBoxIntervention.SuspendLayout();
             this.groupBoxIInfos.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,28 @@ namespace GestionMatos
             this.groupBoxIntervention.TabIndex = 0;
             this.groupBoxIntervention.TabStop = false;
             this.groupBoxIntervention.Text = "Interventions";
+            // 
+            // buttonFinIntervention
+            // 
+            this.buttonFinIntervention.Location = new System.Drawing.Point(1212, 654);
+            this.buttonFinIntervention.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonFinIntervention.Name = "buttonFinIntervention";
+            this.buttonFinIntervention.Size = new System.Drawing.Size(242, 87);
+            this.buttonFinIntervention.TabIndex = 34;
+            this.buttonFinIntervention.Text = "Fin Intervention";
+            this.buttonFinIntervention.UseVisualStyleBackColor = true;
+            this.buttonFinIntervention.Click += new System.EventHandler(this.buttonFinIntervention_Click);
+            // 
+            // buttonISupprimer
+            // 
+            this.buttonISupprimer.Location = new System.Drawing.Point(687, 765);
+            this.buttonISupprimer.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonISupprimer.Name = "buttonISupprimer";
+            this.buttonISupprimer.Size = new System.Drawing.Size(242, 87);
+            this.buttonISupprimer.TabIndex = 33;
+            this.buttonISupprimer.Text = "Supprimer";
+            this.buttonISupprimer.UseVisualStyleBackColor = true;
+            this.buttonISupprimer.Click += new System.EventHandler(this.buttonISupprimer_Click);
             // 
             // buttonIActualiser
             // 
@@ -324,26 +346,6 @@ namespace GestionMatos
             this.buttonNewIntervention.Text = "Nouvelle Intervention";
             this.buttonNewIntervention.UseVisualStyleBackColor = true;
             this.buttonNewIntervention.Click += new System.EventHandler(this.buttonNewIntervention_Click);
-            // 
-            // buttonISupprimer
-            // 
-            this.buttonISupprimer.Location = new System.Drawing.Point(687, 765);
-            this.buttonISupprimer.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonISupprimer.Name = "buttonISupprimer";
-            this.buttonISupprimer.Size = new System.Drawing.Size(242, 87);
-            this.buttonISupprimer.TabIndex = 33;
-            this.buttonISupprimer.Text = "Supprimer";
-            this.buttonISupprimer.UseVisualStyleBackColor = true;
-            // 
-            // buttonFinIntervention
-            // 
-            this.buttonFinIntervention.Location = new System.Drawing.Point(1212, 654);
-            this.buttonFinIntervention.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonFinIntervention.Name = "buttonFinIntervention";
-            this.buttonFinIntervention.Size = new System.Drawing.Size(242, 87);
-            this.buttonFinIntervention.TabIndex = 34;
-            this.buttonFinIntervention.Text = "Fin Intervention";
-            this.buttonFinIntervention.UseVisualStyleBackColor = true;
             // 
             // FormulaireListeIntervention
             // 

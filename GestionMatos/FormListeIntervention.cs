@@ -31,6 +31,7 @@ namespace GestionMatos
             FormConnexion fr = new FormConnexion(); // Au lancement de l'application, ouvre la fenêtre de connexion
 
             buttonModifierIntervention.Enabled = false;
+            buttonISupprimer.Enabled = false;
 
             fr.ShowDialog();
             string s = "SELECT * FROM Intervention INNER JOIN Materiel ON Intervention.MatID = Materiel.MatID INNER JOIN Client ON Materiel.ClientID = Client.ClientID INNER JOIN Site ON Materiel.SiteID = Site.SiteID";
@@ -143,6 +144,7 @@ namespace GestionMatos
         private void listBoxIntervention_SelectedIndexChanged(object sender, EventArgs e)
         {
             buttonModifierIntervention.Enabled = true;
+            buttonISupprimer.Enabled = true;
 
             IdInter truc = (IdInter)(listBoxIntervention.SelectedItem);
             if (truc == null)
@@ -166,6 +168,71 @@ namespace GestionMatos
             textBoxISite.Text = sqr["SiteNom"].ToString();
 
             cn.Close();
+        }
+
+        private void buttonISupprimer_Click(object sender, EventArgs e)
+        {
+            /* à tester */
+            const string message1 = "Souhaitez-vous supprimer cette intervention ?";
+            const string caption1 = "Attention Supression";
+            var result1 = MessageBox.Show(message1, caption1, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result1 == DialogResult.Yes)
+            {
+                const string message2 = "La supression sera deffinitive, voulez-vous toujours continuer ?";
+                const string caption2 = "Attention Supression";
+                var result2 = MessageBox.Show(message2, caption2, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result2 == DialogResult.Yes)
+                {
+                    string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
+                    SqlConnection sqlConn = new SqlConnection(cnsql);
+
+                    string query = "DELETE from Intervention where InterID = " + IDIntervention.ToString();
+                    SqlCommand cmd = new SqlCommand(query, sqlConn);
+                    cmd.Connection.Open();
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Error " + ex.Message);
+                    }
+
+                    MessageBox.Show("Suppression Confirmée !");
+                    sqlConn.Close();
+                }
+            }
+        }
+
+        private void buttonFinIntervention_Click(object sender, EventArgs e)
+        {
+            /* à tester */
+            const string message1 = "Cette intervention a t-elle été accomplis ?";
+            const string caption1 = "Intervention Terminée";
+            var result = MessageBox.Show(message1, caption1, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
+                SqlConnection sqlConn = new SqlConnection(cnsql);
+
+                string query = "DELETE from Intervention where InterID = " + IDIntervention.ToString();
+                SqlCommand cmd = new SqlCommand(query, sqlConn);
+                cmd.Connection.Open();
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error " + ex.Message);
+                }
+
+                MessageBox.Show("Merci d'avoir choisis nos serices !");
+                sqlConn.Close();
+            }
         }
     }
 }

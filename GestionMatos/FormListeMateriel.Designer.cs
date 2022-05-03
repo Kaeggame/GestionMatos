@@ -30,6 +30,7 @@ namespace GestionMatos
         private void InitializeComponent()
         {
             this.groupBoxMateriel = new System.Windows.Forms.GroupBox();
+            this.buttonMSupprimer = new System.Windows.Forms.Button();
             this.buttonMActualiser = new System.Windows.Forms.Button();
             this.labelMChercher = new System.Windows.Forms.Label();
             this.buttonModifierMateriel = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@ namespace GestionMatos
             this.listBoxMateriel = new System.Windows.Forms.ListBox();
             this.textBoxMRecherche = new System.Windows.Forms.TextBox();
             this.buttonNewMateriel = new System.Windows.Forms.Button();
-            this.buttonMSupprimer = new System.Windows.Forms.Button();
             this.groupBoxMateriel.SuspendLayout();
             this.groupBoxMInfos.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +76,17 @@ namespace GestionMatos
             this.groupBoxMateriel.TabIndex = 0;
             this.groupBoxMateriel.TabStop = false;
             this.groupBoxMateriel.Text = "Materiels";
+            // 
+            // buttonMSupprimer
+            // 
+            this.buttonMSupprimer.Location = new System.Drawing.Point(680, 769);
+            this.buttonMSupprimer.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonMSupprimer.Name = "buttonMSupprimer";
+            this.buttonMSupprimer.Size = new System.Drawing.Size(242, 87);
+            this.buttonMSupprimer.TabIndex = 34;
+            this.buttonMSupprimer.Text = "Supprimer";
+            this.buttonMSupprimer.UseVisualStyleBackColor = true;
+            this.buttonMSupprimer.Click += new System.EventHandler(this.buttonMSupprimer_Click);
             // 
             // buttonMActualiser
             // 
@@ -308,16 +319,6 @@ namespace GestionMatos
             this.buttonNewMateriel.Text = "Nouveau Materiel";
             this.buttonNewMateriel.UseVisualStyleBackColor = true;
             this.buttonNewMateriel.Click += new System.EventHandler(this.buttonNewMateriel_Click);
-            // 
-            // buttonMSupprimer
-            // 
-            this.buttonMSupprimer.Location = new System.Drawing.Point(680, 769);
-            this.buttonMSupprimer.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonMSupprimer.Name = "buttonMSupprimer";
-            this.buttonMSupprimer.Size = new System.Drawing.Size(242, 87);
-            this.buttonMSupprimer.TabIndex = 34;
-            this.buttonMSupprimer.Text = "Supprimer";
-            this.buttonMSupprimer.UseVisualStyleBackColor = true;
             // 
             // FormulaireListeMateriel
             // 
