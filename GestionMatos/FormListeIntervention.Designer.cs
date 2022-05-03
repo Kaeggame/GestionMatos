@@ -53,12 +53,14 @@ namespace GestionMatos
             this.buttonListeIMateriel = new System.Windows.Forms.Button();
             this.listBoxIntervention = new System.Windows.Forms.ListBox();
             this.buttonNewIntervention = new System.Windows.Forms.Button();
+            this.buttonISupprimer = new System.Windows.Forms.Button();
             this.groupBoxIntervention.SuspendLayout();
             this.groupBoxIInfos.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxIntervention
             // 
+            this.groupBoxIntervention.Controls.Add(this.buttonISupprimer);
             this.groupBoxIntervention.Controls.Add(this.buttonIActualiser);
             this.groupBoxIntervention.Controls.Add(this.labelIChercher);
             this.groupBoxIntervention.Controls.Add(this.buttonModifierIntervention);
@@ -69,9 +71,9 @@ namespace GestionMatos
             this.groupBoxIntervention.Controls.Add(this.listBoxIntervention);
             this.groupBoxIntervention.Controls.Add(this.buttonNewIntervention);
             this.groupBoxIntervention.Location = new System.Drawing.Point(36, 35);
-            this.groupBoxIntervention.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxIntervention.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxIntervention.Name = "groupBoxIntervention";
-            this.groupBoxIntervention.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxIntervention.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxIntervention.Size = new System.Drawing.Size(1472, 873);
             this.groupBoxIntervention.TabIndex = 0;
             this.groupBoxIntervention.TabStop = false;
@@ -80,7 +82,7 @@ namespace GestionMatos
             // buttonIActualiser
             // 
             this.buttonIActualiser.Location = new System.Drawing.Point(1253, 38);
-            this.buttonIActualiser.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonIActualiser.Margin = new System.Windows.Forms.Padding(6);
             this.buttonIActualiser.Name = "buttonIActualiser";
             this.buttonIActualiser.Size = new System.Drawing.Size(144, 66);
             this.buttonIActualiser.TabIndex = 32;
@@ -100,8 +102,8 @@ namespace GestionMatos
             // 
             // buttonModifierIntervention
             // 
-            this.buttonModifierIntervention.Location = new System.Drawing.Point(946, 765);
-            this.buttonModifierIntervention.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonModifierIntervention.Location = new System.Drawing.Point(951, 765);
+            this.buttonModifierIntervention.Margin = new System.Windows.Forms.Padding(4);
             this.buttonModifierIntervention.Name = "buttonModifierIntervention";
             this.buttonModifierIntervention.Size = new System.Drawing.Size(242, 87);
             this.buttonModifierIntervention.TabIndex = 29;
@@ -126,10 +128,10 @@ namespace GestionMatos
             this.groupBoxIInfos.Controls.Add(this.textBoxINom);
             this.groupBoxIInfos.Controls.Add(this.labelINom);
             this.groupBoxIInfos.Location = new System.Drawing.Point(420, 123);
-            this.groupBoxIInfos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxIInfos.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxIInfos.Name = "groupBoxIInfos";
-            this.groupBoxIInfos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBoxIInfos.Size = new System.Drawing.Size(1034, 602);
+            this.groupBoxIInfos.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBoxIInfos.Size = new System.Drawing.Size(1034, 509);
             this.groupBoxIInfos.TabIndex = 30;
             this.groupBoxIInfos.TabStop = false;
             this.groupBoxIInfos.Text = "Informations";
@@ -137,7 +139,7 @@ namespace GestionMatos
             // textBoxIDate
             // 
             this.textBoxIDate.Location = new System.Drawing.Point(726, 44);
-            this.textBoxIDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIDate.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIDate.Name = "textBoxIDate";
             this.textBoxIDate.ReadOnly = true;
             this.textBoxIDate.Size = new System.Drawing.Size(286, 31);
@@ -156,7 +158,7 @@ namespace GestionMatos
             // textBoxISite
             // 
             this.textBoxISite.Location = new System.Drawing.Point(726, 296);
-            this.textBoxISite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxISite.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxISite.Name = "textBoxISite";
             this.textBoxISite.ReadOnly = true;
             this.textBoxISite.Size = new System.Drawing.Size(286, 31);
@@ -175,7 +177,7 @@ namespace GestionMatos
             // textBoxIClient
             // 
             this.textBoxIClient.Location = new System.Drawing.Point(726, 171);
-            this.textBoxIClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIClient.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIClient.Name = "textBoxIClient";
             this.textBoxIClient.ReadOnly = true;
             this.textBoxIClient.Size = new System.Drawing.Size(286, 31);
@@ -194,7 +196,7 @@ namespace GestionMatos
             // textBoxIType
             // 
             this.textBoxIType.Location = new System.Drawing.Point(198, 296);
-            this.textBoxIType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIType.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIType.Name = "textBoxIType";
             this.textBoxIType.ReadOnly = true;
             this.textBoxIType.Size = new System.Drawing.Size(286, 31);
@@ -213,7 +215,7 @@ namespace GestionMatos
             // textBoxICommentaire
             // 
             this.textBoxICommentaire.Location = new System.Drawing.Point(198, 421);
-            this.textBoxICommentaire.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxICommentaire.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxICommentaire.Name = "textBoxICommentaire";
             this.textBoxICommentaire.ReadOnly = true;
             this.textBoxICommentaire.Size = new System.Drawing.Size(814, 31);
@@ -232,7 +234,7 @@ namespace GestionMatos
             // textBoxIMateriel
             // 
             this.textBoxIMateriel.Location = new System.Drawing.Point(198, 171);
-            this.textBoxIMateriel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIMateriel.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIMateriel.Name = "textBoxIMateriel";
             this.textBoxIMateriel.ReadOnly = true;
             this.textBoxIMateriel.Size = new System.Drawing.Size(286, 31);
@@ -251,7 +253,7 @@ namespace GestionMatos
             // textBoxINom
             // 
             this.textBoxINom.Location = new System.Drawing.Point(198, 44);
-            this.textBoxINom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxINom.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxINom.Name = "textBoxINom";
             this.textBoxINom.ReadOnly = true;
             this.textBoxINom.Size = new System.Drawing.Size(286, 31);
@@ -270,7 +272,7 @@ namespace GestionMatos
             // textBoxIRecherche
             // 
             this.textBoxIRecherche.Location = new System.Drawing.Point(142, 56);
-            this.textBoxIRecherche.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIRecherche.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIRecherche.Name = "textBoxIRecherche";
             this.textBoxIRecherche.Size = new System.Drawing.Size(1046, 31);
             this.textBoxIRecherche.TabIndex = 11;
@@ -279,8 +281,8 @@ namespace GestionMatos
             // 
             // buttonListeIClient
             // 
-            this.buttonListeIClient.Location = new System.Drawing.Point(420, 765);
-            this.buttonListeIClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonListeIClient.Location = new System.Drawing.Point(420, 654);
+            this.buttonListeIClient.Margin = new System.Windows.Forms.Padding(4);
             this.buttonListeIClient.Name = "buttonListeIClient";
             this.buttonListeIClient.Size = new System.Drawing.Size(242, 87);
             this.buttonListeIClient.TabIndex = 7;
@@ -290,8 +292,8 @@ namespace GestionMatos
             // 
             // buttonListeIMateriel
             // 
-            this.buttonListeIMateriel.Location = new System.Drawing.Point(684, 765);
-            this.buttonListeIMateriel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonListeIMateriel.Location = new System.Drawing.Point(420, 765);
+            this.buttonListeIMateriel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonListeIMateriel.Name = "buttonListeIMateriel";
             this.buttonListeIMateriel.Size = new System.Drawing.Size(242, 87);
             this.buttonListeIMateriel.TabIndex = 6;
@@ -304,7 +306,7 @@ namespace GestionMatos
             this.listBoxIntervention.FormattingEnabled = true;
             this.listBoxIntervention.ItemHeight = 25;
             this.listBoxIntervention.Location = new System.Drawing.Point(30, 123);
-            this.listBoxIntervention.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxIntervention.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxIntervention.Name = "listBoxIntervention";
             this.listBoxIntervention.Size = new System.Drawing.Size(338, 729);
             this.listBoxIntervention.TabIndex = 5;
@@ -313,13 +315,23 @@ namespace GestionMatos
             // buttonNewIntervention
             // 
             this.buttonNewIntervention.Location = new System.Drawing.Point(1212, 765);
-            this.buttonNewIntervention.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonNewIntervention.Margin = new System.Windows.Forms.Padding(4);
             this.buttonNewIntervention.Name = "buttonNewIntervention";
             this.buttonNewIntervention.Size = new System.Drawing.Size(242, 87);
             this.buttonNewIntervention.TabIndex = 0;
             this.buttonNewIntervention.Text = "Nouvelle Intervention";
             this.buttonNewIntervention.UseVisualStyleBackColor = true;
             this.buttonNewIntervention.Click += new System.EventHandler(this.buttonNewIntervention_Click);
+            // 
+            // buttonISupprimer
+            // 
+            this.buttonISupprimer.Location = new System.Drawing.Point(687, 765);
+            this.buttonISupprimer.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonISupprimer.Name = "buttonISupprimer";
+            this.buttonISupprimer.Size = new System.Drawing.Size(242, 87);
+            this.buttonISupprimer.TabIndex = 33;
+            this.buttonISupprimer.Text = "Supprimer";
+            this.buttonISupprimer.UseVisualStyleBackColor = true;
             // 
             // FormulaireListeIntervention
             // 
@@ -328,7 +340,7 @@ namespace GestionMatos
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1548, 937);
             this.Controls.Add(this.groupBoxIntervention);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormulaireListeIntervention";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Liste Intervention";
@@ -367,5 +379,6 @@ namespace GestionMatos
         private System.Windows.Forms.Button buttonModifierIntervention;
         private System.Windows.Forms.Label labelIChercher;
         private System.Windows.Forms.Button buttonIActualiser;
+        private System.Windows.Forms.Button buttonISupprimer;
     }
 }

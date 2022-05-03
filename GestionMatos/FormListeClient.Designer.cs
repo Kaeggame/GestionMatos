@@ -44,12 +44,14 @@ namespace GestionMatos
             this.buttonListeCRetour = new System.Windows.Forms.Button();
             this.listBoxClient = new System.Windows.Forms.ListBox();
             this.buttonNewClient = new System.Windows.Forms.Button();
+            this.buttonCSupprimer = new System.Windows.Forms.Button();
             this.groupBoxClient.SuspendLayout();
             this.groupBoxMInfos.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxClient
             // 
+            this.groupBoxClient.Controls.Add(this.buttonCSupprimer);
             this.groupBoxClient.Controls.Add(this.buttonCActualiser);
             this.groupBoxClient.Controls.Add(this.buttonModifierClient);
             this.groupBoxClient.Controls.Add(this.labelCChercher);
@@ -80,7 +82,7 @@ namespace GestionMatos
             // 
             // buttonModifierClient
             // 
-            this.buttonModifierClient.Location = new System.Drawing.Point(912, 769);
+            this.buttonModifierClient.Location = new System.Drawing.Point(941, 769);
             this.buttonModifierClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonModifierClient.Name = "buttonModifierClient";
             this.buttonModifierClient.Size = new System.Drawing.Size(242, 87);
@@ -184,7 +186,7 @@ namespace GestionMatos
             // 
             // buttonListeCRetour
             // 
-            this.buttonListeCRetour.Location = new System.Drawing.Point(610, 769);
+            this.buttonListeCRetour.Location = new System.Drawing.Point(412, 769);
             this.buttonListeCRetour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonListeCRetour.Name = "buttonListeCRetour";
             this.buttonListeCRetour.Size = new System.Drawing.Size(242, 87);
@@ -214,6 +216,16 @@ namespace GestionMatos
             this.buttonNewClient.Text = "Nouveau Client";
             this.buttonNewClient.UseVisualStyleBackColor = true;
             this.buttonNewClient.Click += new System.EventHandler(this.buttonNewClient_Click);
+            // 
+            // buttonCSupprimer
+            // 
+            this.buttonCSupprimer.Location = new System.Drawing.Point(681, 769);
+            this.buttonCSupprimer.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCSupprimer.Name = "buttonCSupprimer";
+            this.buttonCSupprimer.Size = new System.Drawing.Size(242, 87);
+            this.buttonCSupprimer.TabIndex = 34;
+            this.buttonCSupprimer.Text = "Supprimer";
+            this.buttonCSupprimer.UseVisualStyleBackColor = true;
             // 
             // FormulaireListeClient
             // 
@@ -251,5 +263,6 @@ namespace GestionMatos
         private System.Windows.Forms.Label labelCChercher;
         private System.Windows.Forms.Button buttonModifierClient;
         private System.Windows.Forms.Button buttonCActualiser;
+        private System.Windows.Forms.Button buttonCSupprimer;
     }
 }

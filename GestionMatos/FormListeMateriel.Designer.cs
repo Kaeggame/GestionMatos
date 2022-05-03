@@ -52,12 +52,14 @@ namespace GestionMatos
             this.listBoxMateriel = new System.Windows.Forms.ListBox();
             this.textBoxMRecherche = new System.Windows.Forms.TextBox();
             this.buttonNewMateriel = new System.Windows.Forms.Button();
+            this.buttonMSupprimer = new System.Windows.Forms.Button();
             this.groupBoxMateriel.SuspendLayout();
             this.groupBoxMInfos.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxMateriel
             // 
+            this.groupBoxMateriel.Controls.Add(this.buttonMSupprimer);
             this.groupBoxMateriel.Controls.Add(this.buttonMActualiser);
             this.groupBoxMateriel.Controls.Add(this.labelMChercher);
             this.groupBoxMateriel.Controls.Add(this.buttonModifierMateriel);
@@ -67,9 +69,9 @@ namespace GestionMatos
             this.groupBoxMateriel.Controls.Add(this.textBoxMRecherche);
             this.groupBoxMateriel.Controls.Add(this.buttonNewMateriel);
             this.groupBoxMateriel.Location = new System.Drawing.Point(32, 31);
-            this.groupBoxMateriel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxMateriel.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxMateriel.Name = "groupBoxMateriel";
-            this.groupBoxMateriel.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxMateriel.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxMateriel.Size = new System.Drawing.Size(1478, 869);
             this.groupBoxMateriel.TabIndex = 0;
             this.groupBoxMateriel.TabStop = false;
@@ -78,7 +80,7 @@ namespace GestionMatos
             // buttonMActualiser
             // 
             this.buttonMActualiser.Location = new System.Drawing.Point(1206, 33);
-            this.buttonMActualiser.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonMActualiser.Margin = new System.Windows.Forms.Padding(6);
             this.buttonMActualiser.Name = "buttonMActualiser";
             this.buttonMActualiser.Size = new System.Drawing.Size(144, 72);
             this.buttonMActualiser.TabIndex = 33;
@@ -98,8 +100,8 @@ namespace GestionMatos
             // 
             // buttonModifierMateriel
             // 
-            this.buttonModifierMateriel.Location = new System.Drawing.Point(908, 769);
-            this.buttonModifierMateriel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonModifierMateriel.Location = new System.Drawing.Point(941, 769);
+            this.buttonModifierMateriel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonModifierMateriel.Name = "buttonModifierMateriel";
             this.buttonModifierMateriel.Size = new System.Drawing.Size(242, 87);
             this.buttonModifierMateriel.TabIndex = 30;
@@ -124,9 +126,9 @@ namespace GestionMatos
             this.groupBoxMInfos.Controls.Add(this.textBoxMNom);
             this.groupBoxMInfos.Controls.Add(this.labelMNom);
             this.groupBoxMInfos.Location = new System.Drawing.Point(414, 127);
-            this.groupBoxMInfos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxMInfos.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxMInfos.Name = "groupBoxMInfos";
-            this.groupBoxMInfos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxMInfos.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxMInfos.Size = new System.Drawing.Size(1034, 619);
             this.groupBoxMInfos.TabIndex = 29;
             this.groupBoxMInfos.TabStop = false;
@@ -135,7 +137,7 @@ namespace GestionMatos
             // textBoxMDate
             // 
             this.textBoxMDate.Location = new System.Drawing.Point(718, 165);
-            this.textBoxMDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMDate.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMDate.Name = "textBoxMDate";
             this.textBoxMDate.ReadOnly = true;
             this.textBoxMDate.Size = new System.Drawing.Size(286, 31);
@@ -154,7 +156,7 @@ namespace GestionMatos
             // textBoxMmtbf
             // 
             this.textBoxMmtbf.Location = new System.Drawing.Point(718, 300);
-            this.textBoxMmtbf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMmtbf.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMmtbf.Name = "textBoxMmtbf";
             this.textBoxMmtbf.ReadOnly = true;
             this.textBoxMmtbf.Size = new System.Drawing.Size(286, 31);
@@ -173,7 +175,7 @@ namespace GestionMatos
             // textBoxMClient
             // 
             this.textBoxMClient.Location = new System.Drawing.Point(718, 48);
-            this.textBoxMClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMClient.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMClient.Name = "textBoxMClient";
             this.textBoxMClient.ReadOnly = true;
             this.textBoxMClient.Size = new System.Drawing.Size(286, 31);
@@ -192,7 +194,7 @@ namespace GestionMatos
             // textBoxMType
             // 
             this.textBoxMType.Location = new System.Drawing.Point(198, 300);
-            this.textBoxMType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMType.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMType.Name = "textBoxMType";
             this.textBoxMType.ReadOnly = true;
             this.textBoxMType.Size = new System.Drawing.Size(286, 31);
@@ -211,7 +213,7 @@ namespace GestionMatos
             // textBoxMDescription
             // 
             this.textBoxMDescription.Location = new System.Drawing.Point(198, 421);
-            this.textBoxMDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMDescription.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMDescription.Name = "textBoxMDescription";
             this.textBoxMDescription.ReadOnly = true;
             this.textBoxMDescription.Size = new System.Drawing.Size(806, 31);
@@ -230,7 +232,7 @@ namespace GestionMatos
             // textBoxMNserie
             // 
             this.textBoxMNserie.Location = new System.Drawing.Point(198, 167);
-            this.textBoxMNserie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMNserie.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMNserie.Name = "textBoxMNserie";
             this.textBoxMNserie.ReadOnly = true;
             this.textBoxMNserie.Size = new System.Drawing.Size(286, 31);
@@ -249,7 +251,7 @@ namespace GestionMatos
             // textBoxMNom
             // 
             this.textBoxMNom.Location = new System.Drawing.Point(198, 44);
-            this.textBoxMNom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMNom.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMNom.Name = "textBoxMNom";
             this.textBoxMNom.ReadOnly = true;
             this.textBoxMNom.Size = new System.Drawing.Size(286, 31);
@@ -267,8 +269,8 @@ namespace GestionMatos
             // 
             // buttonListeMRetour
             // 
-            this.buttonListeMRetour.Location = new System.Drawing.Point(612, 769);
-            this.buttonListeMRetour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonListeMRetour.Location = new System.Drawing.Point(414, 769);
+            this.buttonListeMRetour.Margin = new System.Windows.Forms.Padding(4);
             this.buttonListeMRetour.Name = "buttonListeMRetour";
             this.buttonListeMRetour.Size = new System.Drawing.Size(242, 87);
             this.buttonListeMRetour.TabIndex = 13;
@@ -281,7 +283,7 @@ namespace GestionMatos
             this.listBoxMateriel.FormattingEnabled = true;
             this.listBoxMateriel.ItemHeight = 25;
             this.listBoxMateriel.Location = new System.Drawing.Point(24, 127);
-            this.listBoxMateriel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxMateriel.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxMateriel.Name = "listBoxMateriel";
             this.listBoxMateriel.Size = new System.Drawing.Size(352, 729);
             this.listBoxMateriel.TabIndex = 11;
@@ -290,7 +292,7 @@ namespace GestionMatos
             // textBoxMRecherche
             // 
             this.textBoxMRecherche.Location = new System.Drawing.Point(124, 54);
-            this.textBoxMRecherche.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMRecherche.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMRecherche.Name = "textBoxMRecherche";
             this.textBoxMRecherche.Size = new System.Drawing.Size(1026, 31);
             this.textBoxMRecherche.TabIndex = 10;
@@ -299,13 +301,23 @@ namespace GestionMatos
             // buttonNewMateriel
             // 
             this.buttonNewMateriel.Location = new System.Drawing.Point(1206, 769);
-            this.buttonNewMateriel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonNewMateriel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonNewMateriel.Name = "buttonNewMateriel";
             this.buttonNewMateriel.Size = new System.Drawing.Size(242, 87);
             this.buttonNewMateriel.TabIndex = 8;
             this.buttonNewMateriel.Text = "Nouveau Materiel";
             this.buttonNewMateriel.UseVisualStyleBackColor = true;
             this.buttonNewMateriel.Click += new System.EventHandler(this.buttonNewMateriel_Click);
+            // 
+            // buttonMSupprimer
+            // 
+            this.buttonMSupprimer.Location = new System.Drawing.Point(680, 769);
+            this.buttonMSupprimer.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonMSupprimer.Name = "buttonMSupprimer";
+            this.buttonMSupprimer.Size = new System.Drawing.Size(242, 87);
+            this.buttonMSupprimer.TabIndex = 34;
+            this.buttonMSupprimer.Text = "Supprimer";
+            this.buttonMSupprimer.UseVisualStyleBackColor = true;
             // 
             // FormulaireListeMateriel
             // 
@@ -314,7 +326,7 @@ namespace GestionMatos
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1544, 938);
             this.Controls.Add(this.groupBoxMateriel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormulaireListeMateriel";
             this.Text = "Liste Materiel";
             this.Load += new System.EventHandler(this.FormulaireListeMateriel_Load);
@@ -351,5 +363,6 @@ namespace GestionMatos
         private System.Windows.Forms.Button buttonModifierMateriel;
         private System.Windows.Forms.Label labelMChercher;
         private System.Windows.Forms.Button buttonMActualiser;
+        private System.Windows.Forms.Button buttonMSupprimer;
     }
 }
