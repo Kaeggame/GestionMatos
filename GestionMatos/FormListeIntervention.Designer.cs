@@ -54,12 +54,14 @@ namespace GestionMatos
             this.listBoxIntervention = new System.Windows.Forms.ListBox();
             this.buttonNewIntervention = new System.Windows.Forms.Button();
             this.buttonISupprimer = new System.Windows.Forms.Button();
+            this.buttonFinIntervention = new System.Windows.Forms.Button();
             this.groupBoxIntervention.SuspendLayout();
             this.groupBoxIInfos.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxIntervention
             // 
+            this.groupBoxIntervention.Controls.Add(this.buttonFinIntervention);
             this.groupBoxIntervention.Controls.Add(this.buttonISupprimer);
             this.groupBoxIntervention.Controls.Add(this.buttonIActualiser);
             this.groupBoxIntervention.Controls.Add(this.labelIChercher);
@@ -333,6 +335,16 @@ namespace GestionMatos
             this.buttonISupprimer.Text = "Supprimer";
             this.buttonISupprimer.UseVisualStyleBackColor = true;
             // 
+            // buttonFinIntervention
+            // 
+            this.buttonFinIntervention.Location = new System.Drawing.Point(1212, 654);
+            this.buttonFinIntervention.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonFinIntervention.Name = "buttonFinIntervention";
+            this.buttonFinIntervention.Size = new System.Drawing.Size(242, 87);
+            this.buttonFinIntervention.TabIndex = 34;
+            this.buttonFinIntervention.Text = "Fin Intervention";
+            this.buttonFinIntervention.UseVisualStyleBackColor = true;
+            // 
             // FormulaireListeIntervention
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -380,5 +392,6 @@ namespace GestionMatos
         private System.Windows.Forms.Label labelIChercher;
         private System.Windows.Forms.Button buttonIActualiser;
         private System.Windows.Forms.Button buttonISupprimer;
+        private System.Windows.Forms.Button buttonFinIntervention;
     }
 }

@@ -30,6 +30,7 @@ namespace GestionMatos
         private void InitializeComponent()
         {
             this.groupBoxClient = new System.Windows.Forms.GroupBox();
+            this.buttonCSupprimer = new System.Windows.Forms.Button();
             this.buttonCActualiser = new System.Windows.Forms.Button();
             this.buttonModifierClient = new System.Windows.Forms.Button();
             this.labelCChercher = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@ namespace GestionMatos
             this.buttonListeCRetour = new System.Windows.Forms.Button();
             this.listBoxClient = new System.Windows.Forms.ListBox();
             this.buttonNewClient = new System.Windows.Forms.Button();
-            this.buttonCSupprimer = new System.Windows.Forms.Button();
             this.groupBoxClient.SuspendLayout();
             this.groupBoxMInfos.SuspendLayout();
             this.SuspendLayout();
@@ -61,18 +61,29 @@ namespace GestionMatos
             this.groupBoxClient.Controls.Add(this.listBoxClient);
             this.groupBoxClient.Controls.Add(this.buttonNewClient);
             this.groupBoxClient.Location = new System.Drawing.Point(32, 35);
-            this.groupBoxClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxClient.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxClient.Name = "groupBoxClient";
-            this.groupBoxClient.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxClient.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxClient.Size = new System.Drawing.Size(1478, 875);
             this.groupBoxClient.TabIndex = 1;
             this.groupBoxClient.TabStop = false;
             this.groupBoxClient.Text = "Clients";
             // 
+            // buttonCSupprimer
+            // 
+            this.buttonCSupprimer.Location = new System.Drawing.Point(681, 769);
+            this.buttonCSupprimer.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCSupprimer.Name = "buttonCSupprimer";
+            this.buttonCSupprimer.Size = new System.Drawing.Size(242, 87);
+            this.buttonCSupprimer.TabIndex = 34;
+            this.buttonCSupprimer.Text = "Supprimer";
+            this.buttonCSupprimer.UseVisualStyleBackColor = true;
+            this.buttonCSupprimer.Click += new System.EventHandler(this.buttonCSupprimer_Click);
+            // 
             // buttonCActualiser
             // 
             this.buttonCActualiser.Location = new System.Drawing.Point(1204, 33);
-            this.buttonCActualiser.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonCActualiser.Margin = new System.Windows.Forms.Padding(6);
             this.buttonCActualiser.Name = "buttonCActualiser";
             this.buttonCActualiser.Size = new System.Drawing.Size(144, 63);
             this.buttonCActualiser.TabIndex = 33;
@@ -83,7 +94,7 @@ namespace GestionMatos
             // buttonModifierClient
             // 
             this.buttonModifierClient.Location = new System.Drawing.Point(941, 769);
-            this.buttonModifierClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonModifierClient.Margin = new System.Windows.Forms.Padding(4);
             this.buttonModifierClient.Name = "buttonModifierClient";
             this.buttonModifierClient.Size = new System.Drawing.Size(242, 87);
             this.buttonModifierClient.TabIndex = 32;
@@ -110,9 +121,9 @@ namespace GestionMatos
             this.groupBoxMInfos.Controls.Add(this.textBoxCNom);
             this.groupBoxMInfos.Controls.Add(this.labelCNom);
             this.groupBoxMInfos.Location = new System.Drawing.Point(412, 102);
-            this.groupBoxMInfos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxMInfos.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxMInfos.Name = "groupBoxMInfos";
-            this.groupBoxMInfos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxMInfos.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxMInfos.Size = new System.Drawing.Size(1034, 610);
             this.groupBoxMInfos.TabIndex = 30;
             this.groupBoxMInfos.TabStop = false;
@@ -121,7 +132,7 @@ namespace GestionMatos
             // textBoxCTel
             // 
             this.textBoxCTel.Location = new System.Drawing.Point(198, 300);
-            this.textBoxCTel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCTel.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCTel.Name = "textBoxCTel";
             this.textBoxCTel.ReadOnly = true;
             this.textBoxCTel.Size = new System.Drawing.Size(286, 31);
@@ -140,7 +151,7 @@ namespace GestionMatos
             // textBoxCMail
             // 
             this.textBoxCMail.Location = new System.Drawing.Point(198, 167);
-            this.textBoxCMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCMail.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCMail.Name = "textBoxCMail";
             this.textBoxCMail.ReadOnly = true;
             this.textBoxCMail.Size = new System.Drawing.Size(286, 31);
@@ -159,7 +170,7 @@ namespace GestionMatos
             // textBoxCNom
             // 
             this.textBoxCNom.Location = new System.Drawing.Point(198, 44);
-            this.textBoxCNom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCNom.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCNom.Name = "textBoxCNom";
             this.textBoxCNom.ReadOnly = true;
             this.textBoxCNom.Size = new System.Drawing.Size(286, 31);
@@ -178,7 +189,7 @@ namespace GestionMatos
             // textBoxCRecherche
             // 
             this.textBoxCRecherche.Location = new System.Drawing.Point(122, 48);
-            this.textBoxCRecherche.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCRecherche.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCRecherche.Name = "textBoxCRecherche";
             this.textBoxCRecherche.Size = new System.Drawing.Size(1032, 31);
             this.textBoxCRecherche.TabIndex = 13;
@@ -187,7 +198,7 @@ namespace GestionMatos
             // buttonListeCRetour
             // 
             this.buttonListeCRetour.Location = new System.Drawing.Point(412, 769);
-            this.buttonListeCRetour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonListeCRetour.Margin = new System.Windows.Forms.Padding(4);
             this.buttonListeCRetour.Name = "buttonListeCRetour";
             this.buttonListeCRetour.Size = new System.Drawing.Size(242, 87);
             this.buttonListeCRetour.TabIndex = 12;
@@ -200,7 +211,7 @@ namespace GestionMatos
             this.listBoxClient.FormattingEnabled = true;
             this.listBoxClient.ItemHeight = 25;
             this.listBoxClient.Location = new System.Drawing.Point(20, 102);
-            this.listBoxClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxClient.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxClient.Name = "listBoxClient";
             this.listBoxClient.Size = new System.Drawing.Size(352, 754);
             this.listBoxClient.TabIndex = 11;
@@ -209,23 +220,13 @@ namespace GestionMatos
             // buttonNewClient
             // 
             this.buttonNewClient.Location = new System.Drawing.Point(1204, 769);
-            this.buttonNewClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonNewClient.Margin = new System.Windows.Forms.Padding(4);
             this.buttonNewClient.Name = "buttonNewClient";
             this.buttonNewClient.Size = new System.Drawing.Size(242, 87);
             this.buttonNewClient.TabIndex = 8;
             this.buttonNewClient.Text = "Nouveau Client";
             this.buttonNewClient.UseVisualStyleBackColor = true;
             this.buttonNewClient.Click += new System.EventHandler(this.buttonNewClient_Click);
-            // 
-            // buttonCSupprimer
-            // 
-            this.buttonCSupprimer.Location = new System.Drawing.Point(681, 769);
-            this.buttonCSupprimer.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonCSupprimer.Name = "buttonCSupprimer";
-            this.buttonCSupprimer.Size = new System.Drawing.Size(242, 87);
-            this.buttonCSupprimer.TabIndex = 34;
-            this.buttonCSupprimer.Text = "Supprimer";
-            this.buttonCSupprimer.UseVisualStyleBackColor = true;
             // 
             // FormulaireListeClient
             // 
@@ -234,7 +235,7 @@ namespace GestionMatos
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1546, 937);
             this.Controls.Add(this.groupBoxClient);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormulaireListeClient";
             this.Text = " ";
             this.Load += new System.EventHandler(this.FormulaireListeClient_Load);

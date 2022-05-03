@@ -44,6 +44,7 @@ namespace GestionMatos
         private void FormulaireListeClient_Load(object sender, EventArgs e)
         {
             buttonModifierClient.Enabled = false;
+            buttonCSupprimer.Enabled = false;
 
             string s = "select * from Client";
 
@@ -83,6 +84,7 @@ namespace GestionMatos
         private void listBoxClient_SelectedIndexChanged(object sender, EventArgs e)
         {
             buttonModifierClient.Enabled = true;
+            buttonCSupprimer.Enabled = true;
 
             IdClient truc = (IdClient)(listBoxClient.SelectedItem);
             if (truc == null)
@@ -133,6 +135,43 @@ namespace GestionMatos
             textBoxCTel.Clear();
 
             Requete(s); // Permet au bouton "Actualiser" d'actualiser la liste de client.
+        }
+
+        //Bouton de Supression 
+        private void buttonCSupprimer_Click(object sender, EventArgs e)
+        {
+
+            const string message1 = "Cette action suprimera les materiels et intreventions rataché à ce client, continuer ?";
+            const string caption1 = "Attention Supression";
+            var result1 = MessageBox.Show(message1, caption1, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result1 == DialogResult.Yes)
+            {
+                const string message2 = "La supression sera deffinitive, voulez-vous toujours continuer ?";
+                const string caption2 = "Attention Supression";
+                var result2 = MessageBox.Show(message2, caption2, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result2 == DialogResult.Yes)
+                {
+                    string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
+                    SqlConnection sqlConn = new SqlConnection(cnsql);
+
+                    string query = "DELETE from Client where ClientID = " + IDClient.ToString();
+                    SqlCommand cmd = new SqlCommand(query, sqlConn);
+                    cmd.Connection.Open();
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Error " + ex.Message);
+                    }
+
+                    MessageBox.Show("Suppression Confirmée !");
+                    sqlConn.Close();
+                }
+            }
         }
     }
 }
