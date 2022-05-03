@@ -13,6 +13,13 @@ namespace GestionMatos
 {
     public partial class FormulaireListeIntervention : System.Windows.Forms.Form
     {
+
+        private string IDIntervention;
+        public string GetTheID()
+        {
+            return this.IDIntervention;
+        }
+
         public FormulaireListeIntervention()
         {
             InitializeComponent();
@@ -80,11 +87,13 @@ namespace GestionMatos
 
             ChildForm.NomIntervention = textBoxINom.Text;
             ChildForm.CommentaireIntervention = textBoxICommentaire.Text;
-            //ChildForm.ClientIntervention = textBoxIClient .Text;
-            //ChildForm.SiteIntervention = textBoxISite.Text;
-            //ChildForm.MaterielIntervention = textBoxIMateriel.Text;
-            //ChildForm.TypeMaterielIntervention = textBoxIType.Text;
+            ChildForm.ClientIntervention = textBoxIClient .Text;
+            ChildForm.SiteIntervention = textBoxISite.Text;
+            ChildForm.MaterielIntervention = textBoxIMateriel.Text;
+            ChildForm.TypeMaterielIntervention = textBoxIType.Text;
             ChildForm.DateIntervention = textBoxIDate.Text;
+            ChildForm.IDIntervention = GetTheID(); // on utilise le getteur du début pour récup l'ID... comment ça "c'est quoi un getteur" ?
+
             ChildForm.ShowDialog();
         }
 
@@ -139,6 +148,7 @@ namespace GestionMatos
             if (truc == null)
                 return;
             int id = truc.id;
+            IDIntervention = id.ToString();
 
             string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
             SqlConnection cn = new SqlConnection(cnsql);

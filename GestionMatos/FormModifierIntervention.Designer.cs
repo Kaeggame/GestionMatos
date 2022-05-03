@@ -30,7 +30,6 @@ namespace GestionMatos
         private void InitializeComponent()
         {
             this.groupBoxModifierIntervention = new System.Windows.Forms.GroupBox();
-            this.textBoxIModifierDate = new System.Windows.Forms.TextBox();
             this.labelIModifierDate = new System.Windows.Forms.Label();
             this.textBoxIModifierTypeMateriel = new System.Windows.Forms.TextBox();
             this.textBoxIModifierMateriel = new System.Windows.Forms.TextBox();
@@ -46,6 +45,7 @@ namespace GestionMatos
             this.labelIModifierCommentaire = new System.Windows.Forms.Label();
             this.labelIModifierClient = new System.Windows.Forms.Label();
             this.labelIModifierNom = new System.Windows.Forms.Label();
+            this.textBoxIModifierDate = new System.Windows.Forms.TextBox();
             this.groupBoxModifierIntervention.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,75 +67,80 @@ namespace GestionMatos
             this.groupBoxModifierIntervention.Controls.Add(this.labelIModifierCommentaire);
             this.groupBoxModifierIntervention.Controls.Add(this.labelIModifierClient);
             this.groupBoxModifierIntervention.Controls.Add(this.labelIModifierNom);
-            this.groupBoxModifierIntervention.Location = new System.Drawing.Point(46, 45);
+            this.groupBoxModifierIntervention.Location = new System.Drawing.Point(23, 23);
+            this.groupBoxModifierIntervention.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxModifierIntervention.Name = "groupBoxModifierIntervention";
-            this.groupBoxModifierIntervention.Size = new System.Drawing.Size(1461, 679);
+            this.groupBoxModifierIntervention.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxModifierIntervention.Size = new System.Drawing.Size(730, 353);
             this.groupBoxModifierIntervention.TabIndex = 15;
             this.groupBoxModifierIntervention.TabStop = false;
             this.groupBoxModifierIntervention.Text = "Intervention";
             // 
-            // textBoxIModifierDate
-            // 
-            this.textBoxIModifierDate.Location = new System.Drawing.Point(361, 414);
-            this.textBoxIModifierDate.Name = "textBoxIModifierDate";
-            this.textBoxIModifierDate.Size = new System.Drawing.Size(260, 31);
-            this.textBoxIModifierDate.TabIndex = 19;
-            // 
             // labelIModifierDate
             // 
             this.labelIModifierDate.AutoSize = true;
-            this.labelIModifierDate.Location = new System.Drawing.Point(169, 417);
+            this.labelIModifierDate.Location = new System.Drawing.Point(84, 217);
+            this.labelIModifierDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIModifierDate.Name = "labelIModifierDate";
-            this.labelIModifierDate.Size = new System.Drawing.Size(191, 25);
+            this.labelIModifierDate.Size = new System.Drawing.Size(97, 13);
             this.labelIModifierDate.TabIndex = 18;
             this.labelIModifierDate.Text = "Date d\'Intervention";
             // 
             // textBoxIModifierTypeMateriel
             // 
-            this.textBoxIModifierTypeMateriel.Location = new System.Drawing.Point(998, 299);
+            this.textBoxIModifierTypeMateriel.Location = new System.Drawing.Point(499, 155);
+            this.textBoxIModifierTypeMateriel.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIModifierTypeMateriel.Name = "textBoxIModifierTypeMateriel";
-            this.textBoxIModifierTypeMateriel.Size = new System.Drawing.Size(260, 31);
+            this.textBoxIModifierTypeMateriel.ReadOnly = true;
+            this.textBoxIModifierTypeMateriel.Size = new System.Drawing.Size(132, 20);
             this.textBoxIModifierTypeMateriel.TabIndex = 17;
             // 
             // textBoxIModifierMateriel
             // 
-            this.textBoxIModifierMateriel.Location = new System.Drawing.Point(361, 302);
+            this.textBoxIModifierMateriel.Location = new System.Drawing.Point(180, 157);
+            this.textBoxIModifierMateriel.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIModifierMateriel.Name = "textBoxIModifierMateriel";
-            this.textBoxIModifierMateriel.Size = new System.Drawing.Size(260, 31);
+            this.textBoxIModifierMateriel.ReadOnly = true;
+            this.textBoxIModifierMateriel.Size = new System.Drawing.Size(132, 20);
             this.textBoxIModifierMateriel.TabIndex = 16;
             // 
             // labelIModifierTypeMateriel
             // 
             this.labelIModifierTypeMateriel.AutoSize = true;
-            this.labelIModifierTypeMateriel.Location = new System.Drawing.Point(823, 302);
+            this.labelIModifierTypeMateriel.Location = new System.Drawing.Point(412, 157);
+            this.labelIModifierTypeMateriel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIModifierTypeMateriel.Name = "labelIModifierTypeMateriel";
-            this.labelIModifierTypeMateriel.Size = new System.Drawing.Size(143, 25);
+            this.labelIModifierTypeMateriel.Size = new System.Drawing.Size(71, 13);
             this.labelIModifierTypeMateriel.TabIndex = 15;
             this.labelIModifierTypeMateriel.Text = "Type Materiel";
             // 
             // labelIModifierMateriel
             // 
             this.labelIModifierMateriel.AutoSize = true;
-            this.labelIModifierMateriel.Location = new System.Drawing.Point(169, 302);
+            this.labelIModifierMateriel.Location = new System.Drawing.Point(84, 157);
+            this.labelIModifierMateriel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIModifierMateriel.Name = "labelIModifierMateriel";
-            this.labelIModifierMateriel.Size = new System.Drawing.Size(89, 25);
+            this.labelIModifierMateriel.Size = new System.Drawing.Size(44, 13);
             this.labelIModifierMateriel.TabIndex = 14;
             this.labelIModifierMateriel.Text = "Materiel";
             // 
             // buttonIModifier
             // 
-            this.buttonIModifier.Location = new System.Drawing.Point(828, 524);
+            this.buttonIModifier.Location = new System.Drawing.Point(414, 272);
+            this.buttonIModifier.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIModifier.Name = "buttonIModifier";
-            this.buttonIModifier.Size = new System.Drawing.Size(259, 62);
+            this.buttonIModifier.Size = new System.Drawing.Size(130, 32);
             this.buttonIModifier.TabIndex = 13;
             this.buttonIModifier.Text = "Modifier";
             this.buttonIModifier.UseVisualStyleBackColor = true;
+            this.buttonIModifier.Click += new System.EventHandler(this.buttonIModifier_Click);
             // 
             // buttonIModifierAnnuler
             // 
-            this.buttonIModifierAnnuler.Location = new System.Drawing.Point(361, 524);
+            this.buttonIModifierAnnuler.Location = new System.Drawing.Point(180, 272);
+            this.buttonIModifierAnnuler.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIModifierAnnuler.Name = "buttonIModifierAnnuler";
-            this.buttonIModifierAnnuler.Size = new System.Drawing.Size(259, 62);
+            this.buttonIModifierAnnuler.Size = new System.Drawing.Size(130, 32);
             this.buttonIModifierAnnuler.TabIndex = 12;
             this.buttonIModifierAnnuler.Text = "Annuler";
             this.buttonIModifierAnnuler.UseVisualStyleBackColor = true;
@@ -143,74 +148,93 @@ namespace GestionMatos
             // 
             // textBoxIModifierClient
             // 
-            this.textBoxIModifierClient.Location = new System.Drawing.Point(361, 190);
+            this.textBoxIModifierClient.Location = new System.Drawing.Point(180, 99);
+            this.textBoxIModifierClient.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIModifierClient.Name = "textBoxIModifierClient";
-            this.textBoxIModifierClient.Size = new System.Drawing.Size(260, 31);
+            this.textBoxIModifierClient.ReadOnly = true;
+            this.textBoxIModifierClient.Size = new System.Drawing.Size(132, 20);
             this.textBoxIModifierClient.TabIndex = 9;
             // 
             // textBoxIModifierSite
             // 
-            this.textBoxIModifierSite.Location = new System.Drawing.Point(998, 190);
+            this.textBoxIModifierSite.Location = new System.Drawing.Point(499, 99);
+            this.textBoxIModifierSite.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIModifierSite.Name = "textBoxIModifierSite";
-            this.textBoxIModifierSite.Size = new System.Drawing.Size(260, 31);
+            this.textBoxIModifierSite.ReadOnly = true;
+            this.textBoxIModifierSite.Size = new System.Drawing.Size(132, 20);
             this.textBoxIModifierSite.TabIndex = 8;
             // 
             // textBoxIModifierCommentaire
             // 
-            this.textBoxIModifierCommentaire.Location = new System.Drawing.Point(998, 86);
+            this.textBoxIModifierCommentaire.Location = new System.Drawing.Point(499, 45);
+            this.textBoxIModifierCommentaire.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIModifierCommentaire.Name = "textBoxIModifierCommentaire";
-            this.textBoxIModifierCommentaire.Size = new System.Drawing.Size(260, 31);
+            this.textBoxIModifierCommentaire.Size = new System.Drawing.Size(132, 20);
             this.textBoxIModifierCommentaire.TabIndex = 7;
             // 
             // textBoxIModifierNom
             // 
-            this.textBoxIModifierNom.Location = new System.Drawing.Point(361, 86);
+            this.textBoxIModifierNom.Location = new System.Drawing.Point(180, 45);
+            this.textBoxIModifierNom.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIModifierNom.Name = "textBoxIModifierNom";
-            this.textBoxIModifierNom.Size = new System.Drawing.Size(260, 31);
+            this.textBoxIModifierNom.Size = new System.Drawing.Size(132, 20);
             this.textBoxIModifierNom.TabIndex = 6;
             // 
             // labelIModifierSite
             // 
             this.labelIModifierSite.AutoSize = true;
-            this.labelIModifierSite.Location = new System.Drawing.Point(823, 190);
+            this.labelIModifierSite.Location = new System.Drawing.Point(412, 99);
+            this.labelIModifierSite.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIModifierSite.Name = "labelIModifierSite";
-            this.labelIModifierSite.Size = new System.Drawing.Size(49, 25);
+            this.labelIModifierSite.Size = new System.Drawing.Size(25, 13);
             this.labelIModifierSite.TabIndex = 4;
             this.labelIModifierSite.Text = "Site";
             // 
             // labelIModifierCommentaire
             // 
             this.labelIModifierCommentaire.AutoSize = true;
-            this.labelIModifierCommentaire.Location = new System.Drawing.Point(823, 86);
+            this.labelIModifierCommentaire.Location = new System.Drawing.Point(412, 45);
+            this.labelIModifierCommentaire.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIModifierCommentaire.Name = "labelIModifierCommentaire";
-            this.labelIModifierCommentaire.Size = new System.Drawing.Size(139, 25);
+            this.labelIModifierCommentaire.Size = new System.Drawing.Size(68, 13);
             this.labelIModifierCommentaire.TabIndex = 3;
             this.labelIModifierCommentaire.Text = "Commentaire";
             // 
             // labelIModifierClient
             // 
             this.labelIModifierClient.AutoSize = true;
-            this.labelIModifierClient.Location = new System.Drawing.Point(169, 190);
+            this.labelIModifierClient.Location = new System.Drawing.Point(84, 99);
+            this.labelIModifierClient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIModifierClient.Name = "labelIModifierClient";
-            this.labelIModifierClient.Size = new System.Drawing.Size(67, 25);
+            this.labelIModifierClient.Size = new System.Drawing.Size(33, 13);
             this.labelIModifierClient.TabIndex = 1;
             this.labelIModifierClient.Text = "Client";
             // 
             // labelIModifierNom
             // 
             this.labelIModifierNom.AutoSize = true;
-            this.labelIModifierNom.Location = new System.Drawing.Point(169, 86);
+            this.labelIModifierNom.Location = new System.Drawing.Point(84, 45);
+            this.labelIModifierNom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIModifierNom.Name = "labelIModifierNom";
-            this.labelIModifierNom.Size = new System.Drawing.Size(56, 25);
+            this.labelIModifierNom.Size = new System.Drawing.Size(29, 13);
             this.labelIModifierNom.TabIndex = 0;
             this.labelIModifierNom.Text = "Nom";
             // 
+            // textBoxIModifierDate
+            // 
+            this.textBoxIModifierDate.Location = new System.Drawing.Point(185, 214);
+            this.textBoxIModifierDate.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxIModifierDate.Name = "textBoxIModifierDate";
+            this.textBoxIModifierDate.Size = new System.Drawing.Size(132, 20);
+            this.textBoxIModifierDate.TabIndex = 19;
+            // 
             // FormulaireModifierIntervention
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1553, 768);
+            this.ClientSize = new System.Drawing.Size(776, 399);
             this.Controls.Add(this.groupBoxModifierIntervention);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormulaireModifierIntervention";
             this.Text = "Modifier Intervention";
             this.Load += new System.EventHandler(this.FormulaireModifierIntervention_Load);
@@ -223,7 +247,6 @@ namespace GestionMatos
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxModifierIntervention;
-        private System.Windows.Forms.TextBox textBoxIModifierDate;
         private System.Windows.Forms.Label labelIModifierDate;
         private System.Windows.Forms.TextBox textBoxIModifierTypeMateriel;
         private System.Windows.Forms.TextBox textBoxIModifierMateriel;
@@ -239,5 +262,6 @@ namespace GestionMatos
         private System.Windows.Forms.Label labelIModifierCommentaire;
         private System.Windows.Forms.Label labelIModifierClient;
         private System.Windows.Forms.Label labelIModifierNom;
+        private System.Windows.Forms.TextBox textBoxIModifierDate;
     }
 }

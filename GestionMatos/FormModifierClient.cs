@@ -35,7 +35,6 @@ namespace GestionMatos
         private void FormulaireModifierClient_Load(object sender, EventArgs e)
         {
 
-            string ModifierIDTestTest = this.IDClient;
             this.textBoxCModifierNom.Text = this.NomClient;
             this.textBoxCModifierMail.Text = this.MailClient;
             this.textBoxCModifierTel.Text = this.TelClient;
