@@ -116,7 +116,7 @@ namespace GestionMatos
             Requete(sql);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonCActualiser_Click(object sender, EventArgs e)
         {
             string s = "select * from Client";
 

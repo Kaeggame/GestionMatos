@@ -31,7 +31,7 @@ namespace GestionMatos
             Requete(s);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonIActualiser_Click(object sender, EventArgs e)
         {
 
             string s = "SELECT * FROM Intervention INNER JOIN Materiel ON Intervention.MatID = Materiel.MatID INNER JOIN Client ON Materiel.ClientID = Client.ClientID INNER JOIN Site ON Materiel.SiteID = Site.SiteID";
@@ -149,7 +149,5 @@ namespace GestionMatos
 
             cn.Close();
         }
-
-
     }
 }

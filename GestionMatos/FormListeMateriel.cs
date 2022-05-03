@@ -143,7 +143,7 @@ namespace GestionMatos
             Requete(sql);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonMActualiser_Click(object sender, EventArgs e)
         {
             string s = "SELECT * FROM Materiel INNER JOIN Client ON Materiel.ClientID = Client.ClientID";
 
