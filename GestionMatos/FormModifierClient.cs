@@ -18,6 +18,7 @@ namespace GestionMatos
         public string MailClient;
         public string TelClient;
         public string DescriptionClient;
+        public string IDClient;
 
 
         public FormulaireModifierClient()
@@ -33,6 +34,8 @@ namespace GestionMatos
 
         private void FormulaireModifierClient_Load(object sender, EventArgs e)
         {
+
+            string ModifierIDTestTest = this.IDClient;
             this.textBoxCModifierNom.Text = this.NomClient;
             this.textBoxCModifierMail.Text = this.MailClient;
             this.textBoxCModifierTel.Text = this.TelClient;
@@ -41,32 +44,27 @@ namespace GestionMatos
         // Heu là c'est plus une bombe à retardement qu'autre choses... juste... n'y touchez pas... s'il vous plaît
         private void buttonCModifier_Click(object sender, EventArgs e)
         {
-            /*
             string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
+            SqlConnection sqlConn = new SqlConnection(cnsql);
 
+            string query = "UPDATE Client SET NomClient = @NomClient,Mail = @Mail,NumTel = @NumTel where ClientID = " + IDClient.ToString();
+            SqlCommand cmd = new SqlCommand(query, sqlConn);
+            cmd.Parameters.AddWithValue("@NomClient", textBoxCModifierNom.Text);
+            cmd.Parameters.AddWithValue("@Mail", textBoxCModifierMail.Text);
+            cmd.Parameters.AddWithValue("@NumTel", textBoxCModifierTel.Text);
+            cmd.Connection.Open();
+            try
             {
-                string query = "UPDATE tbl_Items SET Name = @Name,Category=@Category,start = @start, end = @End,Description = @Description where ID = @ID ";
-                SqlCommand cmd = new SqlCommand(query, sqlConn);
-                cmd.Parameters.AddWithValue("@ID", txtID.Text);
-                cmd.Parameters.AddWithValue("@Name", txtName.Text);
-                cmd.Parameters.AddWithValue("@Category", Category.Text);
-                cmd.Parameters.AddWithValue("@start", txtStart.Text);
-                cmd.Parameters.AddWithValue("@end", txtend.Text);
-                cmd.Parameters.AddWithValue("@Description", txtDescription.Text);
-                cmd.Connection.Open();
-
-                try
-                {
-                    cmd.ExecuteNonQuery();
-                }
-
-                catch (Exception ex)
-                {
-                    throw new Exception("Error " + ex.Message);
-                }
+                cmd.ExecuteNonQuery();
             }
-            */
-            
+            catch (Exception ex)
+            {
+                throw new Exception("Error " + ex.Message);
+            }
+            Form.ActiveForm.Close(); // Ferme la fenetre actuelle apres la confirmation de la modification
+            MessageBox.Show("Modification enregistrée");
+            sqlConn.Close();
         }
+            
+       }
     }
-}

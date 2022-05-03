@@ -147,6 +147,14 @@ namespace GestionMatos
         {
             string s = "SELECT * FROM Materiel INNER JOIN Client ON Materiel.ClientID = Client.ClientID";
 
+            textBoxMNom.Clear();
+            textBoxMNserie.Clear();
+            textBoxMType.Clear();
+            textBoxMDate.Clear();
+            textBoxMmtbf.Clear();
+            textBoxMDescription.Clear();
+            textBoxMClient.Clear();
+
             Requete(s); // Permet au bouton "Actualiser" d'actualiser la liste de materiel.
         }
     }

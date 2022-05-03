@@ -21,7 +21,6 @@ namespace GestionMatos
         public string NomMateriel;
         public string TypeMateriel;
         public string NserieMateriel;
-
         public string IdTest; 
 
         public FormulaireModifierMateriel()
@@ -37,8 +36,6 @@ namespace GestionMatos
 
         private void FormulaireModifierMateriel_Load(object sender, EventArgs e)
         {
-            string ModifierIDTestTest = this.IdTest;
-
             this.textBoxMModifierDate.Text = this.DateMateriel;
             this.textBoxMModifierCommentaire.Text = this.CommentaireMateriel;
             this.textBoxMModifierClient.Text = this.ClientMateriel;

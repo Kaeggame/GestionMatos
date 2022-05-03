@@ -14,6 +14,12 @@ namespace GestionMatos
     public partial class FormulaireListeClient : System.Windows.Forms.Form
     {
 
+        private string IDClient;
+        public string GetTheID()
+        {
+            return this.IDClient;
+        }
+
         public FormulaireListeClient()
         {
             InitializeComponent();
@@ -82,6 +88,7 @@ namespace GestionMatos
             if (truc == null)
                 return;
             int id = truc.id;
+            IDClient = id.ToString();
 
             string cnsql = @"Server=.\SQLEXPRESS;Database=GestionMatos;Trusted_Connection=True;";
             SqlConnection cn = new SqlConnection(cnsql);
@@ -104,6 +111,7 @@ namespace GestionMatos
             ChildForm.NomClient = textBoxCNom.Text;
             ChildForm.MailClient = textBoxCMail.Text;
             ChildForm.TelClient = textBoxCTel.Text;
+            ChildForm.IDClient = GetTheID(); // on utilise le getteur du début pour récup l'ID... comment ça "c'est quoi un getteur" ?
 
             ChildForm.ShowDialog();
         }
@@ -119,6 +127,10 @@ namespace GestionMatos
         private void buttonCActualiser_Click(object sender, EventArgs e)
         {
             string s = "select * from Client";
+
+            textBoxCNom.Clear();
+            textBoxCMail.Clear();
+            textBoxCTel.Clear();
 
             Requete(s); // Permet au bouton "Actualiser" d'actualiser la liste de client.
         }

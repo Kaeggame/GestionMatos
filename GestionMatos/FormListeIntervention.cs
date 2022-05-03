@@ -35,7 +35,15 @@ namespace GestionMatos
         {
 
             string s = "SELECT * FROM Intervention INNER JOIN Materiel ON Intervention.MatID = Materiel.MatID INNER JOIN Client ON Materiel.ClientID = Client.ClientID INNER JOIN Site ON Materiel.SiteID = Site.SiteID";
-           
+
+            textBoxINom.Clear();
+            textBoxIDate.Clear();
+            textBoxICommentaire.Clear();
+            textBoxIMateriel.Clear();
+            textBoxIType.Clear();
+            textBoxIClient.Clear();
+            textBoxISite.Clear();
+
             Requete(s); // Permet au bouton "Actualiser" d'actualiser la liste d'intervention.
         }
 
