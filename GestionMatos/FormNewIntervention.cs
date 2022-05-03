@@ -79,20 +79,26 @@ namespace GestionMatos
             cmd.Parameters.AddWithValue("@MatID", idmat);
 
             cmd.Connection.Open();
+
+            bool Error = false; //Créer la valeur booléen pour une erreur
             try
             {
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception ex) //Grab l'erreur
             {
-                throw new Exception("Error " + ex.Message);
+                Error = true;
+                MessageBox.Show("Création Impossible, une intervention est déjà prévu sur ce materiel"); // Affiche un message d'erreur
+
             }
             //Fin de la query
             Form.ActiveForm.Close(); // Ferme la fenetre actuelle apres la confirmation de la modification
 
-            MessageBox.Show("Création éffectuée");
-            sqlConn.Close();
+            if (Error == false) //Vérifie si il y a eu une erreur dans la création d'intervention, si non, execute le code ci dessous
+            {
+                MessageBox.Show("Création éffectuée");
+                sqlConn.Close();
+            }
         }
-
     }
 }

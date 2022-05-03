@@ -145,7 +145,7 @@ namespace GestionMatos
             textBoxIMateriel.Text = sqr["Nom"].ToString();
             textBoxIType.Text = sqr["TypeMat"].ToString();
             textBoxIClient.Text = sqr["NomClient"].ToString();
-            textBoxISite.Text = sqr["Commentaire"].ToString();
+            textBoxISite.Text = sqr["SiteNom"].ToString();
 
             cn.Close();
         }
