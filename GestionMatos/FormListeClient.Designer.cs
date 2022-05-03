@@ -39,26 +39,24 @@ namespace GestionMatos
             this.labelCMail = new System.Windows.Forms.Label();
             this.textBoxCNom = new System.Windows.Forms.TextBox();
             this.labelCNom = new System.Windows.Forms.Label();
-            this.comboBoxCFiltre = new System.Windows.Forms.ComboBox();
             this.textBoxCRecherche = new System.Windows.Forms.TextBox();
             this.buttonListeCRetour = new System.Windows.Forms.Button();
             this.listBoxClient = new System.Windows.Forms.ListBox();
-            this.buttonCFiltre = new System.Windows.Forms.Button();
             this.buttonNewClient = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxClient.SuspendLayout();
             this.groupBoxMInfos.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxClient
             // 
+            this.groupBoxClient.Controls.Add(this.button1);
             this.groupBoxClient.Controls.Add(this.buttonModifierClient);
             this.groupBoxClient.Controls.Add(this.labelCChercher);
             this.groupBoxClient.Controls.Add(this.groupBoxMInfos);
-            this.groupBoxClient.Controls.Add(this.comboBoxCFiltre);
             this.groupBoxClient.Controls.Add(this.textBoxCRecherche);
             this.groupBoxClient.Controls.Add(this.buttonListeCRetour);
             this.groupBoxClient.Controls.Add(this.listBoxClient);
-            this.groupBoxClient.Controls.Add(this.buttonCFiltre);
             this.groupBoxClient.Controls.Add(this.buttonNewClient);
             this.groupBoxClient.Location = new System.Drawing.Point(16, 18);
             this.groupBoxClient.Margin = new System.Windows.Forms.Padding(2);
@@ -164,16 +162,6 @@ namespace GestionMatos
             this.labelCNom.TabIndex = 15;
             this.labelCNom.Text = "Nom";
             // 
-            // comboBoxCFiltre
-            // 
-            this.comboBoxCFiltre.FormattingEnabled = true;
-            this.comboBoxCFiltre.Location = new System.Drawing.Point(336, 61);
-            this.comboBoxCFiltre.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxCFiltre.Name = "comboBoxCFiltre";
-            this.comboBoxCFiltre.Size = new System.Drawing.Size(388, 21);
-            this.comboBoxCFiltre.TabIndex = 15;
-            this.comboBoxCFiltre.Text = "Filtres";
-            // 
             // textBoxCRecherche
             // 
             this.textBoxCRecherche.Location = new System.Drawing.Point(61, 25);
@@ -204,16 +192,6 @@ namespace GestionMatos
             this.listBoxClient.TabIndex = 11;
             this.listBoxClient.SelectedIndexChanged += new System.EventHandler(this.listBoxClient_SelectedIndexChanged);
             // 
-            // buttonCFiltre
-            // 
-            this.buttonCFiltre.Location = new System.Drawing.Point(220, 53);
-            this.buttonCFiltre.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonCFiltre.Name = "buttonCFiltre";
-            this.buttonCFiltre.Size = new System.Drawing.Size(104, 31);
-            this.buttonCFiltre.TabIndex = 9;
-            this.buttonCFiltre.Text = "Filtre";
-            this.buttonCFiltre.UseVisualStyleBackColor = true;
-            // 
             // buttonNewClient
             // 
             this.buttonNewClient.Location = new System.Drawing.Point(602, 400);
@@ -224,6 +202,16 @@ namespace GestionMatos
             this.buttonNewClient.Text = "Nouveau Client";
             this.buttonNewClient.UseVisualStyleBackColor = true;
             this.buttonNewClient.Click += new System.EventHandler(this.buttonNewClient_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(206, 53);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(72, 46);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Actualiser";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormulaireListeClient
             // 
@@ -249,10 +237,8 @@ namespace GestionMatos
         private System.Windows.Forms.GroupBox groupBoxClient;
         private System.Windows.Forms.Button buttonListeCRetour;
         private System.Windows.Forms.ListBox listBoxClient;
-        private System.Windows.Forms.Button buttonCFiltre;
         private System.Windows.Forms.Button buttonNewClient;
         private System.Windows.Forms.TextBox textBoxCRecherche;
-        private System.Windows.Forms.ComboBox comboBoxCFiltre;
         private System.Windows.Forms.GroupBox groupBoxMInfos;
         private System.Windows.Forms.TextBox textBoxCTel;
         private System.Windows.Forms.Label labelCTel;
@@ -262,5 +248,6 @@ namespace GestionMatos
         private System.Windows.Forms.Label labelCNom;
         private System.Windows.Forms.Label labelCChercher;
         private System.Windows.Forms.Button buttonModifierClient;
+        private System.Windows.Forms.Button button1;
     }
 }

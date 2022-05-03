@@ -115,6 +115,12 @@ namespace GestionMatos
             string sql = "select * from Client where NomClient like '" + str + "%'";
             Requete(sql);
         }
-        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string s = "select * from Client";
+
+            Requete(s); // Permet au bouton "Actualiser" d'actualiser la liste de client.
+        }
     }
 }

@@ -47,33 +47,29 @@ namespace GestionMatos
             this.labelMNserie = new System.Windows.Forms.Label();
             this.textBoxMNom = new System.Windows.Forms.TextBox();
             this.labelMNom = new System.Windows.Forms.Label();
-            this.comboBoxMFiltre = new System.Windows.Forms.ComboBox();
             this.buttonListeMRetour = new System.Windows.Forms.Button();
             this.listBoxMateriel = new System.Windows.Forms.ListBox();
             this.textBoxMRecherche = new System.Windows.Forms.TextBox();
-            this.buttonMFiltre = new System.Windows.Forms.Button();
             this.buttonNewMateriel = new System.Windows.Forms.Button();
-            this.textBox1textBoxMID = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxMateriel.SuspendLayout();
             this.groupBoxMInfos.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxMateriel
             // 
-            this.groupBoxMateriel.Controls.Add(this.textBox1textBoxMID);
+            this.groupBoxMateriel.Controls.Add(this.button1);
             this.groupBoxMateriel.Controls.Add(this.labelMChercher);
             this.groupBoxMateriel.Controls.Add(this.buttonModifierMateriel);
             this.groupBoxMateriel.Controls.Add(this.groupBoxMInfos);
-            this.groupBoxMateriel.Controls.Add(this.comboBoxMFiltre);
             this.groupBoxMateriel.Controls.Add(this.buttonListeMRetour);
             this.groupBoxMateriel.Controls.Add(this.listBoxMateriel);
             this.groupBoxMateriel.Controls.Add(this.textBoxMRecherche);
-            this.groupBoxMateriel.Controls.Add(this.buttonMFiltre);
             this.groupBoxMateriel.Controls.Add(this.buttonNewMateriel);
             this.groupBoxMateriel.Location = new System.Drawing.Point(16, 16);
-            this.groupBoxMateriel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxMateriel.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxMateriel.Name = "groupBoxMateriel";
-            this.groupBoxMateriel.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxMateriel.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxMateriel.Size = new System.Drawing.Size(739, 452);
             this.groupBoxMateriel.TabIndex = 0;
             this.groupBoxMateriel.TabStop = false;
@@ -91,7 +87,7 @@ namespace GestionMatos
             // buttonModifierMateriel
             // 
             this.buttonModifierMateriel.Location = new System.Drawing.Point(454, 400);
-            this.buttonModifierMateriel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonModifierMateriel.Margin = new System.Windows.Forms.Padding(2);
             this.buttonModifierMateriel.Name = "buttonModifierMateriel";
             this.buttonModifierMateriel.Size = new System.Drawing.Size(121, 45);
             this.buttonModifierMateriel.TabIndex = 30;
@@ -116,9 +112,9 @@ namespace GestionMatos
             this.groupBoxMInfos.Controls.Add(this.textBoxMNom);
             this.groupBoxMInfos.Controls.Add(this.labelMNom);
             this.groupBoxMInfos.Location = new System.Drawing.Point(207, 126);
-            this.groupBoxMInfos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxMInfos.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxMInfos.Name = "groupBoxMInfos";
-            this.groupBoxMInfos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxMInfos.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxMInfos.Size = new System.Drawing.Size(517, 262);
             this.groupBoxMInfos.TabIndex = 29;
             this.groupBoxMInfos.TabStop = false;
@@ -127,7 +123,7 @@ namespace GestionMatos
             // textBoxMDate
             // 
             this.textBoxMDate.Location = new System.Drawing.Point(359, 86);
-            this.textBoxMDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMDate.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMDate.Name = "textBoxMDate";
             this.textBoxMDate.ReadOnly = true;
             this.textBoxMDate.Size = new System.Drawing.Size(145, 20);
@@ -146,7 +142,7 @@ namespace GestionMatos
             // textBoxMmtbf
             // 
             this.textBoxMmtbf.Location = new System.Drawing.Point(359, 156);
-            this.textBoxMmtbf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMmtbf.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMmtbf.Name = "textBoxMmtbf";
             this.textBoxMmtbf.ReadOnly = true;
             this.textBoxMmtbf.Size = new System.Drawing.Size(145, 20);
@@ -165,7 +161,7 @@ namespace GestionMatos
             // textBoxMClient
             // 
             this.textBoxMClient.Location = new System.Drawing.Point(359, 25);
-            this.textBoxMClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMClient.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMClient.Name = "textBoxMClient";
             this.textBoxMClient.ReadOnly = true;
             this.textBoxMClient.Size = new System.Drawing.Size(145, 20);
@@ -184,7 +180,7 @@ namespace GestionMatos
             // textBoxMType
             // 
             this.textBoxMType.Location = new System.Drawing.Point(99, 156);
-            this.textBoxMType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMType.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMType.Name = "textBoxMType";
             this.textBoxMType.ReadOnly = true;
             this.textBoxMType.Size = new System.Drawing.Size(145, 20);
@@ -203,7 +199,7 @@ namespace GestionMatos
             // textBoxMDescription
             // 
             this.textBoxMDescription.Location = new System.Drawing.Point(99, 219);
-            this.textBoxMDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMDescription.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMDescription.Name = "textBoxMDescription";
             this.textBoxMDescription.ReadOnly = true;
             this.textBoxMDescription.Size = new System.Drawing.Size(405, 20);
@@ -222,7 +218,7 @@ namespace GestionMatos
             // textBoxMNserie
             // 
             this.textBoxMNserie.Location = new System.Drawing.Point(99, 87);
-            this.textBoxMNserie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMNserie.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMNserie.Name = "textBoxMNserie";
             this.textBoxMNserie.ReadOnly = true;
             this.textBoxMNserie.Size = new System.Drawing.Size(145, 20);
@@ -241,7 +237,7 @@ namespace GestionMatos
             // textBoxMNom
             // 
             this.textBoxMNom.Location = new System.Drawing.Point(99, 23);
-            this.textBoxMNom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMNom.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMNom.Name = "textBoxMNom";
             this.textBoxMNom.ReadOnly = true;
             this.textBoxMNom.Size = new System.Drawing.Size(145, 20);
@@ -257,20 +253,10 @@ namespace GestionMatos
             this.labelMNom.TabIndex = 15;
             this.labelMNom.Text = "Nom";
             // 
-            // comboBoxMFiltre
-            // 
-            this.comboBoxMFiltre.FormattingEnabled = true;
-            this.comboBoxMFiltre.Location = new System.Drawing.Point(338, 73);
-            this.comboBoxMFiltre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxMFiltre.Name = "comboBoxMFiltre";
-            this.comboBoxMFiltre.Size = new System.Drawing.Size(388, 21);
-            this.comboBoxMFiltre.TabIndex = 14;
-            this.comboBoxMFiltre.Text = "Filtres";
-            // 
             // buttonListeMRetour
             // 
             this.buttonListeMRetour.Location = new System.Drawing.Point(306, 400);
-            this.buttonListeMRetour.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonListeMRetour.Margin = new System.Windows.Forms.Padding(2);
             this.buttonListeMRetour.Name = "buttonListeMRetour";
             this.buttonListeMRetour.Size = new System.Drawing.Size(121, 45);
             this.buttonListeMRetour.TabIndex = 13;
@@ -282,7 +268,7 @@ namespace GestionMatos
             // 
             this.listBoxMateriel.FormattingEnabled = true;
             this.listBoxMateriel.Location = new System.Drawing.Point(12, 66);
-            this.listBoxMateriel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxMateriel.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxMateriel.Name = "listBoxMateriel";
             this.listBoxMateriel.Size = new System.Drawing.Size(178, 381);
             this.listBoxMateriel.TabIndex = 11;
@@ -291,26 +277,16 @@ namespace GestionMatos
             // textBoxMRecherche
             // 
             this.textBoxMRecherche.Location = new System.Drawing.Point(62, 28);
-            this.textBoxMRecherche.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMRecherche.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMRecherche.Name = "textBoxMRecherche";
             this.textBoxMRecherche.Size = new System.Drawing.Size(664, 20);
             this.textBoxMRecherche.TabIndex = 10;
             this.textBoxMRecherche.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxMRecherche_KeyUp);
             // 
-            // buttonMFiltre
-            // 
-            this.buttonMFiltre.Location = new System.Drawing.Point(225, 66);
-            this.buttonMFiltre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonMFiltre.Name = "buttonMFiltre";
-            this.buttonMFiltre.Size = new System.Drawing.Size(104, 31);
-            this.buttonMFiltre.TabIndex = 9;
-            this.buttonMFiltre.Text = "Filtre";
-            this.buttonMFiltre.UseVisualStyleBackColor = true;
-            // 
             // buttonNewMateriel
             // 
             this.buttonNewMateriel.Location = new System.Drawing.Point(603, 400);
-            this.buttonNewMateriel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonNewMateriel.Margin = new System.Windows.Forms.Padding(2);
             this.buttonNewMateriel.Name = "buttonNewMateriel";
             this.buttonNewMateriel.Size = new System.Drawing.Size(121, 45);
             this.buttonNewMateriel.TabIndex = 8;
@@ -318,13 +294,15 @@ namespace GestionMatos
             this.buttonNewMateriel.UseVisualStyleBackColor = true;
             this.buttonNewMateriel.Click += new System.EventHandler(this.buttonNewMateriel_Click);
             // 
-            // textBox1textBoxMID
+            // button1
             // 
-            this.textBox1textBoxMID.Location = new System.Drawing.Point(566, 101);
-            this.textBox1textBoxMID.Name = "textBox1textBoxMID";
-            this.textBox1textBoxMID.Size = new System.Drawing.Size(100, 20);
-            this.textBox1textBoxMID.TabIndex = 32;
-            this.textBox1textBoxMID.Visible = false;
+            this.button1.Location = new System.Drawing.Point(213, 66);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(72, 46);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Actualiser";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormulaireListeMateriel
             // 
@@ -333,7 +311,7 @@ namespace GestionMatos
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(772, 488);
             this.Controls.Add(this.groupBoxMateriel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormulaireListeMateriel";
             this.Text = "Liste Materiel";
             this.Load += new System.EventHandler(this.FormulaireListeMateriel_Load);
@@ -351,9 +329,7 @@ namespace GestionMatos
         private System.Windows.Forms.Button buttonListeMRetour;
         private System.Windows.Forms.ListBox listBoxMateriel;
         private System.Windows.Forms.TextBox textBoxMRecherche;
-        private System.Windows.Forms.Button buttonMFiltre;
         private System.Windows.Forms.Button buttonNewMateriel;
-        private System.Windows.Forms.ComboBox comboBoxMFiltre;
         private System.Windows.Forms.GroupBox groupBoxMInfos;
         private System.Windows.Forms.TextBox textBoxMDate;
         private System.Windows.Forms.Label labelMDate;
@@ -371,6 +347,6 @@ namespace GestionMatos
         private System.Windows.Forms.Label labelMNom;
         private System.Windows.Forms.Button buttonModifierMateriel;
         private System.Windows.Forms.Label labelMChercher;
-        private System.Windows.Forms.TextBox textBox1textBoxMID;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -142,5 +142,12 @@ namespace GestionMatos
             string sql = "SELECT * FROM Materiel INNER JOIN Client ON Materiel.ClientID = Client.ClientID WHERE Nom like '" + str + "%'";
             Requete(sql);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string s = "SELECT * FROM Materiel INNER JOIN Client ON Materiel.ClientID = Client.ClientID";
+
+            Requete(s); // Permet au bouton "Actualiser" d'actualiser la liste de materiel.
+        }
     }
 }

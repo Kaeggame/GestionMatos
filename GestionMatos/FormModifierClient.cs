@@ -36,7 +36,6 @@ namespace GestionMatos
             this.textBoxCModifierNom.Text = this.NomClient;
             this.textBoxCModifierMail.Text = this.MailClient;
             this.textBoxCModifierTel.Text = this.TelClient;
-            this.textBoxCModifierDescription.Text = this.DescriptionClient;
         }
 
         // Heu là c'est plus une bombe à retardement qu'autre choses... juste... n'y touchez pas... s'il vous plaît

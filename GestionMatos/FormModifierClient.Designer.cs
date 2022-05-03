@@ -30,8 +30,6 @@ namespace GestionMatos
         private void InitializeComponent()
         {
             this.groupBoxModifierClient = new System.Windows.Forms.GroupBox();
-            this.textBoxCModifierDescription = new System.Windows.Forms.TextBox();
-            this.labelCModifierDescription = new System.Windows.Forms.Label();
             this.buttonCModifier = new System.Windows.Forms.Button();
             this.buttonCModifierAnnuler = new System.Windows.Forms.Button();
             this.textBoxCModifierTel = new System.Windows.Forms.TextBox();
@@ -45,8 +43,6 @@ namespace GestionMatos
             // 
             // groupBoxModifierClient
             // 
-            this.groupBoxModifierClient.Controls.Add(this.textBoxCModifierDescription);
-            this.groupBoxModifierClient.Controls.Add(this.labelCModifierDescription);
             this.groupBoxModifierClient.Controls.Add(this.buttonCModifier);
             this.groupBoxModifierClient.Controls.Add(this.buttonCModifierAnnuler);
             this.groupBoxModifierClient.Controls.Add(this.textBoxCModifierTel);
@@ -55,34 +51,21 @@ namespace GestionMatos
             this.groupBoxModifierClient.Controls.Add(this.labelCModifierMail);
             this.groupBoxModifierClient.Controls.Add(this.labelCModifierTel);
             this.groupBoxModifierClient.Controls.Add(this.labelCModifierNom);
-            this.groupBoxModifierClient.Location = new System.Drawing.Point(43, 44);
+            this.groupBoxModifierClient.Location = new System.Drawing.Point(22, 23);
+            this.groupBoxModifierClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxModifierClient.Name = "groupBoxModifierClient";
-            this.groupBoxModifierClient.Size = new System.Drawing.Size(1461, 679);
+            this.groupBoxModifierClient.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxModifierClient.Size = new System.Drawing.Size(730, 353);
             this.groupBoxModifierClient.TabIndex = 14;
             this.groupBoxModifierClient.TabStop = false;
             this.groupBoxModifierClient.Text = "Client";
             // 
-            // textBoxCModifierDescription
-            // 
-            this.textBoxCModifierDescription.Location = new System.Drawing.Point(998, 220);
-            this.textBoxCModifierDescription.Name = "textBoxCModifierDescription";
-            this.textBoxCModifierDescription.Size = new System.Drawing.Size(260, 31);
-            this.textBoxCModifierDescription.TabIndex = 17;
-            // 
-            // labelCModifierDescription
-            // 
-            this.labelCModifierDescription.AutoSize = true;
-            this.labelCModifierDescription.Location = new System.Drawing.Point(823, 220);
-            this.labelCModifierDescription.Name = "labelCModifierDescription";
-            this.labelCModifierDescription.Size = new System.Drawing.Size(120, 25);
-            this.labelCModifierDescription.TabIndex = 16;
-            this.labelCModifierDescription.Text = "Description";
-            // 
             // buttonCModifier
             // 
-            this.buttonCModifier.Location = new System.Drawing.Point(828, 524);
+            this.buttonCModifier.Location = new System.Drawing.Point(414, 272);
+            this.buttonCModifier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCModifier.Name = "buttonCModifier";
-            this.buttonCModifier.Size = new System.Drawing.Size(259, 62);
+            this.buttonCModifier.Size = new System.Drawing.Size(130, 32);
             this.buttonCModifier.TabIndex = 13;
             this.buttonCModifier.Text = "Modifier";
             this.buttonCModifier.UseVisualStyleBackColor = true;
@@ -90,9 +73,10 @@ namespace GestionMatos
             // 
             // buttonCModifierAnnuler
             // 
-            this.buttonCModifierAnnuler.Location = new System.Drawing.Point(361, 524);
+            this.buttonCModifierAnnuler.Location = new System.Drawing.Point(180, 272);
+            this.buttonCModifierAnnuler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCModifierAnnuler.Name = "buttonCModifierAnnuler";
-            this.buttonCModifierAnnuler.Size = new System.Drawing.Size(259, 62);
+            this.buttonCModifierAnnuler.Size = new System.Drawing.Size(130, 32);
             this.buttonCModifierAnnuler.TabIndex = 12;
             this.buttonCModifierAnnuler.Text = "Annuler";
             this.buttonCModifierAnnuler.UseVisualStyleBackColor = true;
@@ -100,58 +84,65 @@ namespace GestionMatos
             // 
             // textBoxCModifierTel
             // 
-            this.textBoxCModifierTel.Location = new System.Drawing.Point(361, 220);
+            this.textBoxCModifierTel.Location = new System.Drawing.Point(180, 114);
+            this.textBoxCModifierTel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCModifierTel.Name = "textBoxCModifierTel";
-            this.textBoxCModifierTel.Size = new System.Drawing.Size(260, 31);
+            this.textBoxCModifierTel.Size = new System.Drawing.Size(132, 20);
             this.textBoxCModifierTel.TabIndex = 9;
             // 
             // textBoxCModifierMail
             // 
-            this.textBoxCModifierMail.Location = new System.Drawing.Point(998, 86);
+            this.textBoxCModifierMail.Location = new System.Drawing.Point(499, 45);
+            this.textBoxCModifierMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCModifierMail.Name = "textBoxCModifierMail";
-            this.textBoxCModifierMail.Size = new System.Drawing.Size(260, 31);
+            this.textBoxCModifierMail.Size = new System.Drawing.Size(132, 20);
             this.textBoxCModifierMail.TabIndex = 7;
             // 
             // textBoxCModifierNom
             // 
-            this.textBoxCModifierNom.Location = new System.Drawing.Point(361, 86);
+            this.textBoxCModifierNom.Location = new System.Drawing.Point(180, 45);
+            this.textBoxCModifierNom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCModifierNom.Name = "textBoxCModifierNom";
-            this.textBoxCModifierNom.Size = new System.Drawing.Size(260, 31);
+            this.textBoxCModifierNom.Size = new System.Drawing.Size(132, 20);
             this.textBoxCModifierNom.TabIndex = 6;
             // 
             // labelCModifierMail
             // 
             this.labelCModifierMail.AutoSize = true;
-            this.labelCModifierMail.Location = new System.Drawing.Point(823, 86);
+            this.labelCModifierMail.Location = new System.Drawing.Point(412, 45);
+            this.labelCModifierMail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCModifierMail.Name = "labelCModifierMail";
-            this.labelCModifierMail.Size = new System.Drawing.Size(52, 25);
+            this.labelCModifierMail.Size = new System.Drawing.Size(26, 13);
             this.labelCModifierMail.TabIndex = 3;
             this.labelCModifierMail.Text = "Mail";
             // 
             // labelCModifierTel
             // 
             this.labelCModifierTel.AutoSize = true;
-            this.labelCModifierTel.Location = new System.Drawing.Point(169, 220);
+            this.labelCModifierTel.Location = new System.Drawing.Point(84, 114);
+            this.labelCModifierTel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCModifierTel.Name = "labelCModifierTel";
-            this.labelCModifierTel.Size = new System.Drawing.Size(143, 25);
+            this.labelCModifierTel.Size = new System.Drawing.Size(73, 13);
             this.labelCModifierTel.TabIndex = 1;
             this.labelCModifierTel.Text = "N° Telephone";
             // 
             // labelCModifierNom
             // 
             this.labelCModifierNom.AutoSize = true;
-            this.labelCModifierNom.Location = new System.Drawing.Point(169, 86);
+            this.labelCModifierNom.Location = new System.Drawing.Point(84, 45);
+            this.labelCModifierNom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCModifierNom.Name = "labelCModifierNom";
-            this.labelCModifierNom.Size = new System.Drawing.Size(56, 25);
+            this.labelCModifierNom.Size = new System.Drawing.Size(29, 13);
             this.labelCModifierNom.TabIndex = 0;
             this.labelCModifierNom.Text = "Nom";
             // 
             // FormulaireModifierClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1546, 767);
+            this.ClientSize = new System.Drawing.Size(773, 399);
             this.Controls.Add(this.groupBoxModifierClient);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormulaireModifierClient";
             this.Text = "Modifier Client";
             this.Load += new System.EventHandler(this.FormulaireModifierClient_Load);
@@ -172,7 +163,5 @@ namespace GestionMatos
         private System.Windows.Forms.Label labelCModifierMail;
         private System.Windows.Forms.Label labelCModifierTel;
         private System.Windows.Forms.Label labelCModifierNom;
-        private System.Windows.Forms.TextBox textBoxCModifierDescription;
-        private System.Windows.Forms.Label labelCModifierDescription;
     }
 }
